@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +20,53 @@
             --font-family: 'JetBrains Mono', monospace;
         }
 
+        @media (prefers-color-scheme: light) {
+            :root {
+                --color-background: hsl(0, 0%, 98%);
+                --color-widget-background: hsl(0, 0%, 100%);
+                --color-widget-background-highlight: hsl(0, 0%, 96%);
+                --color-separator: hsl(0, 0%, 90%);
+                --color-widget-content-border: hsl(0, 0%, 85%);
+                --color-primary: hsl(43, 70%, 55%);
+                --color-text-highlight: hsl(0, 0%, 10%);
+                --color-text-base: hsl(0, 0%, 40%);
+                --color-text-subdue: hsl(0, 0%, 65%);
+            }
+        }
+
+
+        body.light-theme {
+            --color-background: hsl(0, 0%, 98%);
+            --color-widget-background: hsl(0, 0%, 100%);
+            --color-widget-background-highlight: hsl(0, 0%, 96%);
+            --color-separator: hsl(0, 0%, 90%);
+            --color-widget-content-border: hsl(0, 0%, 85%);
+            --color-primary: hsl(43, 70%, 55%);
+            --color-text-highlight: hsl(0, 0%, 10%);
+            --color-text-base: hsl(0, 0%, 40%);
+            --color-text-subdue: hsl(0, 0%, 65%);
+        }
+
+        body.dark-theme {
+            --color-background: hsl(240, 8%, 9%);
+            --color-widget-background: hsl(240, 8%, 10%);
+            --color-widget-background-highlight: hsl(240, 8%, 14%);
+            --color-separator: hsl(240, 8%, 13%);
+            --color-widget-content-border: hsl(240, 8%, 13%);
+            --color-primary: hsl(43, 50%, 70%);
+            --color-text-highlight: hsl(240, 8%, 85%);
+            --color-text-base: hsl(240, 8%, 58%);
+            --color-text-subdue: hsl(240, 8%, 35%);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
             overflow: hidden;
         }
@@ -68,7 +109,7 @@
         .message.bot {
             align-self: flex-start;
         }
-        
+
         .message-avatar {
             width: 30px;
             height: 30px;
@@ -92,14 +133,16 @@
 
         .message.user .message-content {
             background-color: var(--color-primary);
-            color: var(--color-background);
+            color: var(--color-widget-background);
+            font-weight: 500;
         }
 
         .message.bot .message-content {
             background-color: var(--color-widget-background-highlight);
             color: var(--color-text-highlight);
+            border: 1px solid var(--color-separator);
         }
-        
+
         .chat-input-container {
             padding: 1rem;
             border-top: 1px solid var(--color-widget-content-border);
@@ -129,7 +172,7 @@
         .message-input:focus {
             border-color: var(--color-primary);
         }
-        
+
         .send-button {
             width: 40px;
             height: 40px;
@@ -137,24 +180,27 @@
             border-radius: 50%;
             border: none;
             background-color: var(--color-primary);
-            color: var(--color-background);
+            color: var(--color-widget-background);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity 0.2s;
+            transition: all 0.2s ease;
         }
 
         .send-button:hover {
             opacity: 0.85;
+            transform: scale(1.05);
         }
 
         .send-button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
+            transform: none;
         }
     </style>
 </head>
+
 <body>
     <div class="chat-container">
         <div class="chat-messages" id="chatMessages">
@@ -167,23 +213,57 @@
             <div class="input-group">
                 <textarea class="message-input" id="messageInput" placeholder="输入你的问题..." rows="1"></textarea>
                 <button class="send-button" id="sendButton" title="发送">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                    </svg>
                 </button>
             </div>
         </div>
     </div>
     <script>
+        function detectAndApplyTheme() {
+            let isLightTheme = false;
+
+            try {
+                if (window.parent && window.parent !== window) {
+                    const parentBody = window.parent.document.body;
+                    const parentBg = window.getComputedStyle(parentBody).backgroundColor;
+
+                    const rgb = parentBg.match(/\d+/g);
+                    if (rgb) {
+                        const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+                        isLightTheme = brightness > 127;
+                    }
+                }
+            } catch (e) {
+                isLightTheme = window.matchMedia('(prefers-color-scheme: light)').matches;
+            }
+
+            document.body.className = isLightTheme ? 'light-theme' : 'dark-theme';
+        }
+
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', detectAndApplyTheme);
+        }
+
+        detectAndApplyTheme();
+
         document.addEventListener('DOMContentLoaded', () => {
             const chatMessages = document.getElementById('chatMessages');
             const messageInput = document.getElementById('messageInput');
             const sendButton = document.getElementById('sendButton');
+
+
             const _0x1a2b = ['aHR0cHM6Ly9vcGVucm91dGVyLmFpL2FwaS92MS9jaGF0L2NvbXBsZXRpb25z'];
             const _0x3c4d = ['c2stb3ItdjEtMTg3ZDViZjVlZWYwNDJjNjlhNzQ5NDMyNzEwYmM2Yjg0MDU1M2E3ZjIwMWQyYjA4MGNiODBhYWM0MTAxZDNhNw=='];
-            const _0x5e6f = ['qwen/qwen3-30b-a3b:free', 'Authorization', 'Bearer '];
+            const _0x5e6f = ['qwen/qwen3-235b-a22b:free', 'Authorization', 'Bearer '];
             const _0x7g8h = ['Content-Type', 'application/json', 'HTTP-Referer', 'https://mingzhe.uk'];
-            
+
             let isLoading = false;
             let chatHistory = [];
+
+
             const systemPrompt = {
                 role: 'system',
                 content: '你是mingzhe.uk的GPT，旨在为用户提供有用的信息和帮助。不要提供任何敏感信息或个人数据。请确保回答简洁明了。'
@@ -192,6 +272,7 @@
             function _decrypt(arr, index) {
                 return window.atob(arr[index]);
             }
+
 
             function _buildAuth() {
                 const key = _decrypt(_0x3c4d, 0);
@@ -224,12 +305,13 @@
                 isLoading = true;
                 sendButton.disabled = true;
                 messageInput.value = '';
-                
+
                 addMessage('user', userMessage);
                 chatHistory.push({ role: "user", content: userMessage });
                 const botMessageElement = addMessage('bot', '...');
 
                 try {
+
                     const requestConfig = {
                         method: "POST",
                         headers: {
@@ -254,10 +336,10 @@
                     const data = await response.json();
                     const aiResponse = data.choices[0].message.content;
                     botMessageElement.textContent = aiResponse;
-                    chatHistory.push({ role: "assistant", content: aiResponse }); 
+                    chatHistory.push({ role: "assistant", content: aiResponse });
                 } catch (e) {
                     botMessageElement.textContent = `出错了: ${e.message}`;
-                    chatHistory.pop(); 
+                    chatHistory.pop();
                 } finally {
                     isLoading = false;
                     sendButton.disabled = false;
@@ -277,7 +359,10 @@
                     handleSend();
                 }
             });
+
+            setInterval(detectAndApplyTheme, 1000);
         });
     </script>
 </body>
+
 </html>
