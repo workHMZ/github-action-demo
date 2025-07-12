@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat for Glance</title>
+    <style>
+        :root {
+            --color-background: hsl(240, 8%, 9%);
+            --color-widget-background: hsl(240, 8%, 10%);
+            --color-widget-background-highlight: hsl(240, 8%, 14%);
+            --color-separator: hsl(240, 8%, 13%);
+            --color-widget-content-border: hsl(240, 8%, 13%);
+            --color-primary: hsl(43, 50%, 70%);
+            --color-text-highlight: hsl(240, 8%, 85%);
+            --color-text-base: hsl(240, 8%, 58%);
+            --color-text-subdue: hsl(240, 8%, 35%);
+            --border-radius: 5px;
+            --font-family: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-background);
+            color: var(--color-text-base);
+            font-size: 14px;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: var(--color-widget-background);
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            display: flex;
+            max-width: 85%;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .message.bot {
+            align-self: flex-start;
+        }
+        
+        .message-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--color-separator);
+            color: var(--color-text-highlight);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .message-content {
+            padding: 0.6rem 1rem;
+            border-radius: var(--border-radius);
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        .message.user .message-content {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+        }
+
+        .message.bot .message-content {
+            background-color: var(--color-widget-background-highlight);
+            color: var(--color-text-highlight);
+        }
+        
+        .chat-input-container {
+            padding: 1rem;
+            border-top: 1px solid var(--color-widget-content-border);
+            background-color: var(--color-widget-background);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .message-input {
+            flex-grow: 1;
+            background-color: var(--color-widget-background);
+            border: 1px solid var(--color-separator);
+            border-radius: var(--border-radius);
+            padding: 0.75rem 1rem;
+            color: var(--color-text-highlight);
+            font-family: inherit;
+            font-size: inherit;
+            resize: none;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .message-input:focus {
+            border-color: var(--color-primary);
+        }
+        
+        .send-button {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s;
+        }
+
+        .send-button:hover {
+            opacity: 0.85;
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">你好！我是Mingzhe.uk的GPT，很高兴为你服务。</div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <div class="input-group">
+                <textarea class="message-input" id="messageInput" placeholder="输入你的问题..." rows="1"></textarea>
+                <button class="send-button" id="sendButton" title="发送">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageInput = document.getElementById('messageInput');
+            const sendButton = document.getElementById('sendButton');
+            const _0x1a2b = ['aHR0cHM6Ly9vcGVucm91dGVyLmFpL2FwaS92MS9jaGF0L2NvbXBsZXRpb25z'];
+            const _0x3c4d = ['c2stb3ItdjEtMTg3ZDViZjVlZWYwNDJjNjlhNzQ5NDMyNzEwYmM2Yjg0MDU1M2E3ZjIwMWQyYjA4MGNiODBhYWM0MTAxZDNhNw=='];
+            const _0x5e6f = ['qwen/qwen3-30b-a3b:free', 'Authorization', 'Bearer '];
+            const _0x7g8h = ['Content-Type', 'application/json', 'HTTP-Referer', 'https://mingzhe.uk'];
+            
+            let isLoading = false;
+            let chatHistory = [];
+            const systemPrompt = {
+                role: 'system',
+                content: '你是mingzhe.uk的GPT，旨在为用户提供有用的信息和帮助。不要提供任何敏感信息或个人数据。请确保回答简洁明了。'
+            };
+
+            function _decrypt(arr, index) {
+                return window.atob(arr[index]);
+            }
+
+            function _buildAuth() {
+                const key = _decrypt(_0x3c4d, 0);
+                return _0x5e6f[2] + key;
+            }
+
+            function _buildUrl() {
+                return _decrypt(_0x1a2b, 0);
+            }
+
+            function addMessage(sender, text) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                const avatar = document.createElement('div');
+                avatar.className = 'message-avatar';
+                avatar.textContent = sender === 'user' ? '👤' : '🤖';
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'message-content';
+                contentDiv.textContent = text;
+                messageDiv.append(avatar, contentDiv);
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                return contentDiv;
+            }
+
+            async function getAiResponse() {
+                const userMessage = messageInput.value.trim();
+                if (!userMessage) return;
+
+                isLoading = true;
+                sendButton.disabled = true;
+                messageInput.value = '';
+                
+                addMessage('user', userMessage);
+                chatHistory.push({ role: "user", content: userMessage });
+                const botMessageElement = addMessage('bot', '...');
+
+                try {
+                    const requestConfig = {
+                        method: "POST",
+                        headers: {
+                            [_0x5e6f[1]]: _buildAuth(),
+                            [_0x7g8h[0]]: _0x7g8h[1],
+                            [_0x7g8h[2]]: _0x7g8h[3],
+                            "X-Title": "Glance AI Chat"
+                        },
+                        body: JSON.stringify({
+                            model: _0x5e6f[0],
+                            messages: [systemPrompt, ...chatHistory]
+                        })
+                    };
+
+                    const response = await fetch(_buildUrl(), requestConfig);
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error?.message || "请求失败");
+                    }
+
+                    const data = await response.json();
+                    const aiResponse = data.choices[0].message.content;
+                    botMessageElement.textContent = aiResponse;
+                    chatHistory.push({ role: "assistant", content: aiResponse }); 
+                } catch (e) {
+                    botMessageElement.textContent = `出错了: ${e.message}`;
+                    chatHistory.pop(); 
+                } finally {
+                    isLoading = false;
+                    sendButton.disabled = false;
+                    messageInput.focus();
+                }
+            }
+
+            function handleSend() {
+                if (isLoading) return;
+                getAiResponse();
+            }
+
+            sendButton.addEventListener('click', handleSend);
+            messageInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    handleSend();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
