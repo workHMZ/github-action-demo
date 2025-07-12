@@ -334,9 +334,15 @@
                     }
 
                     const data = await response.json();
-                    const aiResponse = data.choices[0].message.content;
-                    botMessageElement.textContent = aiResponse;
-                    chatHistory.push({ role: "assistant", content: aiResponse });
+                    const rawResponse = data.choices[0].message.content;
+
+                    // MODIFICATION START: Remove <think> tags from the response
+                    const cleanedResponse = rawResponse.replace(/<think>[\s\S]*?<\/think>/g, '').trim();
+                    
+                    botMessageElement.textContent = cleanedResponse;
+                    chatHistory.push({ role: "assistant", content: cleanedResponse });
+                    // MODIFICATION END
+
                 } catch (e) {
                     botMessageElement.textContent = `出错了: ${e.message}`;
                     chatHistory.pop();
