@@ -23,7 +23,7 @@ def scrape_transit_data():
     """
     print("Chromeブラウザを検出し、ドライバを初期化中...")
     chrome_options = ChromeOptions()
-    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--headless=new")
     chrome_options.add_argument("--no-sandbox") # Docker/Linux環境で重要
     chrome_options.add_argument("--disable-dev-shm-usage") # Docker/Linux環境で重要
     chrome_options.add_argument("--window-size=1920,1080")

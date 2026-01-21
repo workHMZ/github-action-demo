@@ -43,7 +43,7 @@ def main():
             
             # APIリクエストパラメータの構築
             request_params = {
-                "model": "gpt-4.1-nano",
+                "model": "gpt-5-mini",
                 "input": [
                     {
                         "role": "user",
