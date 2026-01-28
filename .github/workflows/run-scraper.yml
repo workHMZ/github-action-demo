@@ -1,19 +1,32 @@
 # =============================================================================
-# 手动运行爬虫（不重新构建/拉取镜像）
+# 定时运行爬虫 + 发送通知到 Synology Chat
 # =============================================================================
-# 用途：只想看爬虫结果时，手动触发此 workflow
-# 特点：跳过 CI 构建，可选择是否拉取最新镜像
+# 触发：每天早上 8:00 (JST) 自动运行 或 手动触发
+# 功能：运行交通爬虫，将结果发送到 Synology Chat
 # =============================================================================
 
-name: 🔍 Run Scraper Only
+name: 🔍 Run Scraper (Daily 8AM)
 
 on:
+  # 定时触发：每天早上 8:00 JST (= 前一天 23:00 UTC)
+  schedule:
+    - cron: '0 23 * * *'
+  
+  # 手动触发
   workflow_dispatch:
     inputs:
       pull_latest:
-        description: '是否拉取最新镜像？（代码没变就选 false）'
+        description: '是否拉取最新镜像？'
         required: true
         default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+      send_notification:
+        description: '是否发送通知到 Synology Chat？'
+        required: true
+        default: 'true'
         type: choice
         options:
           - 'true'
@@ -28,7 +41,7 @@ env:
 
 jobs:
   run-scraper:
-    name: 🚀 Run Scraper
+    name: 🚀 Run Scraper & Notify
     runs-on: ubuntu-latest
 
     steps:
@@ -60,10 +73,12 @@ jobs:
             echo "VM_IP=$IP" >> $GITHUB_OUTPUT
 
       - name: 🐳 Run Scraper via SSH
+        id: scraper
         uses: appleboy/ssh-action@v1.0.3
         env:
           DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-          PULL_LATEST: ${{ github.event.inputs.pull_latest }}
+          # 定时触发时默认不拉取镜像，手动可选
+          PULL_LATEST: ${{ github.event.inputs.pull_latest || 'false' }}
         with:
           host: ${{ steps.get-ip.outputs.VM_IP }}
           username: ${{ env.SSH_USER }}
@@ -73,37 +88,57 @@ jobs:
           script: |
             set -e
             
-            echo "=========================================="
-            echo "🧹 清理旧容器..."
-            echo "=========================================="
-            sudo docker rm -f $CONTAINER_NAME 2>/dev/null || echo "没有旧容器"
+            # 清理旧容器
+            sudo docker rm -f $CONTAINER_NAME 2>/dev/null || true
             
-            # 根据用户选择决定是否拉取最新镜像
+            # 根据设置决定是否拉取镜像
             if [ "$PULL_LATEST" = "true" ]; then
-              echo ""
-              echo "=========================================="
-              echo "📦 拉取最新镜像..."
-              echo "=========================================="
               sudo docker pull $DOCKER_IMAGE
-            else
-              echo ""
-              echo "=========================================="
-              echo "⏩ 跳过拉取镜像，使用本地缓存"
-              echo "=========================================="
             fi
             
-            echo ""
-            echo "=========================================="
-            echo "🚀 运行爬虫..."
-            echo "=========================================="
+            # 运行爬虫并捕获 JSON 输出
             sudo docker run --rm --name $CONTAINER_NAME \
               -e PYTHONUNBUFFERED=1 \
-              $DOCKER_IMAGE
+              $DOCKER_IMAGE 2>&1 | tee /tmp/scraper_output.txt
             
-            echo ""
-            echo "=========================================="
-            echo "✅ 完成！"
-            echo "=========================================="
+            # 只提取 JSON 部分（从 { 开始到 } 结束）
+            cat /tmp/scraper_output.txt | sed -n '/^{/,/^}/p'
+
+      - name: 📤 Send to Synology Chat
+        # 定时触发时默认发送，手动可选
+        if: ${{ github.event.inputs.send_notification != 'false' }}
+        env:
+          SYNOLOGY_WEBHOOK: ${{ secrets.SYNOLOGY_CHAT_WEBHOOK }}
+        run: |
+          # 从 SSH 输出中提取结果
+          OUTPUT='${{ steps.scraper.outputs.stdout }}'
+          
+          # 解析关键信息
+          UPDATE_TIME=$(echo "$OUTPUT" | grep -o '"update_time": "[^"]*"' | cut -d'"' -f4 || echo "Unknown")
+          ISSUE_COUNT=$(echo "$OUTPUT" | grep -o '"issue_count": [0-9]*' | grep -o '[0-9]*' || echo "0")
+          STATUS=$(echo "$OUTPUT" | grep -o '"status": "[^"]*"' | cut -d'"' -f4 || echo "unknown")
+          
+          # 构建通知消息
+          if [ "$STATUS" = "all_clear" ]; then
+            EMOJI="✅"
+            MESSAGE="$EMOJI 【関東交通情報】全線正常運転中！\\n\\n� 更新時間: $UPDATE_TIME"
+          else
+            EMOJI="⚠️"
+            # 提取有问题的路线名称
+            ISSUES=$(echo "$OUTPUT" | grep -o '"line": "[^"]*"' | cut -d'"' -f4 | head -5 | tr '\n' '、' | sed 's/、$//')
+            MESSAGE="$EMOJI 【関東交通情報】${ISSUE_COUNT}件の運行情報あり\\n\\n🚃 影響路線: $ISSUES\\n🕐 更新時間: $UPDATE_TIME\\n\\n詳細は GitHub Actions ログをご確認ください。"
+          fi
+          
+          echo "📨 发送通知到 Synology Chat..."
+          echo "消息内容: $MESSAGE"
+          
+          # 发送到 Synology Chat
+          curl -k -X POST "$SYNOLOGY_WEBHOOK" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data-urlencode "payload={\"text\": \"$MESSAGE\"}"
+          
+          echo ""
+          echo "✅ 通知已发送！"
 
       - name: 💰 Stop VM (Save Money)
         if: always()
