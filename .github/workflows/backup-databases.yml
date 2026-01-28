@@ -77,7 +77,7 @@ jobs:
             echo "⏩ 跳过 ${{ matrix.display_name }}（未选中）"
           fi
 
-      # ----- 安装 PostgreSQL 17 客户端（解决版本不匹配问题）-----
+      # ----- 安装 PostgreSQL 17 客户端（解决 Neon 版本不匹配问题）-----
       - name: 🔧 Install PostgreSQL 17 Client
         if: steps.check.outputs.should_run == 'true'
         run: |
@@ -90,7 +90,7 @@ jobs:
           sudo apt-get install -y postgresql-client-17
           
           # 验证版本
-          pg_dump --version
+          echo "✅ pg_dump: $(/usr/lib/postgresql/17/bin/pg_dump --version)"
 
       # ----- 执行备份 -----
       - name: 💾 Backup ${{ matrix.display_name }}
@@ -105,44 +105,29 @@ jobs:
           echo "🚀 开始备份: ${{ matrix.display_name }}"
           echo "==========================================="
           
+          # 使用 PostgreSQL 17 的 pg_dump
+          PG_DUMP="/usr/lib/postgresql/17/bin/pg_dump"
+          
           # 生成文件名: lobechat_20260128.sql.gz
           DATE=$(date +'%Y%m%d')
           FILENAME="${{ matrix.name }}_${DATE}.sql.gz"
           
           echo "📁 备份文件: $FILENAME"
           
-          # 检查数据库连接
+          # 检查数据库连接字符串
           if [ -z "$DB_URL" ]; then
             echo "❌ 错误: 数据库连接字符串未设置 (secret: ${{ matrix.db_secret }})"
             echo "result=failed" >> $GITHUB_OUTPUT
-            echo "error=数据库连接字符串未设置" >> $GITHUB_OUTPUT
             exit 1
           fi
           
-          # 执行 pg_dump（强制使用 IPv4 解决 Supabase 连接问题）
+          # 执行备份
           echo "📤 正在导出数据库..."
           START_TIME=$(date +%s)
           
-          # 从 URL 提取 hostname 并解析 IPv4
-          DB_HOST=$(echo "$DB_URL" | sed -E 's|.*@([^:/]+).*|\1|')
-          echo "🌐 数据库主机: $DB_HOST"
-          
-          # 获取 IPv4 地址（解决 GitHub Actions IPv6 不可用问题）
-          IPV4=$(dig +short A "$DB_HOST" | head -1)
-          if [ -n "$IPV4" ]; then
-            echo "📍 解析到 IPv4: $IPV4"
-            # 替换 URL 中的 hostname 为 IPv4
-            DB_URL_IPV4=$(echo "$DB_URL" | sed "s|$DB_HOST|$IPV4|")
-            DUMP_URL="$DB_URL_IPV4"
-          else
-            echo "⚠️ 无法解析 IPv4，尝试直接连接..."
-            DUMP_URL="$DB_URL"
-          fi
-          
-          if ! pg_dump "$DUMP_URL" | gzip > "$FILENAME"; then
+          if ! $PG_DUMP "$DB_URL" 2>&1 | gzip > "$FILENAME"; then
             echo "❌ pg_dump 失败"
             echo "result=failed" >> $GITHUB_OUTPUT
-            echo "error=pg_dump 执行失败" >> $GITHUB_OUTPUT
             exit 1
           fi
           
