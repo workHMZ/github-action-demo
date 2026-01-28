@@ -1,0 +1,116 @@
+# =============================================================================
+# 手动运行爬虫（不重新构建/拉取镜像）
+# =============================================================================
+# 用途：只想看爬虫结果时，手动触发此 workflow
+# 特点：跳过 CI 构建，可选择是否拉取最新镜像
+# =============================================================================
+
+name: 🔍 Run Scraper Only
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull_latest:
+        description: '是否拉取最新镜像？（代码没变就选 false）'
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+env:
+  AZURE_RESOURCE_GROUP: rg-stirling-project
+  AZURE_VM_NAME: vm-runner-transit-scraper
+  IMAGE_NAME: github-action-demo
+  CONTAINER_NAME: demo-runner
+  SSH_USER: azureuser
+
+jobs:
+  run-scraper:
+    name: 🚀 Run Scraper
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔐 Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: ⚡ Start VM
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            echo "🔄 正在唤醒 VM..."
+            az vm start \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+              --name ${{ env.AZURE_VM_NAME }}
+            echo "✅ VM 已启动！"
+
+      - name: 🌐 Get VM Public IP
+        id: get-ip
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            IP=$(az vm show -d \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+              --name ${{ env.AZURE_VM_NAME }} \
+              --query publicIps -o tsv)
+            echo "📍 VM IP: $IP"
+            echo "VM_IP=$IP" >> $GITHUB_OUTPUT
+
+      - name: 🐳 Run Scraper via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+          PULL_LATEST: ${{ github.event.inputs.pull_latest }}
+        with:
+          host: ${{ steps.get-ip.outputs.VM_IP }}
+          username: ${{ env.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: DOCKER_IMAGE,CONTAINER_NAME,PULL_LATEST
+          command_timeout: 10m
+          script: |
+            set -e
+            
+            echo "=========================================="
+            echo "🧹 清理旧容器..."
+            echo "=========================================="
+            sudo docker rm -f $CONTAINER_NAME 2>/dev/null || echo "没有旧容器"
+            
+            # 根据用户选择决定是否拉取最新镜像
+            if [ "$PULL_LATEST" = "true" ]; then
+              echo ""
+              echo "=========================================="
+              echo "📦 拉取最新镜像..."
+              echo "=========================================="
+              sudo docker pull $DOCKER_IMAGE
+            else
+              echo ""
+              echo "=========================================="
+              echo "⏩ 跳过拉取镜像，使用本地缓存"
+              echo "=========================================="
+            fi
+            
+            echo ""
+            echo "=========================================="
+            echo "🚀 运行爬虫..."
+            echo "=========================================="
+            sudo docker run --rm --name $CONTAINER_NAME \
+              -e PYTHONUNBUFFERED=1 \
+              $DOCKER_IMAGE
+            
+            echo ""
+            echo "=========================================="
+            echo "✅ 完成！"
+            echo "=========================================="
+
+      - name: 💰 Stop VM (Save Money)
+        if: always()
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            az vm deallocate \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+              --name ${{ env.AZURE_VM_NAME }}
+            echo "✅ VM 已关机"
