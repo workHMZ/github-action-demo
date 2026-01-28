@@ -1,0 +1,132 @@
+# =============================================================================
+# CD Pipeline: Deploy to Azure Ephemeral VM (Transit Scraper)
+# =============================================================================
+# 触发条件：CI 完成后自动触发 或 手动触发
+# 功能：唤醒 Azure VM -> 拉取最新镜像 -> 运行任务 -> 关机省钱
+# =============================================================================
+
+name: CD - Deploy to Azure VM
+
+on:
+  # 当 CI workflow 完成后自动触发
+  workflow_run:
+    workflows: ["CI - Build and Push"]
+    types: [completed]
+    branches: ["main"]
+  
+  # 手动触发
+  workflow_dispatch:
+
+# -----------------------------------------------------------------------------
+# 环境变量（集中管理，方便修改）
+# -----------------------------------------------------------------------------
+env:
+  # Azure 资源
+  AZURE_RESOURCE_GROUP: rg-stirling-project
+  AZURE_VM_NAME: vm-runner-transit-scraper
+  
+  # Docker 容器
+  IMAGE_NAME: github-action-demo
+  CONTAINER_NAME: demo-runner
+  
+  # SSH 配置
+  SSH_USER: azureuser
+
+jobs:
+  deploy:
+    name: 🚀 Deploy to Azure VM
+    runs-on: ubuntu-latest
+    
+    # 只有 CI 成功才执行（针对 workflow_run 触发）
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      # =========================================================================
+      # 阶段 1: Azure 登录 & 启动 VM
+      # =========================================================================
+      - name: 🔐 Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: ⚡ Start VM
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            echo "🔄 正在唤醒 VM: ${{ env.AZURE_VM_NAME }}..."
+            az vm start \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+              --name ${{ env.AZURE_VM_NAME }}
+            echo "✅ VM 已启动！"
+
+      # =========================================================================
+      # 阶段 2: 获取动态 IP
+      # =========================================================================
+      - name: 🌐 Get VM Public IP
+        id: get-ip
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            IP=$(az vm show -d \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+              --name ${{ env.AZURE_VM_NAME }} \
+              --query publicIps -o tsv)
+            echo "📍 VM IP: $IP"
+            echo "VM_IP=$IP" >> $GITHUB_OUTPUT
+
+      # =========================================================================
+      # 阶段 3: SSH 连接并执行任务
+      # =========================================================================
+      - name: 🐳 Run Task via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+        with:
+          host: ${{ steps.get-ip.outputs.VM_IP }}
+          username: ${{ env.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: DOCKER_IMAGE,CONTAINER_NAME
+          # 爬虫可能需要较长时间，设置 10 分钟超时
+          command_timeout: 10m
+          script: |
+            set -e  # 遇到错误立即退出
+            
+            echo "=========================================="
+            echo "🧹 清理旧容器..."
+            echo "=========================================="
+            docker rm -f $CONTAINER_NAME 2>/dev/null || echo "没有旧容器需要清理"
+            
+            echo ""
+            echo "=========================================="
+            echo "📦 拉取最新镜像..."
+            echo "=========================================="
+            docker pull $DOCKER_IMAGE
+            
+            echo ""
+            echo "=========================================="
+            echo "🚀 运行爬虫任务..."
+            echo "=========================================="
+            # PYTHONUNBUFFERED=1 确保 Python 输出实时显示，不被缓冲
+            docker run --rm --name $CONTAINER_NAME \
+              -e PYTHONUNBUFFERED=1 \
+              $DOCKER_IMAGE
+            
+            echo ""
+            echo "=========================================="
+            echo "✅ 爬虫任务完成！以上是抓取结果"
+            echo "=========================================="
+
+      # =========================================================================
+      # 阶段 4: 关机省钱（无论成功失败都执行）
+      # =========================================================================
+      - name: 💰 Stop VM (Save Money)
+        if: always()
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            echo "🔄 正在关闭 VM 以节省费用..."
+            az vm deallocate \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+              --name ${{ env.AZURE_VM_NAME }}
+            echo "✅ VM 已 deallocate，停止计费！"
+            echo "💡 提示：deallocate 会释放计算资源，只保留存储费用"
