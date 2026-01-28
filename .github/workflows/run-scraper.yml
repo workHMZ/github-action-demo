@@ -72,6 +72,20 @@ jobs:
             echo "📍 VM IP: $IP"
             echo "VM_IP=$IP" >> $GITHUB_OUTPUT
 
+      - name: ⏳ Wait for SSH to be ready
+        run: |
+          echo "⏳ 等待 VM SSH 服务就绪..."
+          for i in {1..12}; do
+            if nc -z -w5 ${{ steps.get-ip.outputs.VM_IP }} 22 2>/dev/null; then
+              echo "✅ SSH 服务已就绪！"
+              exit 0
+            fi
+            echo "尝试 $i/12: SSH 未就绪，等待 10 秒..."
+            sleep 10
+          done
+          echo "❌ SSH 服务启动超时"
+          exit 1
+
       - name: 🐳 Run Scraper & Send Notification
         uses: appleboy/ssh-action@v1.0.3
         env:
