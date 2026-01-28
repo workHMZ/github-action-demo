@@ -77,12 +77,20 @@ jobs:
             echo "⏩ 跳过 ${{ matrix.display_name }}（未选中）"
           fi
 
-      # ----- 安装 PostgreSQL 客户端 -----
-      - name: 🔧 Install PostgreSQL Client
+      # ----- 安装 PostgreSQL 17 客户端（解决版本不匹配问题）-----
+      - name: 🔧 Install PostgreSQL 17 Client
         if: steps.check.outputs.should_run == 'true'
         run: |
+          # 添加 PostgreSQL 官方源
+          sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+          wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
           sudo apt-get update
-          sudo apt-get install -y postgresql-client
+          
+          # 安装 PostgreSQL 17 客户端
+          sudo apt-get install -y postgresql-client-17
+          
+          # 验证版本
+          pg_dump --version
 
       # ----- 执行备份 -----
       - name: 💾 Backup ${{ matrix.display_name }}
@@ -111,11 +119,27 @@ jobs:
             exit 1
           fi
           
-          # 执行 pg_dump
+          # 执行 pg_dump（强制使用 IPv4 解决 Supabase 连接问题）
           echo "📤 正在导出数据库..."
           START_TIME=$(date +%s)
           
-          if ! pg_dump "$DB_URL" | gzip > "$FILENAME"; then
+          # 从 URL 提取 hostname 并解析 IPv4
+          DB_HOST=$(echo "$DB_URL" | sed -E 's|.*@([^:/]+).*|\1|')
+          echo "🌐 数据库主机: $DB_HOST"
+          
+          # 获取 IPv4 地址（解决 GitHub Actions IPv6 不可用问题）
+          IPV4=$(dig +short A "$DB_HOST" | head -1)
+          if [ -n "$IPV4" ]; then
+            echo "📍 解析到 IPv4: $IPV4"
+            # 替换 URL 中的 hostname 为 IPv4
+            DB_URL_IPV4=$(echo "$DB_URL" | sed "s|$DB_HOST|$IPV4|")
+            DUMP_URL="$DB_URL_IPV4"
+          else
+            echo "⚠️ 无法解析 IPv4，尝试直接连接..."
+            DUMP_URL="$DB_URL"
+          fi
+          
+          if ! pg_dump "$DUMP_URL" | gzip > "$FILENAME"; then
             echo "❌ pg_dump 失败"
             echo "result=failed" >> $GITHUB_OUTPUT
             echo "error=pg_dump 执行失败" >> $GITHUB_OUTPUT
