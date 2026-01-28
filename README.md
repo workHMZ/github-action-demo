@@ -127,3 +127,40 @@ python chat.py
 - OpenAI Python Library
 - python-dotenv
 
+---
+
+### ⚙️ GitHub Actions Workflows
+
+This project includes several automated workflows:
+
+| Workflow | File | Trigger | Description |
+|----------|------|---------|-------------|
+| **CI - Build and Push** | `ci.yml` | Push to `main` | 构建多架构 Docker 镜像并推送到 Docker Hub |
+| **CD - Deploy to Azure VM** | `cd.yml` | CI 完成后 / 手动 | 将爬虫部署到 Azure 临时 VM 运行 |
+| **Run Scraper** | `run-scraper.yml` | 每天 8:00 JST / 手动 | 运行爬虫并发送结果到 Synology Chat |
+| **Database Backup** | `backup-databases.yml` | 每天 4:00 JST / 手动 | 备份 Neon/Supabase 数据库到 Azure Blob |
+
+#### 💾 Database Backup Workflow
+
+自动备份 PostgreSQL 数据库到 Azure Blob Storage：
+
+**功能特点：**
+- 🔄 每日自动备份（凌晨 4:00 JST）
+- 📦 支持多数据库并行备份
+- 🧹 自动清理 30 天前的旧备份
+- 📢 Synology Chat 通知（成功/失败）
+
+**当前备份数据库：**
+- LobeChat (Neon)
+- Vaultwarden (Supabase)
+
+**添加新数据库：** 编辑 `backup-databases.yml` 中的 matrix 配置即可。
+
+**Required Secrets:**
+```
+AZURE_STORAGE_CONNECTION_STRING  # Azure Blob 连接字符串
+NEON_LOBECHAT_DB_URL             # Neon 数据库 URL
+SUPABASE_VAULTWARDEN_DB_URL      # Supabase 数据库 URL
+SYNOLOGY_CHAT_WEBHOOK            # Synology Chat Webhook
+```
+
