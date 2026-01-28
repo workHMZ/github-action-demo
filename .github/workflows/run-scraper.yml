@@ -72,73 +72,97 @@ jobs:
             echo "📍 VM IP: $IP"
             echo "VM_IP=$IP" >> $GITHUB_OUTPUT
 
-      - name: 🐳 Run Scraper via SSH
-        id: scraper
+      - name: 🐳 Run Scraper & Send Notification
         uses: appleboy/ssh-action@v1.0.3
         env:
           DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-          # 定时触发时默认不拉取镜像，手动可选
           PULL_LATEST: ${{ github.event.inputs.pull_latest || 'false' }}
+          SEND_NOTIFICATION: ${{ github.event.inputs.send_notification || 'true' }}
+          SYNOLOGY_WEBHOOK: ${{ secrets.SYNOLOGY_CHAT_WEBHOOK }}
         with:
           host: ${{ steps.get-ip.outputs.VM_IP }}
           username: ${{ env.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          envs: DOCKER_IMAGE,CONTAINER_NAME,PULL_LATEST
+          envs: DOCKER_IMAGE,CONTAINER_NAME,PULL_LATEST,SEND_NOTIFICATION,SYNOLOGY_WEBHOOK
           command_timeout: 10m
           script: |
             set -e
             
-            # 清理旧容器
+            echo "=========================================="
+            echo "🧹 清理旧容器..."
+            echo "=========================================="
             sudo docker rm -f $CONTAINER_NAME 2>/dev/null || true
             
             # 根据设置决定是否拉取镜像
             if [ "$PULL_LATEST" = "true" ]; then
+              echo ""
+              echo "=========================================="
+              echo "📦 拉取最新镜像..."
+              echo "=========================================="
               sudo docker pull $DOCKER_IMAGE
             fi
             
-            # 运行爬虫并捕获 JSON 输出
+            echo ""
+            echo "=========================================="
+            echo "🚀 运行爬虫..."
+            echo "=========================================="
+            
+            # 运行爬虫并保存完整输出
             sudo docker run --rm --name $CONTAINER_NAME \
               -e PYTHONUNBUFFERED=1 \
               $DOCKER_IMAGE 2>&1 | tee /tmp/scraper_output.txt
             
-            # 只提取 JSON 部分（从 { 开始到 } 结束）
-            cat /tmp/scraper_output.txt | sed -n '/^{/,/^}/p'
-
-      - name: 📤 Send to Synology Chat
-        # 定时触发时默认发送，手动可选
-        if: ${{ github.event.inputs.send_notification != 'false' }}
-        env:
-          SYNOLOGY_WEBHOOK: ${{ secrets.SYNOLOGY_CHAT_WEBHOOK }}
-        run: |
-          # 从 SSH 输出中提取结果
-          OUTPUT='${{ steps.scraper.outputs.stdout }}'
-          
-          # 解析关键信息
-          UPDATE_TIME=$(echo "$OUTPUT" | grep -o '"update_time": "[^"]*"' | cut -d'"' -f4 || echo "Unknown")
-          ISSUE_COUNT=$(echo "$OUTPUT" | grep -o '"issue_count": [0-9]*' | grep -o '[0-9]*' || echo "0")
-          STATUS=$(echo "$OUTPUT" | grep -o '"status": "[^"]*"' | cut -d'"' -f4 || echo "unknown")
-          
-          # 构建通知消息
-          if [ "$STATUS" = "all_clear" ]; then
-            EMOJI="✅"
-            MESSAGE="$EMOJI 【関東交通情報】全線正常運転中！\\n\\n� 更新時間: $UPDATE_TIME"
-          else
-            EMOJI="⚠️"
-            # 提取有问题的路线名称
-            ISSUES=$(echo "$OUTPUT" | grep -o '"line": "[^"]*"' | cut -d'"' -f4 | head -5 | tr '\n' '、' | sed 's/、$//')
-            MESSAGE="$EMOJI 【関東交通情報】${ISSUE_COUNT}件の運行情報あり\\n\\n🚃 影響路線: $ISSUES\\n🕐 更新時間: $UPDATE_TIME\\n\\n詳細は GitHub Actions ログをご確認ください。"
-          fi
-          
-          echo "📨 发送通知到 Synology Chat..."
-          echo "消息内容: $MESSAGE"
-          
-          # 发送到 Synology Chat
-          curl -k -X POST "$SYNOLOGY_WEBHOOK" \
-            -H "Content-Type: application/x-www-form-urlencoded" \
-            --data-urlencode "payload={\"text\": \"$MESSAGE\"}"
-          
-          echo ""
-          echo "✅ 通知已发送！"
+            echo ""
+            echo "=========================================="
+            echo "📤 处理并发送通知..."
+            echo "=========================================="
+            
+            # 提取 JSON 部分
+            sed -n '/^{/,/^}/p' /tmp/scraper_output.txt | head -50 > /tmp/json_output.txt
+            
+            # 如果不需要发送通知，跳过
+            if [ "$SEND_NOTIFICATION" = "false" ]; then
+              echo "⏩ 跳过通知发送"
+              exit 0
+            fi
+            
+            # 解析 JSON 数据
+            UPDATE_TIME=$(grep -o '"update_time": "[^"]*"' /tmp/json_output.txt | head -1 | cut -d'"' -f4)
+            ISSUE_COUNT=$(grep -o '"issue_count": [0-9]*' /tmp/json_output.txt | head -1 | grep -o '[0-9]*')
+            STATUS=$(grep -o '"status": "[^"]*"' /tmp/json_output.txt | head -1 | cut -d'"' -f4)
+            
+            echo "解析结果: 更新时间=$UPDATE_TIME, 问题数=$ISSUE_COUNT, 状态=$STATUS"
+            
+            # 根据状态构建消息
+            if [ "$STATUS" = "all_clear" ]; then
+              MESSAGE="✅ 【関東交通情報】全線正常運転中！\n\n🕐 更新時間: $UPDATE_TIME"
+            else
+              # 提取有问题的路线信息
+              LINES_INFO=""
+              while IFS= read -r line; do
+                LINE_NAME=$(echo "$line" | grep -o '"line": "[^"]*"' | cut -d'"' -f4)
+                LINE_STATUS=$(echo "$line" | grep -o '"status": "[^"]*"' | cut -d'"' -f4)
+                LINE_DETAIL=$(echo "$line" | grep -o '"detail": "[^"]*"' | cut -d'"' -f4 | cut -c1-30)
+                if [ -n "$LINE_NAME" ]; then
+                  LINES_INFO="${LINES_INFO}\n• ${LINE_NAME} [${LINE_STATUS}]: ${LINE_DETAIL}..."
+                fi
+              done < <(grep -A3 '"line":' /tmp/json_output.txt | head -20)
+              
+              MESSAGE="⚠️ 【関東交通情報】${ISSUE_COUNT}件の運行情報\n\n🕐 更新: $UPDATE_TIME\n${LINES_INFO}"
+            fi
+            
+            echo "发送消息内容:"
+            echo -e "$MESSAGE"
+            
+            # 发送到 Synology Chat
+            curl -k -X POST "$SYNOLOGY_WEBHOOK" \
+              -H "Content-Type: application/x-www-form-urlencoded" \
+              --data-urlencode "payload={\"text\": \"$MESSAGE\"}"
+            
+            echo ""
+            echo "=========================================="
+            echo "✅ 完成！"
+            echo "=========================================="
 
       - name: 💰 Stop VM (Save Money)
         if: always()
