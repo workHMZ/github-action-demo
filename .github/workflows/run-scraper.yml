@@ -131,8 +131,13 @@ jobs:
             echo "📤 处理并发送通知..."
             echo "=========================================="
             
-            # 提取 JSON 部分
-            sed -n '/^{/,/^}/p' /tmp/scraper_output.txt | head -50 > /tmp/json_output.txt
+            # 提取 JSON 部分（从 { 开始到 } 结束的完整 JSON）
+            grep -Pzo '\{[\s\S]*\}' /tmp/scraper_output.txt | head -c 5000 > /tmp/json_output.txt
+            
+            # 调试：显示提取的 JSON
+            echo "提取的 JSON 内容:"
+            cat /tmp/json_output.txt
+            echo ""
             
             # 如果不需要发送通知，跳过
             if [ "$SEND_NOTIFICATION" = "false" ]; then
@@ -140,29 +145,26 @@ jobs:
               exit 0
             fi
             
-            # 解析 JSON 数据
-            UPDATE_TIME=$(grep -o '"update_time": "[^"]*"' /tmp/json_output.txt | head -1 | cut -d'"' -f4)
-            ISSUE_COUNT=$(grep -o '"issue_count": [0-9]*' /tmp/json_output.txt | head -1 | grep -o '[0-9]*')
-            STATUS=$(grep -o '"status": "[^"]*"' /tmp/json_output.txt | head -1 | cut -d'"' -f4)
+            # 安装 jq（如果没有）
+            if ! command -v jq &> /dev/null; then
+              sudo apt-get update && sudo apt-get install -y jq
+            fi
+            
+            # 使用 jq 解析 JSON
+            UPDATE_TIME=$(jq -r '.update_time' /tmp/json_output.txt 2>/dev/null || echo "Unknown")
+            ISSUE_COUNT=$(jq -r '.issue_count' /tmp/json_output.txt 2>/dev/null || echo "0")
+            STATUS=$(jq -r '.status' /tmp/json_output.txt 2>/dev/null || echo "unknown")
             
             echo "解析结果: 更新时间=$UPDATE_TIME, 问题数=$ISSUE_COUNT, 状态=$STATUS"
             
             # 根据状态构建消息
             if [ "$STATUS" = "all_clear" ]; then
-              MESSAGE="✅ 【関東交通情報】全線正常運転中！\n\n🕐 更新時間: $UPDATE_TIME"
+              MESSAGE="✅ 【関東交通情報】全線正常運転中！\n\n🕐 更新時間: $UPDATE_TIME (JST)"
             else
-              # 提取有问题的路线信息
-              LINES_INFO=""
-              while IFS= read -r line; do
-                LINE_NAME=$(echo "$line" | grep -o '"line": "[^"]*"' | cut -d'"' -f4)
-                LINE_STATUS=$(echo "$line" | grep -o '"status": "[^"]*"' | cut -d'"' -f4)
-                LINE_DETAIL=$(echo "$line" | grep -o '"detail": "[^"]*"' | cut -d'"' -f4 | cut -c1-30)
-                if [ -n "$LINE_NAME" ]; then
-                  LINES_INFO="${LINES_INFO}\n• ${LINE_NAME} [${LINE_STATUS}]: ${LINE_DETAIL}..."
-                fi
-              done < <(grep -A3 '"line":' /tmp/json_output.txt | head -20)
+              # 使用 jq 提取路线信息
+              LINES_INFO=$(jq -r '.issues[] | "• \(.line) [\(.status)]: \(.detail[0:25])..."' /tmp/json_output.txt 2>/dev/null | head -5 | tr '\n' '\n')
               
-              MESSAGE="⚠️ 【関東交通情報】${ISSUE_COUNT}件の運行情報\n\n🕐 更新: $UPDATE_TIME\n${LINES_INFO}"
+              MESSAGE="⚠️ 【関東交通情報】${ISSUE_COUNT}件の運行情報\n\n🕐 更新: $UPDATE_TIME (JST)\n\n${LINES_INFO}"
             fi
             
             echo "发送消息内容:"

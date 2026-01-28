@@ -99,9 +99,11 @@ if __name__ == '__main__':
             if NORMAL_OPERATION_TEXT not in line["detail"]
         ]
         
-        # 最終的なJSON構造を作成
+        # 最終的なJSON構造を作成 (JST時間を使用)
+        from datetime import timezone, timedelta
+        JST = timezone(timedelta(hours=9))
         output_json = {
-            "update_time": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            "update_time": datetime.now(JST).strftime('%Y-%m-%d %H:%M:%S'),
             "data_source": TARGET_URL,
             "issue_count": len(troubled_lines),
             "status": "issues_found" if troubled_lines else "all_clear",
