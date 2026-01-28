@@ -86,28 +86,55 @@ jobs:
           username: ${{ env.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           envs: DOCKER_IMAGE,CONTAINER_NAME
-          # 爬虫可能需要较长时间，设置 10 分钟超时
-          command_timeout: 10m
+          # 爬虫可能需要较长时间，设置 15 分钟超时（包含可能的 Docker 安装时间）
+          command_timeout: 15m
           script: |
             set -e  # 遇到错误立即退出
             
             echo "=========================================="
+            echo "🔍 检查 Docker 是否已安装..."
+            echo "=========================================="
+            if ! command -v docker &> /dev/null; then
+              echo "Docker 未安装，正在安装..."
+              
+              # 安装 Docker (Ubuntu/Debian)
+              sudo apt-get update
+              sudo apt-get install -y ca-certificates curl gnupg
+              sudo install -m 0755 -d /etc/apt/keyrings
+              curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+              sudo chmod a+r /etc/apt/keyrings/docker.gpg
+              
+              echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+              
+              sudo apt-get update
+              sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+              
+              # 将当前用户添加到 docker 组
+              sudo usermod -aG docker $USER
+              
+              echo "✅ Docker 安装完成！"
+            else
+              echo "✅ Docker 已安装: $(docker --version)"
+            fi
+            
+            echo ""
+            echo "=========================================="
             echo "🧹 清理旧容器..."
             echo "=========================================="
-            docker rm -f $CONTAINER_NAME 2>/dev/null || echo "没有旧容器需要清理"
+            sudo docker rm -f $CONTAINER_NAME 2>/dev/null || echo "没有旧容器需要清理"
             
             echo ""
             echo "=========================================="
             echo "📦 拉取最新镜像..."
             echo "=========================================="
-            docker pull $DOCKER_IMAGE
+            sudo docker pull $DOCKER_IMAGE
             
             echo ""
             echo "=========================================="
             echo "🚀 运行爬虫任务..."
             echo "=========================================="
             # PYTHONUNBUFFERED=1 确保 Python 输出实时显示，不被缓冲
-            docker run --rm --name $CONTAINER_NAME \
+            sudo docker run --rm --name $CONTAINER_NAME \
               -e PYTHONUNBUFFERED=1 \
               $DOCKER_IMAGE
             
