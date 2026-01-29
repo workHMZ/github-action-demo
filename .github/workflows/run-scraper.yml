@@ -15,14 +15,6 @@ on:
   # 手动触发
   workflow_dispatch:
     inputs:
-      pull_latest:
-        description: '是否拉取最新镜像？'
-        required: true
-        default: 'false'
-        type: choice
-        options:
-          - 'true'
-          - 'false'
       send_notification:
         description: '是否发送通知到 Synology Chat？'
         required: true
@@ -32,160 +24,81 @@ on:
           - 'true'
           - 'false'
 
-env:
-  AZURE_RESOURCE_GROUP: rg-stirling-project
-  AZURE_VM_NAME: vm-runner-transit-scraper
-  IMAGE_NAME: github-action-demo
-  CONTAINER_NAME: demo-runner
-  SSH_USER: azureuser
-
 jobs:
   run-scraper:
     name: 🚀 Run Scraper & Notify
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔐 Azure Login
-        uses: azure/login@v2
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: � Checkout code
+        uses: actions/checkout@v4
 
-      - name: ⚡ Start VM
-        uses: azure/CLI@v2
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
         with:
-          inlineScript: |
-            echo "🔄 正在唤醒 VM..."
-            az vm start \
-              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
-              --name ${{ env.AZURE_VM_NAME }}
-            echo "✅ VM 已启动！"
+          python-version: '3.11'
+          cache: 'pip'
 
-      - name: 🌐 Get VM Public IP
-        id: get-ip
-        uses: azure/CLI@v2
-        with:
-          inlineScript: |
-            IP=$(az vm show -d \
-              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
-              --name ${{ env.AZURE_VM_NAME }} \
-              --query publicIps -o tsv)
-            echo "📍 VM IP: $IP"
-            echo "VM_IP=$IP" >> $GITHUB_OUTPUT
-
-      - name: ⏳ Wait for SSH to be ready
+      - name: � Install dependencies
         run: |
-          echo "⏳ 等待 VM SSH 服务就绪..."
-          for i in {1..12}; do
-            if nc -z -w5 ${{ steps.get-ip.outputs.VM_IP }} 22 2>/dev/null; then
-              echo "✅ SSH 服务已就绪！"
-              exit 0
-            fi
-            echo "尝试 $i/12: SSH 未就绪，等待 10 秒..."
-            sleep 10
-          done
-          echo "❌ SSH 服务启动超时"
-          exit 1
+          pip install selenium webdriver-manager
 
-      - name: 🐳 Run Scraper & Send Notification
-        uses: appleboy/ssh-action@v1.0.3
+      - name: 🚀 Run Scraper
+        id: scraper
+        run: |
+          echo "=========================================="
+          echo " 运行爬虫..."
+          echo "=========================================="
+          
+          python app.py 2>&1 | tee /tmp/scraper_output.txt
+          
+          echo ""
+          echo "=========================================="
+          echo "📤 处理输出..."
+          echo "=========================================="
+          
+          # 提取 JSON 部分
+          grep -Pzo '\{[\s\S]*\}' /tmp/scraper_output.txt | head -c 5000 > /tmp/json_output.txt || true
+          
+          echo "提取的 JSON 内容:"
+          cat /tmp/json_output.txt
+          echo ""
+
+      - name: 📤 Send Notification to Synology Chat
+        if: ${{ github.event.inputs.send_notification != 'false' }}
         env:
-          DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-          PULL_LATEST: ${{ github.event.inputs.pull_latest || 'false' }}
-          SEND_NOTIFICATION: ${{ github.event.inputs.send_notification || 'true' }}
           SYNOLOGY_WEBHOOK: ${{ secrets.SYNOLOGY_CHAT_WEBHOOK }}
-        with:
-          host: ${{ steps.get-ip.outputs.VM_IP }}
-          username: ${{ env.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          envs: DOCKER_IMAGE,CONTAINER_NAME,PULL_LATEST,SEND_NOTIFICATION,SYNOLOGY_WEBHOOK
-          command_timeout: 10m
-          script: |
-            set -e
+        run: |
+          echo "=========================================="
+          echo "📤 发送通知到 Synology Chat..."
+          echo "=========================================="
+          
+          # 使用 jq 解析 JSON
+          UPDATE_TIME=$(jq -r '.update_time' /tmp/json_output.txt 2>/dev/null || echo "Unknown")
+          ISSUE_COUNT=$(jq -r '.issue_count' /tmp/json_output.txt 2>/dev/null || echo "0")
+          STATUS=$(jq -r '.status' /tmp/json_output.txt 2>/dev/null || echo "unknown")
+          
+          echo "解析结果: 更新时间=$UPDATE_TIME, 问题数=$ISSUE_COUNT, 状态=$STATUS"
+          
+          # 根据状态构建消息
+          if [ "$STATUS" = "all_clear" ]; then
+            MESSAGE="✅ 【関東交通情報】全線正常運転中！\n\n🕐 更新時間: $UPDATE_TIME (JST)"
+          else
+            # 使用 jq 提取路线信息
+            LINES_INFO=$(jq -r '.issues[] | "• \(.line) [\(.status)]: \(.detail[0:25])..."' /tmp/json_output.txt 2>/dev/null | head -5 | tr '\n' '\n')
             
-            echo "=========================================="
-            echo "🧹 清理旧容器..."
-            echo "=========================================="
-            sudo docker rm -f $CONTAINER_NAME 2>/dev/null || true
-            
-            # 根据设置决定是否拉取镜像
-            if [ "$PULL_LATEST" = "true" ]; then
-              echo ""
-              echo "=========================================="
-              echo "📦 拉取最新镜像..."
-              echo "=========================================="
-              sudo docker pull $DOCKER_IMAGE
-            fi
-            
-            echo ""
-            echo "=========================================="
-            echo "🚀 运行爬虫..."
-            echo "=========================================="
-            
-            # 运行爬虫并保存完整输出
-            sudo docker run --rm --name $CONTAINER_NAME \
-              -e PYTHONUNBUFFERED=1 \
-              $DOCKER_IMAGE 2>&1 | tee /tmp/scraper_output.txt
-            
-            echo ""
-            echo "=========================================="
-            echo "📤 处理并发送通知..."
-            echo "=========================================="
-            
-            # 提取 JSON 部分（从 { 开始到 } 结束的完整 JSON）
-            grep -Pzo '\{[\s\S]*\}' /tmp/scraper_output.txt | head -c 5000 > /tmp/json_output.txt
-            
-            # 调试：显示提取的 JSON
-            echo "提取的 JSON 内容:"
-            cat /tmp/json_output.txt
-            echo ""
-            
-            # 如果不需要发送通知，跳过
-            if [ "$SEND_NOTIFICATION" = "false" ]; then
-              echo "⏩ 跳过通知发送"
-              exit 0
-            fi
-            
-            # 安装 jq（如果没有）
-            if ! command -v jq &> /dev/null; then
-              sudo apt-get update && sudo apt-get install -y jq
-            fi
-            
-            # 使用 jq 解析 JSON
-            UPDATE_TIME=$(jq -r '.update_time' /tmp/json_output.txt 2>/dev/null || echo "Unknown")
-            ISSUE_COUNT=$(jq -r '.issue_count' /tmp/json_output.txt 2>/dev/null || echo "0")
-            STATUS=$(jq -r '.status' /tmp/json_output.txt 2>/dev/null || echo "unknown")
-            
-            echo "解析结果: 更新时间=$UPDATE_TIME, 问题数=$ISSUE_COUNT, 状态=$STATUS"
-            
-            # 根据状态构建消息
-            if [ "$STATUS" = "all_clear" ]; then
-              MESSAGE="✅ 【関東交通情報】全線正常運転中！\n\n🕐 更新時間: $UPDATE_TIME (JST)"
-            else
-              # 使用 jq 提取路线信息
-              LINES_INFO=$(jq -r '.issues[] | "• \(.line) [\(.status)]: \(.detail[0:25])..."' /tmp/json_output.txt 2>/dev/null | head -5 | tr '\n' '\n')
-              
-              MESSAGE="⚠️ 【関東交通情報】${ISSUE_COUNT}件の運行情報\n\n🕐 更新: $UPDATE_TIME (JST)\n\n${LINES_INFO}"
-            fi
-            
-            echo "发送消息内容:"
-            echo -e "$MESSAGE"
-            
-            # 发送到 Synology Chat
-            curl -k -X POST "$SYNOLOGY_WEBHOOK" \
-              -H "Content-Type: application/x-www-form-urlencoded" \
-              --data-urlencode "payload={\"text\": \"$MESSAGE\"}"
-            
-            echo ""
-            echo "=========================================="
-            echo "✅ 完成！"
-            echo "=========================================="
-
-      - name: 💰 Stop VM (Save Money)
-        if: always()
-        uses: azure/CLI@v2
-        with:
-          inlineScript: |
-            az vm deallocate \
-              --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
-              --name ${{ env.AZURE_VM_NAME }}
-            echo "✅ VM 已关机"
+            MESSAGE="⚠️ 【関東交通情報】${ISSUE_COUNT}件の運行情報\n\n🕐 更新: $UPDATE_TIME (JST)\n\n${LINES_INFO}"
+          fi
+          
+          echo "发送消息内容:"
+          echo -e "$MESSAGE"
+          
+          # 发送到 Synology Chat
+          curl -k -X POST "$SYNOLOGY_WEBHOOK" \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data-urlencode "payload={\"text\": \"$MESSAGE\"}"
+          
+          echo ""
+          echo "=========================================="
+          echo "✅ 完成！"
+          echo "=========================================="
