@@ -1,19 +1,13 @@
 # =============================================================================
 # CD Pipeline: Deploy to Azure Ephemeral VM (Transit Scraper)
 # =============================================================================
-# 触发条件：CI 完成后自动触发 或 手动触发
+# 触发条件：手动触发
 # 功能：唤醒 Azure VM -> 拉取最新镜像 -> 运行任务 -> 关机省钱
 # =============================================================================
 
 name: CD - Deploy to Azure VM
 
 on:
-  # 当 CI workflow 完成后自动触发
-  workflow_run:
-    workflows: ["CI - Build and Push"]
-    types: [completed]
-    branches: ["main"]
-  
   # 手动触发
   workflow_dispatch:
 
@@ -36,9 +30,6 @@ jobs:
   deploy:
     name: 🚀 Deploy to Azure VM
     runs-on: ubuntu-latest
-    
-    # 只有 CI 成功才执行（针对 workflow_run 触发）
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       # =========================================================================

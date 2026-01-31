@@ -136,8 +136,9 @@ This project includes several automated workflows:
 | Workflow | File | Trigger | Description |
 |----------|------|---------|-------------|
 | **CI - Build and Push** | `ci.yml` | Push to `main` | 构建多架构 Docker 镜像并推送到 Docker Hub |
-| **CD - Deploy to Azure VM** | `cd.yml` | CI 完成后 / 手动 | 将爬虫部署到 Azure 临时 VM 运行 |
+| **CD - Deploy to Azure VM** | `cd.yml` | 手动 | 将爬虫部署到 Azure 临时 VM 运行 |
 | **Run Scraper** | `run-scraper.yml` | 每天 8:00 JST / 手动 | 运行爬虫并发送结果到 Synology Chat |
+| **Start PDF Server** | `start-pdf-server.yml` | 每天 7:00 JST / 手动 | 启动 Stirling PDF 服务器 |
 | **Database Backup** | `backup-databases.yml` | 每天 4:00 JST / 手动 | 备份 Neon/Supabase 数据库到 Azure Blob |
 
 #### 💾 Database Backup Workflow
