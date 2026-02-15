@@ -1,15 +1,27 @@
 {
-    "update_time": "2026-02-15 17:55:56",
+    "update_time": "2026-02-16 08:18:34",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "総武線(快速)[東京～千葉]",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月15日 17時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+            "detail": "立川駅での安全確認の影響で、一部列車に遅れが出ています。（2月16日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
+        },
+        {
+            "line": "中央総武線(各停)",
+            "status": "運転状況",
+            "detail": "東京メトロ東西線内で発生したポイント故障の影響で、一部列車に運休が出ています。なお、東京メトロ東西線との直通運転を中止しています。（2月16日 5時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+        },
+        {
+            "line": "東京メトロ東西線",
+            "status": "運転状況",
+            "detail": "西船橋駅で発生したポイント故障の影響で、ダイヤが乱れています。なお、JR中央総武線(各停)との直通運転および快速の運転を中止しています。（2月16日 6時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         }
     ]
 }
