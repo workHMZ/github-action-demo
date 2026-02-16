@@ -1,26 +1,32 @@
 {
-    "update_time": "2026-02-16 08:18:34",
+    "update_time": "2026-02-16 18:10:50",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "南武線[川崎～立川]",
-            "status": "運転状況",
-            "detail": "立川駅での安全確認の影響で、一部列車に遅れが出ています。（2月16日 7時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
-        },
-        {
             "line": "中央総武線(各停)",
             "status": "運転状況",
-            "detail": "東京メトロ東西線内で発生したポイント故障の影響で、一部列車に運休が出ています。なお、東京メトロ東西線との直通運転を中止しています。（2月16日 5時45分掲載）",
+            "detail": "東京メトロ東西線内で発生したポイント故障の影響で、三鷹〜中野駅間、西船橋〜津田沼駅間の一部列車に運休が出ています。なお、東京メトロ東西線との直通運転を中止しています。（2月16日 17時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "武蔵野線内で発生した旅客転落の影響で、一部列車に遅れが出ています。（2月16日 17時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+        },
+        {
+            "line": "武蔵野線",
+            "status": "運転状況",
+            "detail": "北朝霞駅で発生した旅客転落の影響で、一部列車に遅れや運休が出ています。（2月16日 18時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
         },
         {
             "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "西船橋駅で発生したポイント故障の影響で、ダイヤが乱れています。なお、JR中央総武線(各停)との直通運転および快速の運転を中止しています。（2月16日 6時5分掲載）",
+            "detail": "西船橋駅で発生したポイント故障の影響で、ダイヤが乱れています。なお、JR中央総武線(各停)との直通運転を中止しています。（2月16日 17時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         }
     ]
