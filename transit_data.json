@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-02-17 08:21:38",
+    "update_time": "2026-02-17 18:09:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "西武新宿線",
             "status": "運転状況",
-            "detail": "07:39頃、東京メトロ副都心線内でのドア点検の影響で、一部列車に遅れが出ています。（2月17日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "15:17頃、都立家政駅で発生した人身事故の影響で、一部列車に運休が出ています。（2月17日 17時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
         }
     ]
 }
