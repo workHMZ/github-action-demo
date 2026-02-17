@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-02-17 18:09:11",
+    "update_time": "2026-02-18 08:21:31",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "西武新宿線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "15:17頃、都立家政駅で発生した人身事故の影響で、一部列車に運休が出ています。（2月17日 17時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
+            "detail": "東海道本線内での線路内点検の影響で、一部列車に遅れが出ています。（2月18日 7時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "東急池上線",
+            "status": "運転状況",
+            "detail": "07:27頃、千鳥町駅での救護活動の影響で、列車に遅れが出ています。（2月18日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/117/0"
         }
     ]
 }
