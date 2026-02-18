@@ -1,21 +1,51 @@
 {
-    "update_time": "2026-02-18 18:08:52",
+    "update_time": "2026-02-19 08:22:13",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 7,
     "status": "issues_found",
     "issues": [
         {
             "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "高崎線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月18日 17時55分掲載）",
+            "detail": "横須賀線内での安全確認の影響で、一部列車に遅れが出ています。（2月19日 7時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
             "line": "横須賀線",
             "status": "運転状況",
-            "detail": "成田線内での車両点検の影響で、一部列車に遅れが出ています。（2月18日 17時20分掲載）",
+            "detail": "戸塚駅での安全確認の影響で、一部列車に遅れが出ています。（2月19日 7時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "横須賀線内での安全確認の影響で、一部列車に遅れが出ています。（2月19日 8時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "京王井の頭線",
+            "status": "運転状況",
+            "detail": "07:50頃、渋谷駅での車両点検の影響で、列車に遅れや運休が出ています。（2月19日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/108/0"
+        },
+        {
+            "line": "東急田園都市線",
+            "status": "運転状況",
+            "detail": "05:53頃、東武スカイツリーライン内での線路内点検の影響で、一部列車に運転変更が出ています。（2月19日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+        },
+        {
+            "line": "東京メトロ日比谷線",
+            "status": "運転状況",
+            "detail": "05:53頃、東武スカイツリーライン内での線路内点検の影響で、ダイヤが乱れています。（2月19日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
+        },
+        {
+            "line": "東京メトロ半蔵門線",
+            "status": "運転状況",
+            "detail": "05:53頃、東武スカイツリーライン内での線路内点検の影響で、東武スカイツリーラインとの直通運転を中止しています。（2月19日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
         }
     ]
 }
