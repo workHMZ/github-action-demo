@@ -1,8 +1,51 @@
 {
-    "update_time": "2026-02-22 08:16:59",
+    "update_time": "2026-02-22 17:53:43",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 7,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "宇都宮線内での線路内点検の影響で、大船方面行の一部列車に遅れが出ています。（2月22日 16時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "幕張豊砂〜海浜幕張駅間で発生した沿線火災の影響で、一部列車に遅れが出ています。（2月22日 17時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+        },
+        {
+            "line": "武蔵野線",
+            "status": "運転状況",
+            "detail": "京葉線内で発生した沿線火災の影響で、一部列車に遅れが出ています。（2月22日 17時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+        },
+        {
+            "line": "京王線",
+            "status": "運転状況",
+            "detail": "15:16頃、京王相模原線内での線路内点検の影響で、一部列車に遅れが出ています。（2月22日 16時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+        },
+        {
+            "line": "京王新線",
+            "status": "運転状況",
+            "detail": "15:16頃、京王相模原線内での線路内点検の影響で、一部列車に遅れが出ています。（2月22日 16時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "15:16頃、稲城〜若葉台駅間での線路内点検の影響で、一部列車に遅れが出ています。（2月22日 16時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "15:16頃、京王相模原線内での線路内点検の影響で、一部列車に遅れが出ています。（2月22日 16時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+        }
+    ]
 }
