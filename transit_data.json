@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-02-23 18:11:23",
+    "update_time": "2026-02-24 08:28:15",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "救護活動の影響で、一部列車に遅れが出ています。（2月24日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        },
+        {
+            "line": "東急目黒線",
+            "status": "運転状況",
+            "detail": "相鉄線内での救護活動の影響で、一部列車に遅れが出ています。（2月24日 8時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
+        },
+        {
+            "line": "東急田園都市線",
+            "status": "運転状況",
+            "detail": "06:43頃、長津田駅付近で発生した車両故障の影響で、一部列車に運休が出ています。（2月24日 7時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+        }
+    ]
 }
