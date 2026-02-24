@@ -1,8 +1,39 @@
 {
-    "update_time": "2026-02-24 18:11:26",
+    "update_time": "2026-02-25 08:23:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 5,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "06:51頃、柏駅で発生した旅客転落の影響で、一部列車に遅れが出ています。（2月25日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        },
+        {
+            "line": "常磐線(各停)",
+            "status": "運転状況",
+            "detail": "06:51頃、常磐線(快速)内で発生した旅客転落の影響で、綾瀬〜我孫子駅間の一部列車に遅れが出ています。（2月25日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
+        },
+        {
+            "line": "東急目黒線",
+            "status": "運転状況",
+            "detail": "06:44頃、都営三田線内での車両点検の影響で、列車に遅れが出ています。（2月25日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
+        },
+        {
+            "line": "都営浅草線",
+            "status": "運転状況",
+            "detail": "06:33頃、京成本線内で発生した踏切支障の影響で、ダイヤが乱れています。（2月25日 7時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
+        },
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "06:51頃、JR常磐線(快速)内で発生した旅客転落の影響で、ダイヤが乱れています。（2月25日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+        }
+    ]
 }
