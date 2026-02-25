@@ -11,7 +11,7 @@ A Python-based web scraper that collects real-time train operation information f
 - Outputs structured JSON data
 - Automatic GitHub Pages deployment for web dashboard
 - Synology Chat notifications
-- Scheduled runs (8:00 AM and 5:30 PM JST)
+- Scheduled runs (7:30 AM, 12:00 PM, and 5:30 PM JST)
 
 ## Project Structure
 
@@ -24,10 +24,7 @@ A Python-based web scraper that collects real-time train operation information f
 ├── Dockerfile              # Container configuration
 └── .github/workflows/
     ├── run-scraper.yml     # Scraper + notification workflow
-    ├── ci.yml              # Docker image build workflow
-    ├── cd.yml              # Azure VM deployment workflow
-    ├── backup-databases.yml # Database backup workflow
-    └── start-pdf-server.yml # PDF server workflow
+    └── (other personal workflows)
 ```
 
 ## Monitored Railway Lines
@@ -85,10 +82,20 @@ python app.py
 
 | Workflow | Schedule | Description |
 |----------|----------|-------------|
-| Run Scraper | 8:00 AM, 5:30 PM JST | Scrape transit data, update GitHub Pages, send Synology Chat notification |
-| CI Build | On push to main | Build multi-arch Docker image, push to Docker Hub |
-| CD Deploy | Manual | Deploy scraper to Azure VM |
-| Database Backup | Monday 4:00 AM JST | Backup PostgreSQL databases to Azure Blob Storage |
+| Run Scraper | 7:30 AM, 12:00 PM, 5:30 PM JST | Scrape transit data, update GitHub Pages, send Synology Chat notification |
+
+Note: some workflow files in this repository are for personal infrastructure tasks and are not part of this transit monitor project.
+
+### Personal reference (non-project workflows)
+
+The following workflows are kept in this repository for personal operations:
+
+| Workflow file | Purpose | Trigger |
+|---------------|---------|---------|
+| `backup-databases.yml` | PostgreSQL backup to Azure Blob + Synology Chat notification | Weekly Monday 4:00 JST / Manual |
+| `cd.yml` | Wake Azure VM and run latest Docker image via SSH | Manual |
+| `ci.yml` | Build and push multi-arch Docker image to Docker Hub | Push to main (selected paths) / Manual |
+| `start-pdf-server.yml` | Start Stirling PDF VM | Daily 7:00 JST / Manual |
 
 ## Required Secrets
 
@@ -96,13 +103,6 @@ For GitHub Actions workflows to function, configure the following secrets:
 
 ```
 SYNOLOGY_CHAT_WEBHOOK          # Synology Chat incoming webhook URL
-DOCKERHUB_USERNAME             # Docker Hub username
-DOCKERHUB_TOKEN                # Docker Hub access token
-AZURE_CREDENTIALS              # Azure service principal credentials
-SSH_PRIVATE_KEY                # SSH key for Azure VM
-AZURE_STORAGE_CONNECTION_STRING # Azure Blob Storage connection string
-NEON_LOBECHAT_DB_URL           # Neon database connection URL
-SUPABASE_VAULTWARDEN_DB_URL    # Supabase database connection URL
 ```
 
 ## Web Dashboard
@@ -121,8 +121,7 @@ Features:
 - Requests + BeautifulSoup4
 - GitHub Actions
 - GitHub Pages
-- Docker (multi-arch: amd64/arm64)
-- Azure Blob Storage
+- Docker
 
 
 ---
@@ -138,7 +137,7 @@ Yahoo!路線情報から東京圏の鉄道運行情報をリアルタイムで�
 - 構造化されたJSON形式で出力
 - GitHub Pagesへの自動デプロイ（Webダッシュボード）
 - Synology Chat通知
-- 定期実行（毎日 8:00、17:30 JST）
+- 定期実行（毎日 7:30、12:00、17:30 JST）
 
 ## 監視対象路線
 
@@ -171,10 +170,20 @@ python app.py
 
 | ワークフロー | スケジュール | 説明 |
 |-------------|-------------|------|
-| Run Scraper | 8:00、17:30 JST | 交通情報を取得し、GitHub Pages更新、Synology Chat通知 |
-| CI Build | mainへのpush時 | マルチアーチDockerイメージをビルド、Docker Hubへプッシュ |
-| CD Deploy | 手動 | Azure VMにデプロイ |
-| Database Backup | 毎週月曜 4:00 JST | PostgreSQLデータベースをAzure Blobにバックアップ |
+| Run Scraper | 7:30、12:00、17:30 JST | 交通情報を取得し、GitHub Pages更新、Synology Chat通知 |
+
+注記: このリポジトリ内の一部ワークフローファイルは個人インフラ用途であり、本プロジェクトの機能範囲には含めていません。
+
+### 個人用メモ（本プロジェクト外ワークフロー）
+
+以下は個人運用のため同一リポジトリに置いているワークフローです。
+
+| ワークフローファイル | 用途 | トリガー |
+|---------------------|------|----------|
+| `backup-databases.yml` | PostgreSQL を Azure Blob にバックアップし Synology Chat に通知 | 毎週月曜 4:00 JST / 手動 |
+| `cd.yml` | Azure VM を起動し、SSH 経由で最新 Docker イメージを実行 | 手動 |
+| `ci.yml` | マルチアーチ Docker イメージを Docker Hub にビルド＆プッシュ | main への push（対象パス）/ 手動 |
+| `start-pdf-server.yml` | Stirling PDF 用 VM を起動 | 毎日 7:00 JST / 手動 |
 
 ## Webダッシュボード
 
@@ -191,5 +200,4 @@ python app.py
 - Python 3.11+
 - Requests + BeautifulSoup4
 - GitHub Actions / GitHub Pages
-- Docker (マルチアーチ: amd64/arm64)
-- Azure Blob Storage
+- Docker
