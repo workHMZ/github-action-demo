@@ -1,39 +1,27 @@
 {
-    "update_time": "2026-02-25 14:00:30",
+    "update_time": "2026-02-25 18:12:06",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "西武池袋線・秩父線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "12:43頃、東長崎〜江古田駅間での踏切内点検の影響で、一部列車に遅れが出ています。（2月25日 13時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+            "detail": "埼京川越線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月25日 16時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
-            "line": "東急田園都市線",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "10:13頃、東京メトロ半蔵門線内で発生した車両故障の影響で、ダイヤが乱れています。（2月25日 13時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "10:13頃、東京メトロ半蔵門線内で発生した車両故障の影響で、下り線(溝の口方面行)の一部列車に運転変更が出ています。（2月25日 11時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
+            "detail": "矢野口駅での救護活動の影響で、一部列車に遅れが出ています。（2月25日 17時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         },
         {
             "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "06:33頃、京成本線内で発生した踏切支障の影響で、ダイヤが乱れています。（2月25日 7時0分掲載）",
+            "detail": "京成線内での踏切内点検の影響で、ダイヤが乱れています。（2月25日 17時45分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "10:13頃、表参道〜渋谷駅間で発生した車両故障の影響で、ダイヤが乱れています。なお、東武スカイツリーラインとの直通運転を中止しています。（2月25日 12時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
         }
     ]
 }
