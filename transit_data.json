@@ -1,33 +1,8 @@
 {
-    "update_time": "2026-02-26 13:57:51",
+    "update_time": "2026-02-26 18:09:21",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月26日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "高崎線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月26日 12時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "新川崎〜横浜駅間での踏切内点検の影響で、一部列車に遅れが出ています。（2月26日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月26日 13時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
