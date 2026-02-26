@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-02-26 18:09:21",
+    "update_time": "2026-02-27 08:00:12",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "06:36頃、自由が丘駅で発生した車両故障の影響で、上り線(渋谷方面行)の列車に遅れが出ています。（2月27日 7時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        }
+    ]
 }
