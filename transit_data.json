@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-02-27 08:00:12",
+    "update_time": "2026-02-27 13:52:09",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "小田急小田原線",
             "status": "運転状況",
-            "detail": "06:36頃、自由が丘駅で発生した車両故障の影響で、上り線(渋谷方面行)の列車に遅れが出ています。（2月27日 7時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "10:37頃、新百合ケ丘駅で発生した人身事故の影響で、一部列車に遅れが出ています。なお、東京メトロ千代田線との直通運転を中止しています。（2月27日 12時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+        },
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "10:37頃、小田急小田原線内で発生した人身事故の影響で、小田急小田原線との直通運転を中止しています。（2月27日 10時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
         }
     ]
 }
