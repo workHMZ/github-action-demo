@@ -1,21 +1,33 @@
 {
-    "update_time": "2026-02-27 13:52:09",
+    "update_time": "2026-02-27 18:03:50",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "京王線",
             "status": "運転状況",
-            "detail": "10:37頃、新百合ケ丘駅で発生した人身事故の影響で、一部列車に遅れが出ています。なお、東京メトロ千代田線との直通運転を中止しています。（2月27日 12時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "15:14頃、つつじケ丘〜柴崎駅間で発生した人身事故の影響で、列車に遅れや運休が出ています。（2月27日 17時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
         },
         {
-            "line": "東京メトロ千代田線",
+            "line": "京王新線",
             "status": "運転状況",
-            "detail": "10:37頃、小田急小田原線内で発生した人身事故の影響で、小田急小田原線との直通運転を中止しています。（2月27日 10時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+            "detail": "15:14頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（2月27日 16時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "15:14頃、京王線内で発生した人身事故の影響で、列車に遅れや運休が出ています。（2月27日 17時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "15:14頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（2月27日 16時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
         }
     ]
 }
