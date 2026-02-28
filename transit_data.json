@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-02-28 13:20:51",
+    "update_time": "2026-02-28 17:49:00",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "横浜線内での踏切内点検の影響で、一部列車に遅れが出ています。（2月28日 17時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "常磐線(各停)",
+            "status": "運転状況",
+            "detail": "東京メトロ千代田線内での車両点検の影響で、綾瀬〜我孫子駅間の一部列車に遅れが出ています。（2月28日 17時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
+        },
+        {
+            "line": "東京メトロ東西線",
+            "status": "運転状況",
+            "detail": "15:14頃、西船橋駅での停止位置確認の影響で、一部列車に遅れが出ています。（2月28日 15時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+        }
+    ]
 }
