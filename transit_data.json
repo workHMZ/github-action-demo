@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-03-01 14:00:30",
+    "update_time": "2026-03-01 17:51:37",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "常磐線(各停)",
+            "status": "運転状況",
+            "detail": "東京メトロ千代田線内で発生した架線支障の影響で、綾瀬〜我孫子駅間の一部列車に遅れが出ています。（3月1日 17時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
+        }
+    ]
 }
