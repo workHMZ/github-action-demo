@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-03-02 18:05:41",
+    "update_time": "2026-03-03 07:53:58",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "高崎線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（3月2日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "立川駅での安全確認の影響で、一部列車に遅れが出ています。（3月3日 7時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         }
     ]
 }
