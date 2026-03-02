@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-03-02 07:49:01",
+    "update_time": "2026-03-02 13:55:36",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東急多摩川線",
-            "status": "運転状況",
-            "detail": "06:31頃、東急池上線内で発生した人身事故の影響で、一部列車に運休が出ています。（3月2日 7時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/116/0"
-        },
-        {
-            "line": "東急池上線",
-            "status": "運転状況",
-            "detail": "蓮沼駅で発生した人身事故の影響で、雪が谷大塚〜蒲田駅間の運転を見合わせていましたが、07:40頃、運転を再開しました。なお、列車に遅れや運休が出ています。（3月2日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/117/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
