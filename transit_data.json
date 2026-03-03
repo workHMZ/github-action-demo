@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-03-03 18:05:03",
+    "update_time": "2026-03-04 07:53:10",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "横須賀線内でのドア点検の影響で、一部列車に遅れが出ています。（3月4日 7時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "西武新宿線",
+            "status": "運転状況",
+            "detail": "06:50頃、下落合〜中井駅間での踏切内点検の影響で、一部列車に遅れが出ています。（3月4日 7時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
+        },
+        {
+            "line": "西武拝島線",
+            "status": "運転状況",
+            "detail": "06:50頃、西武新宿線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月4日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
+        },
+        {
+            "line": "都営浅草線",
+            "status": "運転状況",
+            "detail": "05:04頃、京急本線内で発生した人身事故の影響で、ダイヤが乱れています。（3月4日 6時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
+        }
+    ]
 }
