@@ -1,15 +1,27 @@
 {
-    "update_time": "2026-03-04 13:47:42",
+    "update_time": "2026-03-04 18:01:26",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "常磐線(快速)[品川～取手]",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "常磐線内で発生した動物支障の影響で、一部列車に運休が出ています。（3月4日 13時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+            "detail": "横須賀線内で発生した人身事故の影響で、運転を見合わせています。（3月4日 17時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "新川崎〜横浜駅間で発生した人身事故の影響で、新宿〜大船駅間の運転を見合わせています。運転区間の一部列車に遅れや運休が出ています。（3月4日 17時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "新川崎〜横浜駅間で発生した人身事故の影響で、運転を見合わせています。振替輸送を行っています。（3月4日 18時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         }
     ]
 }
