@@ -1,21 +1,27 @@
 {
-    "update_time": "2026-03-05 18:04:56",
+    "update_time": "2026-03-06 08:35:43",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京葉線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "武蔵野線内での線路内点検の影響で、一部列車に遅れが出ています。（3月5日 17時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+            "detail": "横須賀線内での車両点検の影響で、一部列車に遅れが出ています。（3月6日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
-            "line": "武蔵野線",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "西浦和〜武蔵浦和駅間での線路内点検の影響で、一部列車に遅れが出ています。（3月5日 15時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+            "detail": "戸塚〜大船駅間での車両点検の影響で、一部列車に遅れが出ています。（3月6日 8時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "横須賀線内での車両点検の影響で、一部列車に遅れが出ています。（3月6日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         }
     ]
 }
