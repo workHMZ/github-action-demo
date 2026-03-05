@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-03-05 13:51:47",
+    "update_time": "2026-03-05 18:04:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "西武池袋線・秩父線",
+            "line": "京葉線",
             "status": "運転状況",
-            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月5日 13時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+            "detail": "武蔵野線内での線路内点検の影響で、一部列車に遅れが出ています。（3月5日 17時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         },
         {
-            "line": "西武有楽町線",
+            "line": "武蔵野線",
             "status": "運転状況",
-            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月5日 13時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月5日 13時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "西浦和〜武蔵浦和駅間での線路内点検の影響で、一部列車に遅れが出ています。（3月5日 15時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
         }
     ]
 }
