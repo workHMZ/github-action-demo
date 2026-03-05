@@ -1,33 +1,27 @@
 {
-    "update_time": "2026-03-05 07:57:29",
+    "update_time": "2026-03-05 13:51:47",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
+            "line": "西武池袋線・秩父線",
+            "status": "運転状況",
+            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月5日 13時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+        },
+        {
+            "line": "西武有楽町線",
+            "status": "運転状況",
+            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月5日 13時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+        },
+        {
             "line": "東急東横線",
             "status": "運転状況",
-            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に運転変更が出ています。（3月5日 7時20分掲載）",
+            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月5日 13時35分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "強風の影響で、JR中央総武線(各停)・津田沼方面との直通運転を中止しています。（3月5日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、ダイヤが乱れています。なお、東武東上線との直通運転を中止しています。（3月5日 7時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "07:06頃、東武東上線内で発生した人身事故の影響で、ダイヤが乱れています。なお、東武東上線との直通運転を中止しています。（3月5日 7時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
