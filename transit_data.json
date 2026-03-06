@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-03-06 18:00:51",
+    "update_time": "2026-03-07 07:55:13",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "常磐線内で発生した旅客転落の影響で、一部列車に遅れが出ています。（3月7日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        },
+        {
+            "line": "小田急小田原線",
+            "status": "運転状況",
+            "detail": "07:10頃、愛甲石田〜伊勢原駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（3月7日 7時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+        }
+    ]
 }
