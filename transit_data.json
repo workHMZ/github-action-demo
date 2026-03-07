@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-03-07 13:26:50",
+    "update_time": "2026-03-07 17:52:10",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "中央総武線(各停)",
             "status": "運転状況",
-            "detail": "高崎線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月7日 12時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "三鷹駅での救護活動の影響で、一部列車に遅れが出ています。（3月7日 17時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "越中島〜潮見駅間での車両点検の影響で、一部列車に遅れが出ています。（3月7日 17時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         }
     ]
 }
