@@ -1,39 +1,8 @@
 {
-    "update_time": "2026-03-09 18:05:53",
+    "update_time": "2026-03-10 07:54:24",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "16:31頃、東海道本線内で発生した人身事故の影響で、品川〜蒲田駅間の運転を見合わせています。運転区間の列車に遅れや運休が出ています。振替輸送を行っています。（3月9日 17時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "16:31頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月9日 18時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "16:31頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月9日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
-            "status": "運転状況",
-            "detail": "16:31頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月9日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
-        },
-        {
-            "line": "上野東京ライン",
-            "status": "運転状況",
-            "detail": "16:31頃、東海道本線内で発生した人身事故の影響で、東海道本線と宇都宮線・高崎線との直通運転を中止しています。（3月9日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/627/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
