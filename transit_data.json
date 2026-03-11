@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-03-11 07:53:54",
+    "update_time": "2026-03-11 13:49:52",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "北浦和駅での線路内点検の影響で、一部列車に遅れが出ています。（3月11日 11時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "京浜東北根岸線内での線路内点検の影響で、一部列車に遅れが出ています。（3月11日 11時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "日暮里〜三河島駅間で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（3月11日 12時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        }
+    ]
 }
