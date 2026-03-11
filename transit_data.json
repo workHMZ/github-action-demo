@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-03-11 18:04:59",
+    "update_time": "2026-03-12 07:49:44",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "東海道本線内でのドア点検の影響で、一部列車に遅れが出ています。（3月11日 17時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月11日 17時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
