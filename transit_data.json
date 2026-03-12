@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-03-12 07:49:44",
+    "update_time": "2026-03-12 13:54:21",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "小田急江ノ島線",
+            "status": "運転状況",
+            "detail": "12:38頃、湘南台駅で発生した人身事故の影響で、長後〜藤沢駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（3月12日 12時38分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "12:59頃、西武池袋線・秩父線内での踏切内点検の影響で、一部列車に運休が出ています。（3月12日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        }
+    ]
 }
