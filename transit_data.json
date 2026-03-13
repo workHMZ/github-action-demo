@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-03-13 07:52:50",
+    "update_time": "2026-03-13 13:51:47",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "西武池袋線・秩父線",
+            "status": "運転状況",
+            "detail": "東急東横線内で発生した停電の影響で、一部列車に遅れや運休が出ています。（3月13日 13時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+        },
+        {
+            "line": "西武有楽町線",
+            "status": "運転状況",
+            "detail": "東急東横線内で発生した停電の影響で、列車に遅れや運休が出ています。（3月13日 13時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "停電の影響で、菊名〜横浜駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（3月13日 12時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "東急東横線内で発生した停電の影響で、ダイヤが乱れています。（3月13日 12時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+        }
+    ]
 }
