@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-03-13 13:51:47",
+    "update_time": "2026-03-13 18:03:35",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 4,
@@ -14,7 +14,7 @@
         {
             "line": "西武有楽町線",
             "status": "運転状況",
-            "detail": "東急東横線内で発生した停電の影響で、列車に遅れや運休が出ています。（3月13日 13時20分掲載）",
+            "detail": "東急東横線内で発生した停電の影響で、一部列車に遅れや運休が出ています。（3月13日 14時20分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/90/0"
         },
         {
