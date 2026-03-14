@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-03-14 13:49:28",
+    "update_time": "2026-03-14 17:57:30",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "12:39頃、東急大井町線内で発生した踏切支障の影響で、一部列車に運休が出ています。（3月14日 13時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "12:39頃、戸越公園〜中延駅間で発生した踏切支障の影響で、列車に遅れや運転変更が出ています。（3月14日 13時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
