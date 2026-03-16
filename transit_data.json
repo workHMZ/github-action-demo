@@ -1,21 +1,27 @@
 {
-    "update_time": "2026-03-16 18:37:26",
+    "update_time": "2026-03-17 07:56:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "総武線(快速)[東京～千葉]",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "総武本線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（3月16日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+            "detail": "06:40頃、相鉄線内での救護活動の影響で、一部列車に運転変更が出ています。（3月17日 7時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         },
         {
-            "line": "東京メトロ東西線",
+            "line": "東急目黒線",
             "status": "運転状況",
-            "detail": "17:17頃、中野駅で発生した線路内立入の影響で、ダイヤが乱れています。（3月16日 18時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+            "detail": "06:40頃、相鉄線内での救護活動の影響で、一部列車に遅れが出ています。（3月17日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
+        },
+        {
+            "line": "都営三田線",
+            "status": "運転状況",
+            "detail": "06:40頃、相鉄線内での救護活動の影響で、一部列車のダイヤが乱れています。（3月17日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
         }
     ]
 }
