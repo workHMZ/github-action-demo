@@ -1,20 +1,26 @@
 {
-    "update_time": "2026-03-16 07:55:13",
+    "update_time": "2026-03-16 14:23:39",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "埼京川越線内で発生した窓ガラス破損の影響で、一部列車に遅れや運休が出ています。（3月16日 11時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
             "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "大宮駅で発生した窓ガラス破損の影響で、大宮〜川越駅間の一部列車に遅れが出ています。（3月16日 5時50分掲載）",
+            "detail": "大宮駅で発生した窓ガラス破損の影響で、一部列車に遅れや運休が出ています。（3月16日 13時35分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/50/0"
         },
         {
             "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "京急本線内での線路内点検の影響で、一部列車のダイヤが乱れています。（3月16日 7時30分掲載）",
+            "detail": "京急本線内での線路内点検の影響で、ダイヤが乱れています。（3月16日 9時20分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
