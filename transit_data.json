@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-03-17 07:56:25",
+    "update_time": "2026-03-17 13:59:23",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "06:40頃、相鉄線内での救護活動の影響で、一部列車に運転変更が出ています。（3月17日 7時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "横浜線内でのドア点検の影響で、東神奈川〜桜木町駅間の一部列車に遅れが出ています。（3月17日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "東急目黒線",
+            "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "06:40頃、相鉄線内での救護活動の影響で、一部列車に遅れが出ています。（3月17日 7時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
-        },
-        {
-            "line": "都営三田線",
-            "status": "運転状況",
-            "detail": "06:40頃、相鉄線内での救護活動の影響で、一部列車のダイヤが乱れています。（3月17日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
+            "detail": "JR中央線(快速)内で発生した線路内立入の影響で、一部列車に遅れが出ています。（3月17日 13時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         }
     ]
 }
