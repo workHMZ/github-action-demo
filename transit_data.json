@@ -1,21 +1,45 @@
 {
-    "update_time": "2026-03-21 13:43:48",
+    "update_time": "2026-03-21 17:54:20",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 6,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "東急田園都市線",
             "status": "運転状況",
-            "detail": "11:10頃、中野駅で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（3月21日 13時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+            "detail": "17:03頃、たまプラーザ駅での車両点検の影響で、一部列車に遅れが出ています。（3月21日 17時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
         },
         {
-            "line": "中央総武線(各停)",
+            "line": "東急大井町線",
             "status": "運転状況",
-            "detail": "11:10頃、中央線(快速)内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。なお、東京メトロ東西線との直通運転を中止しています。（3月21日 12時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+            "detail": "17:03頃、東急田園都市線内での車両点検の影響で、一部列車に運休が出ています。（3月21日 17時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
+        },
+        {
+            "line": "東京メトロ有楽町線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（3月21日 17時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+        },
+        {
+            "line": "東京メトロ半蔵門線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（3月21日 17時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
+        },
+        {
+            "line": "東京メトロ南北線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（3月21日 16時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（3月21日 17時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
