@@ -1,45 +1,8 @@
 {
-    "update_time": "2026-03-21 17:54:20",
+    "update_time": "2026-03-22 07:50:00",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 6,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "17:03頃、たまプラーザ駅での車両点検の影響で、一部列車に遅れが出ています。（3月21日 17時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "17:03頃、東急田園都市線内での車両点検の影響で、一部列車に運休が出ています。（3月21日 17時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（3月21日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（3月21日 17時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
-        },
-        {
-            "line": "東京メトロ南北線",
-            "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（3月21日 16時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（3月21日 17時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
