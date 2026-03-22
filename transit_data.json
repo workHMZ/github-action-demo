@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-03-22 13:59:28",
+    "update_time": "2026-03-22 17:56:32",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "青梅線内での線路内点検の影響で、東京〜立川駅間の上り線(東京方面行)の一部列車に遅れが出ています。（3月22日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+            "detail": "一部列車に遅れが出ています。（3月22日 17時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（3月22日 17時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
