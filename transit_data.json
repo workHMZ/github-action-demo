@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-03-23 14:10:50",
+    "update_time": "2026-03-23 18:34:24",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "常磐線(各停)",
+            "status": "運転状況",
+            "detail": "17:03頃、東京メトロ千代田線内での安全確認の影響で、綾瀬〜松戸駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（3月23日 17時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
+        },
+        {
+            "line": "小田急小田原線",
+            "status": "運転状況",
+            "detail": "17:03頃、東京メトロ千代田線内での安全確認の影響で、一部列車に運休や運転変更が出ています。なお、東京メトロ千代田線との直通運転を中止しています。（3月23日 17時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+        },
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "17:03頃、町屋〜北千住駅間での安全確認の影響で、湯島〜綾瀬駅間の運転を見合わせています。運転区間の列車に遅れや運転変更が出ています。振替輸送を行っています。（3月23日 17時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+        }
+    ]
 }
