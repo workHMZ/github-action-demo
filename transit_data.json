@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-03-24 14:01:22",
+    "update_time": "2026-03-24 18:12:47",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "都営浅草線",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "09:11頃、京急本線内で発生した人身事故の影響で、ダイヤが乱れています。（3月24日 9時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
+            "detail": "17:42頃、学芸大学駅での救護活動の影響で、列車に遅れが出ています。（3月24日 17時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "17:42頃、東急東横線内での救護活動の影響で、一部列車に遅れが出ています。（3月24日 17時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
