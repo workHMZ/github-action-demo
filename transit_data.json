@@ -1,21 +1,15 @@
 {
-    "update_time": "2026-03-24 18:12:47",
+    "update_time": "2026-03-25 07:57:55",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "17:42頃、学芸大学駅での救護活動の影響で、列車に遅れが出ています。（3月24日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "17:42頃、東急東横線内での救護活動の影響で、一部列車に遅れが出ています。（3月24日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "十条〜赤羽駅間で発生した線路内立入の影響で、一部列車に遅れや運転変更が出ています。（3月25日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
         }
     ]
 }
