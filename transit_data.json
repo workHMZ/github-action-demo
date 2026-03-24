@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-03-24 07:59:06",
+    "update_time": "2026-03-24 14:01:22",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "横須賀線",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（3月24日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+            "detail": "09:11頃、京急本線内で発生した人身事故の影響で、ダイヤが乱れています。（3月24日 9時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
