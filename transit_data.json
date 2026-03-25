@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-03-25 07:57:55",
+    "update_time": "2026-03-25 14:01:42",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "十条〜赤羽駅間で発生した線路内立入の影響で、一部列車に遅れや運転変更が出ています。（3月25日 7時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+            "detail": "池袋〜新宿駅間での車両点検の影響で、一部列車に遅れが出ています。（3月25日 9時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "舞浜駅での救護活動の影響で、下り線(蘇我方面行)の一部列車に遅れが出ています。（3月25日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         }
     ]
 }
