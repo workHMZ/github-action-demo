@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-03-26 18:31:28",
+    "update_time": "2026-03-27 07:56:10",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "中央線(快速)[東京～高尾]",
-            "status": "運転状況",
-            "detail": "東小金井駅で発生した人身事故の影響で、一部列車に遅れや運休が出ています。なお、青梅線との直通運転を中止しています。（3月26日 17時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "東京メトロ南北線",
-            "status": "運転状況",
-            "detail": "17:45頃、飯田橋駅でのホームドア点検の影響で、一部列車に遅れが出ています。（3月26日 18時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
