@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-03-27 14:15:05",
+    "update_time": "2026-03-27 18:11:46",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "小田急江ノ島線",
+            "status": "運転状況",
+            "detail": "16:13頃、高座渋谷〜長後駅間で発生した人身事故の影響で、ダイヤが乱れています。（3月27日 18時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
+        }
+    ]
 }
