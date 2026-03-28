@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-03-28 14:01:23",
+    "update_time": "2026-03-28 18:02:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "中央本線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（3月28日 14時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        }
+    ]
 }
