@@ -1,38 +1,32 @@
 {
-    "update_time": "2026-03-29 18:02:40",
+    "update_time": "2026-03-30 07:59:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
             "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "17:05頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（3月29日 18時0分掲載）",
+            "detail": "鶴見〜新子安駅間での踏切内点検の影響で、一部列車に遅れが出ています。（3月30日 7時0分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "横須賀線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "17:05頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月29日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+            "detail": "京浜東北根岸線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月30日 7時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
             "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "立川〜日野駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（3月29日 16時10分掲載）",
+            "detail": "吉祥寺〜三鷹駅間での車両点検の影響で、一部列車に遅れが出ています。（3月30日 7時45分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "17:05頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月29日 17時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
         },
         {
             "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "17:05頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（3月29日 17時55分掲載）",
+            "detail": "京浜東北根岸線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月30日 7時20分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         }
     ]
