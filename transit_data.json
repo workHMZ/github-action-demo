@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-03-29 07:56:30",
+    "update_time": "2026-03-29 14:18:37",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（3月29日 7時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
