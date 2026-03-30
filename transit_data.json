@@ -1,33 +1,15 @@
 {
-    "update_time": "2026-03-30 07:59:11",
+    "update_time": "2026-03-30 14:31:43",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "鶴見〜新子安駅間での踏切内点検の影響で、一部列車に遅れが出ています。（3月30日 7時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "京浜東北根岸線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月30日 7時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
             "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "吉祥寺〜三鷹駅間での車両点検の影響で、一部列車に遅れが出ています。（3月30日 7時45分掲載）",
+            "detail": "10:23頃、荻窪駅で発生した人身事故の影響で、一部列車に遅れが出ています。（3月30日 13時50分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "京浜東北根岸線内での踏切内点検の影響で、一部列車に遅れが出ています。（3月30日 7時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         }
     ]
 }
