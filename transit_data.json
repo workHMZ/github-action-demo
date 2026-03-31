@@ -1,15 +1,51 @@
 {
-    "update_time": "2026-03-31 14:17:55",
+    "update_time": "2026-03-31 18:37:09",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 7,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "09:06頃、荻窪駅で発生した人身事故の影響で、一部列車に遅れが出ています。（3月31日 13時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+            "detail": "総武線(快速)内で発生した線路支障の影響で、一部列車に遅れが出ています。（3月31日 17時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "中央総武線(各停)",
+            "status": "運転状況",
+            "detail": "総武線(快速)内で発生した線路支障の影響で、一部列車に遅れが出ています。（3月31日 17時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "市川〜船橋駅間で発生した線路支障の影響で、一部列車に遅れが出ています。（3月31日 17時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "強風の影響で、西船橋〜南船橋駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（3月31日 18時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+        },
+        {
+            "line": "武蔵野線",
+            "status": "運転状況",
+            "detail": "京葉線内での強風の影響で、一部列車に遅れが出ています。（3月31日 17時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+        },
+        {
+            "line": "東京メトロ東西線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（3月31日 18時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+        },
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "17:57頃、北綾瀬駅での安全確認の影響で、一部列車に遅れが出ています。（3月31日 18時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
         }
     ]
 }
