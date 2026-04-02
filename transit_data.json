@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-04-02 14:10:00",
+    "update_time": "2026-04-02 18:32:38",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
@@ -8,7 +8,7 @@
         {
             "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（4月2日 12時40分掲載）",
+            "detail": "宇都宮線内での安全確認の影響で、一部列車に遅れが出ています。（4月2日 18時25分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         }
     ]
