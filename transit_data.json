@@ -1,45 +1,15 @@
 {
-    "update_time": "2026-04-02 08:04:36",
+    "update_time": "2026-04-02 14:10:00",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 6,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
             "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "宇都宮線内での線路内点検の影響で、大船方面行の一部列車に遅れが出ています。（4月2日 7時30分掲載）",
+            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（4月2日 12時40分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "京王線",
-            "status": "運転状況",
-            "detail": "05:20頃、東府中〜府中駅間で発生した踏切事故の影響で、飛田給〜府中駅間の運転を見合わせています。運転区間の一部列車に遅れや運転変更が出ています。振替輸送を行っています。（4月2日 6時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
-        },
-        {
-            "line": "京王新線",
-            "status": "運転状況",
-            "detail": "05:20頃、京王線内で発生した踏切事故の影響で、一部列車に遅れや運転変更が出ています。（4月2日 6時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
-        },
-        {
-            "line": "京王相模原線",
-            "status": "運転状況",
-            "detail": "05:20頃、京王線内で発生した踏切事故の影響で、一部列車に遅れや運転変更が出ています。（4月2日 6時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "05:20頃、京王線内で発生した踏切事故の影響で、一部列車に遅れや運転変更が出ています。（4月2日 6時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "都営新宿線",
-            "status": "運転状況",
-            "detail": "05:20頃、京王線内で発生した踏切事故の影響で、ダイヤが乱れています。（4月2日 7時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
         }
     ]
 }
