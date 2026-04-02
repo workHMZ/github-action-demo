@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-04-02 18:32:38",
+    "update_time": "2026-04-03 07:58:32",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "東京メトロ丸ノ内線",
             "status": "運転状況",
-            "detail": "宇都宮線内での安全確認の影響で、一部列車に遅れが出ています。（4月2日 18時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "06:32頃、新高円寺〜南阿佐ケ谷駅間で発生した信号関係故障の影響で、中野坂上〜荻窪駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（4月3日 7時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
         }
     ]
 }
