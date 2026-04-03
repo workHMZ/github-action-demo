@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-04-03 14:11:56",
+    "update_time": "2026-04-03 18:13:54",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "山手線",
+            "status": "運転状況",
+            "detail": "新宿駅での救護活動の影響で、外回りの列車に遅れが出ています。（4月3日 17時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "救護活動の影響で、一部列車に遅れが出ています。（4月3日 18時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        },
+        {
+            "line": "東急池上線",
+            "status": "運転状況",
+            "detail": "15:37頃、久が原〜千鳥町駅間での踏切内点検の影響で、列車に遅れが出ています。（4月3日 16時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/117/0"
+        }
+    ]
 }
