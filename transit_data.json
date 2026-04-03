@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-04-03 07:58:32",
+    "update_time": "2026-04-03 14:11:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東京メトロ丸ノ内線",
-            "status": "運転状況",
-            "detail": "06:32頃、新高円寺〜南阿佐ケ谷駅間で発生した信号関係故障の影響で、中野坂上〜荻窪駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（4月3日 7時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
