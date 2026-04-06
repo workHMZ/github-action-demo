@@ -1,15 +1,27 @@
 {
-    "update_time": "2026-04-06 07:58:49",
+    "update_time": "2026-04-06 14:31:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（4月6日 6時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "11:19頃、東武東上線内で発生した人身事故の影響で、一部列車に運転変更が出ています。（4月6日 11時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ有楽町線",
+            "status": "運転状況",
+            "detail": "11:19頃、東武東上線内で発生した人身事故の影響で、東武東上線との直通運転を中止しています。（4月6日 11時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "11:19頃、東武東上線内で発生した人身事故の影響で、東武東上線との直通運転を中止しています。（4月6日 11時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
