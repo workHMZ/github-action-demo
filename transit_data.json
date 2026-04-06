@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-04-06 18:45:43",
+    "update_time": "2026-04-07 08:03:05",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急田園都市線",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "15:47頃、東武スカイツリーライン内で発生した人身事故の影響で、一部列車に運転変更が出ています。（4月6日 17時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+            "detail": "矢野口駅での救護活動の影響で、一部列車に遅れが出ています。（4月7日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         },
         {
-            "line": "東京メトロ日比谷線",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "15:47頃、東武スカイツリーライン内で発生した人身事故の影響で、ダイヤが乱れています。（4月6日 18時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "15:47頃、東武スカイツリーライン内で発生した人身事故の影響で、東武スカイツリーラインとの直通運転を中止しています。（4月6日 17時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
+            "detail": "06:28頃、相鉄線内での信号関係点検の影響で、一部列車に運休が出ています。（4月7日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         }
     ]
 }
