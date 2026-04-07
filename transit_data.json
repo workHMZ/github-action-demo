@@ -1,21 +1,21 @@
 {
-    "update_time": "2026-04-07 08:03:05",
+    "update_time": "2026-04-07 14:17:31",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "南武線[川崎～立川]",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "矢野口駅での救護活動の影響で、一部列車に遅れが出ています。（4月7日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
+            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（4月7日 10時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         },
         {
-            "line": "東急東横線",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "06:28頃、相鉄線内での信号関係点検の影響で、一部列車に運休が出ています。（4月7日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "市川駅での車両点検の影響で、一部列車に遅れが出ています。（4月7日 11時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         }
     ]
 }
