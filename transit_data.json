@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-04-08 14:19:31",
+    "update_time": "2026-04-08 18:41:24",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "08:39頃、東海道本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（4月8日 10時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
