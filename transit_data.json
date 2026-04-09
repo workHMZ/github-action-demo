@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-04-09 18:45:16",
+    "update_time": "2026-04-10 08:08:24",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ千代田線",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "18:14頃、北千住駅でのホームドア点検の影響で、一部列車に遅れが出ています。（4月9日 18時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+            "detail": "京急逗子線内で発生した線路支障の影響で、一部列車のダイヤが乱れています。（4月10日 7時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
