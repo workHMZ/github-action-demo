@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-04-10 18:43:38",
+    "update_time": "2026-04-11 08:02:57",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "車両点検の影響で、上り線(東京方面行)の一部列車に運休が出ています。（4月10日 18時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
