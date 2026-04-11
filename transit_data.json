@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-04-11 08:02:57",
+    "update_time": "2026-04-11 14:02:36",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（4月11日 10時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "東京メトロ日比谷線",
+            "status": "運転状況",
+            "detail": "12:42頃、北千住駅でのホームドア点検の影響で、一部列車に遅れが出ています。（4月11日 13時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
+        }
+    ]
 }
