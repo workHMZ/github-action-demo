@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-04-12 14:29:30",
+    "update_time": "2026-04-12 18:09:20",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "都営浅草線",
-            "status": "運転状況",
-            "detail": "11:12頃、京成押上線内で発生した人身事故の影響で、ダイヤが乱れています。（4月12日 11時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
