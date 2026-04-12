@@ -1,8 +1,39 @@
 {
-    "update_time": "2026-04-12 18:09:20",
+    "update_time": "2026-04-13 08:02:40",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 5,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京王線",
+            "status": "運転状況",
+            "detail": "07:33頃、笹塚駅で発生した車両故障の影響で、列車に遅れが出ています。（4月13日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+        },
+        {
+            "line": "京王新線",
+            "status": "運転状況",
+            "detail": "07:33頃、笹塚駅で発生した車両故障の影響で、列車に遅れが出ています。（4月13日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "07:33頃、京王線内で発生した車両故障の影響で、一部列車に遅れが出ています。（4月13日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "07:33頃、京王線内で発生した車両故障の影響で、一部列車に遅れが出ています。（4月13日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+        },
+        {
+            "line": "東京メトロ東西線",
+            "status": "運転状況",
+            "detail": "07:32頃、門前仲町駅での救護活動の影響で、一部列車に遅れが出ています。（4月13日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+        }
+    ]
 }
