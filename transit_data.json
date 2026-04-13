@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-04-13 19:10:43",
+    "update_time": "2026-04-14 08:10:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "都営浅草線",
-            "status": "運転状況",
-            "detail": "京急本線内で発生した人身事故の影響で、ダイヤが乱れています。（4月13日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "15:45頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（4月13日 17時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "15:45頃、東武東上線内で発生した人身事故の影響で、一部列車に遅れが出ています。（4月13日 17時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
