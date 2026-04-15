@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-04-15 18:54:32",
+    "update_time": "2026-04-16 08:09:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東急目黒線",
+            "status": "運転状況",
+            "detail": "昨日の人身事故の影響で、下り線(日吉方面行)の一部列車に運転変更が出ています。（4月16日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
+        }
+    ]
 }
