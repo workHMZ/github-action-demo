@@ -1,27 +1,15 @@
 {
-    "update_time": "2026-04-16 14:35:52",
+    "update_time": "2026-04-16 18:53:49",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
             "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "高崎線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（4月16日 14時0分掲載）",
+            "detail": "高崎線内で発生した人身事故の影響などで、一部列車に遅れが出ています。（4月16日 16時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "常磐線内で発生した人身事故の影響で、一部列車に遅れが出ています。（4月16日 13時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
-        },
-        {
-            "line": "上野東京ライン",
-            "status": "運転状況",
-            "detail": "高崎線内で発生した人身事故の影響で、東海道本線と高崎線との直通運転を中止しています。（4月16日 14時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/627/0"
         }
     ]
 }
