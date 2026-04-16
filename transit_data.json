@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-04-16 18:53:49",
+    "update_time": "2026-04-17 08:08:22",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "東京メトロ丸ノ内線",
             "status": "運転状況",
-            "detail": "高崎線内で発生した人身事故の影響などで、一部列車に遅れが出ています。（4月16日 16時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "新宿御苑前駅で発生したホームドア故障の影響で、ダイヤが乱れています。（4月17日 5時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
         }
     ]
 }
