@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-04-17 18:51:44",
+    "update_time": "2026-04-18 08:07:32",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "南武線[川崎～立川]",
-            "status": "運転状況",
-            "detail": "稲田堤〜矢野口駅間での踏切内点検の影響で、一部列車に遅れが出ています。（4月17日 18時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
-        },
-        {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
-            "status": "運転状況",
-            "detail": "板橋駅構内での踏切内点検の影響で、一部列車に遅れや運転変更が出ています。（4月17日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
-        },
-        {
-            "line": "武蔵野線",
-            "status": "運転状況",
-            "detail": "東松戸駅での救護活動の影響で、一部列車に遅れが出ています。（4月17日 17時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
