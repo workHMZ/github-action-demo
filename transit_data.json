@@ -1,14 +1,20 @@
 {
-    "update_time": "2026-04-17 08:08:22",
+    "update_time": "2026-04-17 14:33:45",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "常磐線内での車両点検の影響で、一部列車に遅れが出ています。（4月17日 13時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        },
+        {
             "line": "東京メトロ丸ノ内線",
             "status": "運転状況",
-            "detail": "新宿御苑前駅で発生したホームドア故障の影響で、ダイヤが乱れています。（4月17日 5時0分掲載）",
+            "detail": "新宿御苑前駅で発生したホームドア故障の影響で、一部列車に遅れが出ています。（4月17日 13時15分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/133/0"
         }
     ]
