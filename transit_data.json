@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-04-18 08:07:32",
+    "update_time": "2026-04-18 14:13:46",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "東十条駅で発生した線路内立入の影響で、一部列車に遅れが出ています。（4月18日 13時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "京浜東北根岸線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（4月18日 11時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "13:36頃、東京メトロ副都心線内での安全確認の影響で、一部列車に遅れが出ています。（4月18日 13時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "13:36頃、西早稲田駅での安全確認の影響で、一部列車に遅れが出ています。（4月18日 13時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+        }
+    ]
 }
