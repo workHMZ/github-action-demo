@@ -1,27 +1,27 @@
 {
-    "update_time": "2026-04-19 18:11:17",
+    "update_time": "2026-04-20 08:02:58",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "西武池袋線・秩父線",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "みなとみらい線内での車両点検の影響で、一部列車に遅れが出ています。（4月19日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+            "detail": "横須賀線内での車両点検の影響で、一部列車に遅れが出ています。（4月20日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         },
         {
-            "line": "西武有楽町線",
+            "line": "小田急小田原線",
             "status": "運転状況",
-            "detail": "みなとみらい線内での車両点検の影響で、一部列車に遅れが出ています。（4月19日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+            "detail": "06:39頃、小田急江ノ島線内で発生した人身事故の影響で、一部列車に遅れが出ています。（4月20日 7時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
         },
         {
-            "line": "都営浅草線",
+            "line": "小田急江ノ島線",
             "status": "運転状況",
-            "detail": "京成押上線内で発生した人身事故の影響で、ダイヤが乱れています。（4月19日 18時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
+            "detail": "06:39頃、大和〜桜ケ丘駅間で発生した人身事故の影響で、大和〜長後駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（4月20日 7時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
         }
     ]
 }
