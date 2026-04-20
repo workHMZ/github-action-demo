@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-04-20 14:47:17",
+    "update_time": "2026-04-20 19:12:55",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "東急田園都市線",
             "status": "運転状況",
-            "detail": "06:39頃、小田急江ノ島線内で発生した人身事故の影響で、一部列車に遅れが出ています。（4月20日 14時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "18:43頃、渋谷駅での車両点検の影響で、一部列車に遅れが出ています。（4月20日 19時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
         }
     ]
 }
