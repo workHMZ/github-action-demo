@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-04-21 08:07:59",
+    "update_time": "2026-04-21 14:33:02",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東急池上線",
-            "status": "運転状況",
-            "detail": "07:17頃、五反田〜大崎広小路駅間での車両点検の影響で、列車に遅れが出ています。（4月21日 7時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/117/0"
-        },
-        {
-            "line": "東京メトロ南北線",
-            "status": "運転状況",
-            "detail": "07:50頃、後楽園駅での荷物挟まり対応の影響で、一部列車に遅れが出ています。（4月21日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
