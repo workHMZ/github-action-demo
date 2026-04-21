@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-04-21 18:57:20",
+    "update_time": "2026-04-22 08:06:31",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "小田急小田原線",
+            "status": "運転状況",
+            "detail": "06:55頃、向ケ丘遊園駅での旅客対応の影響で、一部列車に遅れが出ています。（4月22日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+        },
+        {
+            "line": "東京メトロ銀座線",
+            "status": "運転状況",
+            "detail": "06:21頃、浅草駅で発生した発煙の影響で、浅草〜三越前駅間の運転を見合わせています。振替輸送を行っています。（4月22日 6時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+        }
+    ]
 }
