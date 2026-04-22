@@ -1,20 +1,26 @@
 {
-    "update_time": "2026-04-22 08:06:31",
+    "update_time": "2026-04-22 14:31:39",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "06:55頃、向ケ丘遊園駅での旅客対応の影響で、一部列車に遅れが出ています。（4月22日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "大宮〜浦和駅間で発生した架線支障の影響で、大宮〜新宿駅間の運転を見合わせています。（4月22日 12時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "西八王子駅で発生した人身事故の影響などで、一部列車に遅れや運休が出ています。なお、青梅線との直通運転を中止しています。（4月22日 13時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         },
         {
             "line": "東京メトロ銀座線",
             "status": "運転状況",
-            "detail": "06:21頃、浅草駅で発生した発煙の影響で、浅草〜三越前駅間の運転を見合わせています。振替輸送を行っています。（4月22日 6時40分掲載）",
+            "detail": "06:21頃、浅草駅で発生した設備故障の影響で、浅草〜三越前駅間の運転を見合わせています。振替輸送を行っています。（4月22日 8時10分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/132/0"
         }
     ]
