@@ -1,39 +1,27 @@
 {
-    "update_time": "2026-04-22 18:58:05",
+    "update_time": "2026-04-23 08:24:30",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
             "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "東十条〜王子駅間で発生した線路内立入の影響で、一部列車に遅れや運休が出ています。（4月22日 18時15分掲載）",
+            "detail": "横浜線内での踏切内点検の影響で、東神奈川〜磯子駅間の一部列車に遅れが出ています。（4月23日 8時15分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "湘南新宿ライン",
+            "line": "都営三田線",
             "status": "運転状況",
-            "detail": "京浜東北根岸線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（4月22日 18時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "06:45頃、東急目黒線内での車両点検の影響で、ダイヤが乱れています。（4月23日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
         },
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "東京メトロ南北線",
             "status": "運転状況",
-            "detail": "御茶ノ水駅での車両点検の影響で、一部列車に遅れが出ています。（4月22日 16時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "都営新宿線",
-            "status": "運転状況",
-            "detail": "18:31頃、篠崎駅での安全確認の影響で、ダイヤが乱れています。（4月22日 18時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
-        },
-        {
-            "line": "東京メトロ銀座線",
-            "status": "運転状況",
-            "detail": "06:21頃、浅草駅で発生した設備故障の影響で、浅草〜三越前駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（4月22日 16時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+            "detail": "06:45頃、東急目黒線内での車両点検の影響で、ダイヤが乱れています。（4月23日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
         }
     ]
 }
