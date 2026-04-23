@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-04-23 19:01:34",
+    "update_time": "2026-04-24 08:12:16",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央総武線(各停)",
+            "line": "都営新宿線",
             "status": "運転状況",
-            "detail": "船橋駅での荷物挟まり対応の影響で、一部列車に遅れが出ています。（4月23日 16時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+            "detail": "京王線内での救護活動の影響で、本八幡方面行のダイヤが乱れています。（4月24日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
         },
         {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "日進〜西大宮駅間での線路内点検の影響で、一部列車に遅れや運転変更が出ています。（4月23日 18時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
-        },
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（4月23日 18時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+            "detail": "07:36頃、永田町駅での安全確認の影響で、一部列車に遅れが出ています。（4月24日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
         }
     ]
 }
