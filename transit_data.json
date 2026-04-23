@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-04-23 08:24:30",
+    "update_time": "2026-04-23 14:36:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "横浜線内での踏切内点検の影響で、東神奈川〜磯子駅間の一部列車に遅れが出ています。（4月23日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "都営三田線",
-            "status": "運転状況",
-            "detail": "06:45頃、東急目黒線内での車両点検の影響で、ダイヤが乱れています。（4月23日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
-        },
-        {
-            "line": "東京メトロ南北線",
-            "status": "運転状況",
-            "detail": "06:45頃、東急目黒線内での車両点検の影響で、ダイヤが乱れています。（4月23日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
