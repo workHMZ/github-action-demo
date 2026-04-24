@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-04-24 08:12:16",
+    "update_time": "2026-04-24 14:41:03",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "都営新宿線",
-            "status": "運転状況",
-            "detail": "京王線内での救護活動の影響で、本八幡方面行のダイヤが乱れています。（4月24日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "07:36頃、永田町駅での安全確認の影響で、一部列車に遅れが出ています。（4月24日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
