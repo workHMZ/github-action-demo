@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-04-24 14:41:03",
+    "update_time": "2026-04-24 18:59:06",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "蒲田〜川崎駅間での踏切内点検の影響で、一部列車に遅れが出ています。（4月24日 18時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        }
+    ]
 }
