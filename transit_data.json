@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-04-25 14:19:50",
+    "update_time": "2026-04-25 18:15:05",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "東海道本線内での踏切内点検の影響などで、一部列車に遅れが出ています。（4月25日 13時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "11:59頃、小田急相模原駅で発生した人身事故の影響で、ダイヤが乱れています。（4月25日 13時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
