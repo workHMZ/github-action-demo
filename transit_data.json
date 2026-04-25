@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-04-25 18:15:05",
+    "update_time": "2026-04-26 08:04:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "保土ケ谷駅構内で発生した踏切支障の影響で、一部列車に遅れが出ています。（4月26日 7時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "保土ケ谷駅構内で発生した踏切支障の影響で、一部列車に遅れや運休が出ています。なお、総武線(快速)との直通運転を中止しています。（4月26日 7時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "横須賀線内で発生した踏切支障の影響で、横須賀線との直通運転を中止しています。（4月26日 6時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "上野東京ライン",
+            "status": "運転状況",
+            "detail": "横須賀線内で発生した踏切支障の影響で、東海道本線と宇都宮線・高崎線との直通運転を中止しています。（4月26日 6時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/627/0"
+        }
+    ]
 }
