@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-04-26 14:45:00",
+    "update_time": "2026-04-26 18:28:33",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "東海道本線内での踏切内点検の影響で、大宮方面行の一部列車に遅れが出ています。（4月26日 13時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
