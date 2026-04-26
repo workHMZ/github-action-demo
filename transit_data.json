@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-04-26 18:28:33",
+    "update_time": "2026-04-27 08:06:07",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "赤羽駅でのホームドア点検の影響で、一部列車に遅れが出ています。（4月27日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "日野駅でのドア点検の影響で、一部列車に遅れが出ています。（4月27日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        }
+    ]
 }
