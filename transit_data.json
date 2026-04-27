@@ -1,51 +1,15 @@
 {
-    "update_time": "2026-04-27 19:29:08",
+    "update_time": "2026-04-28 08:27:47",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 7,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "都営三田線",
             "status": "運転状況",
-            "detail": "横浜線内での荷物挟まり対応の影響で、一部列車に遅れが出ています。（4月27日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "西武池袋線・秩父線",
-            "status": "運転状況",
-            "detail": "13:31頃、石神井公園〜大泉学園駅間での架線点検の影響で、池袋〜飯能駅間の列車に遅れや運休が出ています。（4月27日 18時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
-        },
-        {
-            "line": "西武有楽町線",
-            "status": "運転状況",
-            "detail": "13:31頃、西武池袋線・秩父線内での架線点検の影響で、一部列車に遅れや運休が出ています。（4月27日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "18:09頃、下北沢駅での旅客対応の影響で、一部列車に遅れが出ています。（4月27日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "18:09頃、小田急小田原線内での旅客対応の影響で、一部列車に遅れが出ています。（4月27日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "13:31頃、西武池袋線・秩父線内での架線点検の影響で、一部列車に遅れが出ています。（4月27日 19時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "13:31頃、西武池袋線・秩父線内での架線点検の影響で、一部列車に遅れが出ています。（4月27日 18時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "07:17頃、高島平駅での車両点検の影響で、目黒方面行のダイヤが乱れています。（4月28日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
         }
     ]
 }
