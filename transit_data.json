@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-04-28 19:28:05",
+    "update_time": "2026-04-29 08:27:41",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "大森〜蒲田駅間で発生した線路支障の影響で、一部列車に遅れが出ています。（4月28日 18時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "京浜東北根岸線内で発生した線路支障の影響で、一部列車に遅れが出ています。（4月28日 18時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
