@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-04-28 08:27:47",
+    "update_time": "2026-04-28 15:11:28",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "都営三田線",
+            "line": "常磐線(快速)[品川～取手]",
             "status": "運転状況",
-            "detail": "07:17頃、高島平駅での車両点検の影響で、目黒方面行のダイヤが乱れています。（4月28日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
+            "detail": "常磐線内での車両点検の影響で、一部列車に遅れや運休が出ています。（4月28日 14時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
         }
     ]
 }
