@@ -1,21 +1,45 @@
 {
-    "update_time": "2026-04-29 15:05:47",
+    "update_time": "2026-04-29 19:21:05",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 6,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急田園都市線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "13:50頃、東急大井町線内で発生した車両故障の影響で、一部列車に運休が出ています。（4月29日 14時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れや運休が出ています。（4月29日 19時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "東急大井町線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "15:05現在、ほぼ平常通り運転しています。（4月29日 15時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（4月29日 18時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（4月29日 18時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（4月29日 18時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "市川塩浜〜二俣新町駅間での線路内点検の影響で、一部列車に遅れが出ています。（4月29日 18時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+        },
+        {
+            "line": "武蔵野線",
+            "status": "運転状況",
+            "detail": "京葉線内での線路内点検の影響で、一部列車に遅れが出ています。（4月29日 19時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
         }
     ]
 }
