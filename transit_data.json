@@ -1,33 +1,8 @@
 {
-    "update_time": "2026-05-01 19:00:44",
+    "update_time": "2026-05-02 08:26:15",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "藤沢駅で発生した架線支障の影響で、長後〜片瀬江ノ島駅間の運転を見合わせていましたが、18:32頃、運転を再開しました。なお、ダイヤが乱れています。（5月1日 18時32分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "14:25頃、宮崎台駅で発生した人身事故の影響で、ダイヤが乱れています。（5月1日 17時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "14:25頃、東急田園都市線内で発生した人身事故の影響で、一部列車に運休が出ています。（5月1日 15時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "14:25頃、東急田園都市線内で発生した人身事故の影響で、ダイヤが乱れています。（5月1日 15時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
