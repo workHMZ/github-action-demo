@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-05-04 15:18:55",
+    "update_time": "2026-05-04 19:29:24",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京葉線",
-            "status": "運転状況",
-            "detail": "強風の影響で、一部列車に遅れや運休が出ています。（5月4日 14時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
-        },
-        {
-            "line": "武蔵野線",
-            "status": "運転状況",
-            "detail": "京葉線内での強風の影響で、一部列車に遅れや運休が出ています。（5月4日 10時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
-        },
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "強風の影響で、一部列車に遅れが出ています。（5月4日 7時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
