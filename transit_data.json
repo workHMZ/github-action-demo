@@ -1,45 +1,27 @@
 {
-    "update_time": "2026-05-04 08:09:59",
+    "update_time": "2026-05-04 15:18:55",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 6,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "成田線内で発生した倒木の影響で、成田線との直通運転を中止しています。（5月4日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
-        },
-        {
             "line": "京葉線",
             "status": "運転状況",
-            "detail": "強風の影響で、運転を見合わせていましたが、07:52頃、運転を再開しました。なお、一部列車に遅れや運転変更が出ています。（5月4日 7時52分掲載）",
+            "detail": "強風の影響で、一部列車に遅れや運休が出ています。（5月4日 14時45分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         },
         {
             "line": "武蔵野線",
             "status": "運転状況",
-            "detail": "京葉線内での強風の影響で、一部列車に遅れが出ています。なお、京葉線との直通運転を中止しています。（5月4日 7時0分掲載）",
+            "detail": "京葉線内での強風の影響で、一部列車に遅れや運休が出ています。（5月4日 10時25分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/71/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "停電の影響で、秦野〜小田原駅間の運転を見合わせています。振替輸送を行っています。（5月4日 6時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
         },
         {
             "line": "東京メトロ東西線",
             "status": "運転状況",
             "detail": "強風の影響で、一部列車に遅れが出ています。（5月4日 7時25分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        },
-        {
-            "line": "東京メトロ千代田線",
-            "status": "運転状況",
-            "detail": "小田急小田原線内で発生した停電の影響で、ダイヤが乱れています。（5月4日 7時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
         }
     ]
 }
