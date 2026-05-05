@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-05-05 19:15:11",
+    "update_time": "2026-05-06 08:25:31",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "都営浅草線",
+            "status": "運転状況",
+            "detail": "北総線内での車両点検の影響で、押上方面行のダイヤが乱れています。（5月6日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
+        }
+    ]
 }
