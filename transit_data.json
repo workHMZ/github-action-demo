@@ -1,15 +1,33 @@
 {
-    "update_time": "2026-05-06 08:25:31",
+    "update_time": "2026-05-06 15:10:28",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "都営浅草線",
+            "line": "西武池袋線・秩父線",
             "status": "運転状況",
-            "detail": "北総線内での車両点検の影響で、押上方面行のダイヤが乱れています。（5月6日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
+            "detail": "12:46頃、東急東横線内で発生した人身事故の影響で、練馬〜小手指駅間の一部列車に遅れや運休が出ています。（5月6日 13時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+        },
+        {
+            "line": "西武有楽町線",
+            "status": "運転状況",
+            "detail": "12:46頃、東急東横線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（5月6日 13時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "12:46頃、妙蓮寺〜白楽駅間で発生した人身事故の影響で、菊名〜横浜駅間の運転を見合わせています。運転区間の列車に遅れや運転変更が出ています。振替輸送を行っています。（5月6日 13時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "12:46頃、東急東横線内で発生した人身事故の影響で、ダイヤが乱れています。（5月6日 13時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
