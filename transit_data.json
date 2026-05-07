@@ -1,27 +1,15 @@
 {
-    "update_time": "2026-05-07 08:13:15",
+    "update_time": "2026-05-07 15:15:29",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
-            "status": "運転状況",
-            "detail": "西国分寺駅での救護活動の影響で、一部列車に遅れが出ています。（5月7日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
             "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "06:36頃、大手町駅での救護活動の影響で、一部列車に遅れが出ています。（5月7日 6時45分掲載）",
+            "detail": "13:28頃、東葉高速線内での信号関係点検の影響で、ダイヤが乱れています。（5月7日 14時15分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        },
-        {
-            "line": "東京メトロ南北線",
-            "status": "運転状況",
-            "detail": "07:21頃、溜池山王駅での救護活動の影響で、一部列車に遅れが出ています。（5月7日 7時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
         }
     ]
 }
