@@ -1,63 +1,27 @@
 {
-    "update_time": "2026-05-07 19:38:04",
+    "update_time": "2026-05-08 08:26:30",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 9,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "小田急小田原線",
             "status": "運転状況",
-            "detail": "川崎〜鶴見駅間で発生した人身事故の影響で、運転を見合わせています。振替輸送を行っています。（5月7日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+            "detail": "07:13頃、読売ランド前〜百合ケ丘駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月8日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
         },
         {
-            "line": "湘南新宿ライン",
+            "line": "小田急江ノ島線",
             "status": "運転状況",
-            "detail": "京浜東北根岸線内で発生した人身事故の影響で、一部列車に遅れが出ています。（5月7日 19時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "07:13頃、小田急小田原線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月8日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
         },
         {
-            "line": "横須賀線",
+            "line": "都営三田線",
             "status": "運転状況",
-            "detail": "京浜東北根岸線内で発生した人身事故の影響で、一部列車に遅れが出ています。（5月7日 19時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "中央線(快速)[東京～高尾]",
-            "status": "運転状況",
-            "detail": "西八王子駅で発生した人身事故の影響で、一部列車に遅れが出ています。（5月7日 17時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "京浜東北根岸線内で発生した人身事故の影響で、一部列車に遅れが出ています。（5月7日 19時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "上野東京ライン",
-            "status": "運転状況",
-            "detail": "京浜東北根岸線内で発生した人身事故の影響で、東海道本線と宇都宮線・高崎線との直通運転を中止しています。（5月7日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/627/0"
-        },
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "16:36頃、鷺沼〜たまプラーザ駅間で発生した線路内立入の影響で、ダイヤが乱れています。（5月7日 19時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "16:36頃、東急田園都市線内で発生した線路内立入の影響で、ダイヤが乱れています。（5月7日 18時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "16:36頃、東急田園都市線内で発生した線路内立入の影響で、ダイヤが乱れています。（5月7日 17時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
+            "detail": "07:49頃、巣鴨駅での車両点検の影響で、ダイヤが乱れています。（5月8日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
         }
     ]
 }
