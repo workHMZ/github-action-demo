@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-05-08 08:26:30",
+    "update_time": "2026-05-08 14:18:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "07:13頃、読売ランド前〜百合ケ丘駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月8日 8時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "北赤羽駅での線路内点検の影響で、一部列車に遅れや運転変更が出ています。（5月8日 14時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
         },
         {
-            "line": "小田急江ノ島線",
+            "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "07:13頃、小田急小田原線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月8日 8時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "都営三田線",
-            "status": "運転状況",
-            "detail": "07:49頃、巣鴨駅での車両点検の影響で、ダイヤが乱れています。（5月8日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
+            "detail": "11:57頃、南砂町〜西葛西駅間で発生した線路支障の影響で、一部列車に遅れが出ています。（5月8日 12時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         }
     ]
 }
