@@ -10,7 +10,7 @@ name: 💾 Database Backup
 on:
   schedule:
     # 每周一凌晨 4:00 JST = 周日 19:00 UTC
-    - cron: '0 19 * * 0'
+    - cron: '45 18 * * 0'  # 目标 4:00 JST（提前15分钟补偿 GitHub 调度延迟）
   
   workflow_dispatch:
     inputs:
@@ -35,6 +35,7 @@ on:
 env:
   AZURE_CONTAINER: database-backups
   BACKUP_RETENTION_DAYS: 30
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   backup:

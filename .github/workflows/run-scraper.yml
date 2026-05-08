@@ -13,9 +13,9 @@ on:
   # - 每天中午 12:00 JST (= 当天 3:00 UTC)
   # - 每天下午 5:30 JST (= 当天 8:30 UTC)
   schedule:
-    - cron: '30 22 * * *'  # 7:30 JST
-    - cron: '0 3 * * *'    # 12:00 JST
-    - cron: '30 8 * * *'   # 17:30 JST
+    - cron: '15 22 * * *'  # 目标 7:30 JST（提前15分钟补偿 GitHub 调度延迟）
+    - cron: '45 2 * * *'   # 目标 12:00 JST（提前15分钟补偿 GitHub 调度延迟）
+    - cron: '15 8 * * *'   # 目标 17:30 JST（提前15分钟补偿 GitHub 调度延迟）
   
   # 手动触发
   workflow_dispatch:
@@ -39,10 +39,10 @@ jobs:
 
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: 🐍 Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
