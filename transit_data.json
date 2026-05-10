@@ -1,21 +1,15 @@
 {
-    "update_time": "2026-05-10 14:52:17",
+    "update_time": "2026-05-10 18:48:39",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "横須賀線",
+            "line": "京葉線",
             "status": "運転状況",
-            "detail": "総武線(快速)内での車内安全確認の影響で、下り線(久里浜方面行)の一部列車に遅れが出ています。（5月10日 14時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "14:24頃、大和〜桜ケ丘駅間で発生した人身事故の影響で、大和〜長後駅間の運転を見合わせています。運転区間の一部列車に遅れや運休が出ています。振替輸送を行っています。（5月10日 14時24分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
+            "detail": "車内安全確認の影響で、一部列車に遅れが出ています。（5月10日 18時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         }
     ]
 }
