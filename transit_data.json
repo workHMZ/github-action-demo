@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-05-10 18:48:39",
+    "update_time": "2026-05-11 08:08:06",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京葉線",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "車内安全確認の影響で、一部列車に遅れが出ています。（5月10日 18時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+            "detail": "分倍河原駅での救護活動の影響で、一部列車に遅れが出ています。（5月11日 8時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         }
     ]
 }
