@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-05-11 15:24:14",
+    "update_time": "2026-05-11 20:37:00",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "山手線",
-            "status": "運転状況",
-            "detail": "巣鴨駅での安全確認の影響で、内回りの運転を見合わせていましたが、15:10頃、運転を再開しました。なお、列車に遅れが出ています。（5月11日 15時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
