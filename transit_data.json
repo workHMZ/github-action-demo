@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-05-12 08:11:04",
+    "update_time": "2026-05-12 14:54:42",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "赤羽〜池袋駅間での車両点検の影響で、一部列車に遅れが出ています。（5月12日 14時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        }
+    ]
 }
