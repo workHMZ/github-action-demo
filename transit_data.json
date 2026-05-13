@@ -1,33 +1,39 @@
 {
-    "update_time": "2026-05-13 19:43:49",
+    "update_time": "2026-05-14 08:20:29",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "山手線",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "新大久保駅でのホームドア点検の影響で、内回りの列車に遅れが出ています。（5月13日 17時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（5月14日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         },
         {
-            "line": "中央総武線(各停)",
+            "line": "東急目黒線",
             "status": "運転状況",
-            "detail": "新小岩〜小岩駅間での車両点検の影響で、一部列車に遅れが出ています。（5月13日 18時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+            "detail": "07:47頃、目黒駅での設備点検の影響で、列車に遅れが出ています。（5月14日 7時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
         },
         {
-            "line": "京葉線",
+            "line": "都営三田線",
             "status": "運転状況",
-            "detail": "越中島〜潮見駅間での車両点検の影響で、一部列車に遅れが出ています。（5月13日 18時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+            "detail": "07:47頃、東急目黒線内での設備点検の影響で、ダイヤが乱れています。（5月14日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
         },
         {
-            "line": "武蔵野線",
+            "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "京葉線内での車両点検の影響で、一部列車に遅れが出ています。（5月13日 18時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+            "detail": "一部列車に遅れが出ています。（5月14日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "一部列車に遅れが出ています。（5月14日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
