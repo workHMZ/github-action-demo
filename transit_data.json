@@ -1,51 +1,21 @@
 {
-    "update_time": "2026-05-14 15:04:06",
+    "update_time": "2026-05-14 19:34:36",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 7,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "横須賀線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "鎌倉〜逗子駅間での踏切内点検の影響で、一部列車に遅れが出ています。（5月14日 13時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月14日 17時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "総武線(快速)[東京～千葉]",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月14日 14時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "西武池袋線・秩父線",
-            "status": "運転状況",
-            "detail": "東急東横線内で発生した窓ガラス破損の影響で、練馬〜小手指駅間の一部列車に遅れや運休が出ています。（5月14日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
-        },
-        {
-            "line": "西武有楽町線",
-            "status": "運転状況",
-            "detail": "東急東横線内で発生した窓ガラス破損の影響で、一部列車に遅れや運休が出ています。（5月14日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "上り線(渋谷方面行)の一部列車に運転変更が出ています。（5月14日 14時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（5月14日 12時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "混雑の影響で、ダイヤが乱れています。（5月14日 12時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "京急線内での大雨の影響で、一部列車のダイヤが乱れています。（5月14日 19時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
