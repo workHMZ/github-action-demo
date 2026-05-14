@@ -1,38 +1,50 @@
 {
-    "update_time": "2026-05-14 08:20:29",
+    "update_time": "2026-05-14 15:04:06",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 7,
     "status": "issues_found",
     "issues": [
         {
             "line": "横須賀線",
             "status": "運転状況",
-            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（5月14日 8時15分掲載）",
+            "detail": "鎌倉〜逗子駅間での踏切内点検の影響で、一部列車に遅れが出ています。（5月14日 13時45分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         },
         {
-            "line": "東急目黒線",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "07:47頃、目黒駅での設備点検の影響で、列車に遅れが出ています。（5月14日 7時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
+            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月14日 14時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         },
         {
-            "line": "都営三田線",
+            "line": "西武池袋線・秩父線",
             "status": "運転状況",
-            "detail": "07:47頃、東急目黒線内での設備点検の影響で、ダイヤが乱れています。（5月14日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
+            "detail": "東急東横線内で発生した窓ガラス破損の影響で、練馬〜小手指駅間の一部列車に遅れや運休が出ています。（5月14日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+        },
+        {
+            "line": "西武有楽町線",
+            "status": "運転状況",
+            "detail": "東急東横線内で発生した窓ガラス破損の影響で、一部列車に遅れや運休が出ています。（5月14日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "上り線(渋谷方面行)の一部列車に運転変更が出ています。（5月14日 14時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         },
         {
             "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（5月14日 8時15分掲載）",
+            "detail": "混雑の影響で、一部列車に遅れが出ています。（5月14日 12時50分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/137/0"
         },
         {
             "line": "東京メトロ副都心線",
             "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（5月14日 8時15分掲載）",
+            "detail": "混雑の影響で、ダイヤが乱れています。（5月14日 12時55分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
