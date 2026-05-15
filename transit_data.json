@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-05-15 08:11:53",
+    "update_time": "2026-05-15 15:20:12",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "総武本線内での作業遅延の影響で、総武線(快速)との直通運転を中止しています。（5月15日 6時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "作業遅延の影響で、一部列車に遅れや運休が出ています。なお、横須賀線との直通運転を中止しています。（5月15日 6時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "京葉線",
-            "status": "運転状況",
-            "detail": "武蔵野線内での線路内点検の影響で、一部列車に遅れが出ています。（5月15日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
