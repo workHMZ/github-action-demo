@@ -1,21 +1,39 @@
 {
-    "update_time": "2026-05-18 20:54:01",
+    "update_time": "2026-05-19 08:18:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "西武新宿線",
             "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月18日 19時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+            "detail": "06:29頃、西武拝島線内で発生した人身事故の影響で、列車に遅れや運休が出ています。（5月19日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
         },
         {
-            "line": "常磐線(快速)[品川～取手]",
+            "line": "西武国分寺線",
             "status": "運転状況",
-            "detail": "常磐線内での線路内点検の影響で、一部列車に遅れが出ています。（5月18日 20時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+            "detail": "06:29頃、西武拝島線内で発生した人身事故の影響で、列車に遅れや運休が出ています。（5月19日 7時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/88/0"
+        },
+        {
+            "line": "西武拝島線",
+            "status": "運転状況",
+            "detail": "06:29頃、東大和市駅で発生した人身事故の影響で、列車に遅れや運休が出ています。（5月19日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
+        },
+        {
+            "line": "東京メトロ東西線",
+            "status": "運転状況",
+            "detail": "07:41頃、東陽町駅での停止位置確認の影響で、一部列車に遅れが出ています。（5月19日 7時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+        },
+        {
+            "line": "東京メトロ南北線",
+            "status": "運転状況",
+            "detail": "07:51頃、王子神谷駅でのホームドア点検の影響で、一部列車に遅れが出ています。（5月19日 8時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
         }
     ]
 }
