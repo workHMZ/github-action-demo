@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-05-18 08:10:24",
+    "update_time": "2026-05-18 15:40:10",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "衣笠〜久里浜駅間での線路内点検の影響で、一部列車に遅れが出ています。（5月18日 7時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "東急池上線",
-            "status": "運転状況",
-            "detail": "07:28頃、旗の台駅での車内安全確認の影響で、五反田〜雪が谷大塚駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（5月18日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/117/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
