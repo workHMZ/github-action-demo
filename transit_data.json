@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-05-18 15:40:10",
+    "update_time": "2026-05-18 20:54:01",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月18日 19時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "常磐線内での線路内点検の影響で、一部列車に遅れが出ています。（5月18日 20時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        }
+    ]
 }
