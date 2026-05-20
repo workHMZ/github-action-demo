@@ -1,39 +1,39 @@
 {
-    "update_time": "2026-05-20 20:21:13",
+    "update_time": "2026-05-21 08:39:15",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京王線",
+            "line": "常磐線(快速)[品川～取手]",
             "status": "運転状況",
-            "detail": "下高井戸〜桜上水駅間で発生した線路内立入の影響で、列車に遅れが出ています。（5月20日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+            "detail": "成田線内で発生した倒竹の影響で、一部列車に遅れが出ています。（5月21日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
         },
         {
-            "line": "京王新線",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "京王線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月20日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+            "detail": "07:59頃、東京メトロ副都心線内でのホームドア点検の影響で、一部列車に遅れが出ています。（5月21日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         },
         {
-            "line": "京王相模原線",
+            "line": "東京メトロ千代田線",
             "status": "運転状況",
-            "detail": "京王線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月20日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+            "detail": "一部列車に遅れが出ています。（5月21日 8時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
         },
         {
-            "line": "京王高尾線",
+            "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "京王線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（5月20日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+            "detail": "07:59頃、永田町駅でのホームドア点検の影響で、ダイヤが乱れています。（5月21日 8時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
         },
         {
-            "line": "東京メトロ日比谷線",
+            "line": "東京メトロ副都心線",
             "status": "運転状況",
-            "detail": "14:45頃、八丁堀駅での安全確認の影響で、ダイヤが乱れています。（5月20日 16時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
+            "detail": "07:59頃、東京メトロ有楽町線内でのホームドア点検の影響で、一部列車に遅れが出ています。（5月21日 8時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
