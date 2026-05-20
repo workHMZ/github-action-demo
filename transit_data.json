@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-05-20 08:21:14",
+    "update_time": "2026-05-20 15:35:37",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "東京メトロ日比谷線",
             "status": "運転状況",
-            "detail": "開成〜栢山駅間で発生した人身事故の影響で、新松田〜小田原駅間の運転を見合わせていましたが、07:58頃、運転を再開しました。なお、ダイヤが乱れています。（5月20日 7時58分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "14:45頃、八丁堀駅での安全確認の影響で、一部列車に遅れが出ています。（5月20日 15時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
         }
     ]
 }
