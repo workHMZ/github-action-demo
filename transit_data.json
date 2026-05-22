@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-05-22 15:34:57",
+    "update_time": "2026-05-22 20:18:09",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東京メトロ銀座線",
+            "status": "運転状況",
+            "detail": "上野駅での落し物拾得の影響で、列車に遅れが出ています。（5月22日 20時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+        }
+    ]
 }
