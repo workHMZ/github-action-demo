@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-05-22 20:18:09",
+    "update_time": "2026-05-23 08:18:41",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ銀座線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "上野駅での落し物拾得の影響で、列車に遅れが出ています。（5月22日 20時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+            "detail": "東海道本線内での信号関係点検の影響で、一部列車に遅れが出ています。（5月23日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         }
     ]
 }
