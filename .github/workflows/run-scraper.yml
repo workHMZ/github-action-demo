@@ -111,7 +111,7 @@ jobs:
           git push || echo "Nothing to push"
 
       - name: 📤 Send Notification to Synology Chat
-        if: ${{ github.event.inputs.send_notification != 'false' }}
+        if: ${{ false }} # Disabled per user request (was: github.event.inputs.send_notification != 'false')
         env:
           SYNOLOGY_WEBHOOK: ${{ secrets.SYNOLOGY_CHAT_WEBHOOK }}
         run: |
