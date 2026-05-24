@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-05-24 15:23:33",
+    "update_time": "2026-05-24 19:11:32",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "池袋駅での車内安全確認の影響で、一部列車に遅れが出ています。（5月24日 18時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        }
+    ]
 }
