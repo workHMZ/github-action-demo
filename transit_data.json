@@ -1,15 +1,63 @@
 {
-    "update_time": "2026-05-25 21:00:04",
+    "update_time": "2026-05-26 08:21:17",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 9,
     "status": "issues_found",
     "issues": [
         {
-            "line": "常磐線(快速)[品川～取手]",
+            "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "常磐線内での線路内点検の影響で、一部列車に遅れが出ています。（5月25日 20時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+            "detail": "相鉄線内で発生した車両故障の影響で、羽沢横浜国大〜新宿駅間の一部列車に運休が出ています。（5月26日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+        },
+        {
+            "line": "常磐線(各停)",
+            "status": "運転状況",
+            "detail": "北松戸駅でのホームドア点検の影響で、一部列車に遅れが出ています。（5月26日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
+        },
+        {
+            "line": "京王線",
+            "status": "運転状況",
+            "detail": "08:00頃、武蔵野台駅で発生した人身事故の影響で、飛田給〜府中駅間の運転を見合わせています。運転区間の列車に遅れや運転変更が出ています。振替輸送を行っています。（5月26日 8時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+        },
+        {
+            "line": "京王新線",
+            "status": "運転状況",
+            "detail": "08:00頃、京王線内で発生した人身事故の影響で、列車に遅れや運転変更が出ています。（5月26日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "08:00頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（5月26日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "08:00頃、京王線内で発生した人身事故の影響で、列車に遅れや運転変更が出ています。（5月26日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+        },
+        {
+            "line": "日暮里・舎人ライナー",
+            "status": "運転状況",
+            "detail": "07:56頃、西日暮里駅での安全確認の影響で、運転を見合わせています。振替輸送を行っています。（5月26日 7時56分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/541/0"
+        },
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "JR常磐線(各停)内でのホームドア点検の影響で、一部列車に遅れが出ています。（5月26日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+        },
+        {
+            "line": "東京モノレール線",
+            "status": "運転状況",
+            "detail": "05:13頃、羽田空港第3ターミナル駅で発生したホームドア故障の影響で、列車に遅れが出ています。（5月26日 7時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/154/0"
         }
     ]
 }
