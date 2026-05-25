@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-05-25 15:57:16",
+    "update_time": "2026-05-25 21:00:04",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "常磐線内での線路内点検の影響で、一部列車に遅れが出ています。（5月25日 20時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        }
+    ]
 }
