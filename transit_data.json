@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-05-26 15:33:40",
+    "update_time": "2026-05-27 08:33:15",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "08:11頃、千駄木駅での救護活動の影響で、一部列車に遅れが出ています。（5月27日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+        }
+    ]
 }
