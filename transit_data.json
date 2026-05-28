@@ -1,27 +1,27 @@
 {
-    "update_time": "2026-05-28 15:39:56",
+    "update_time": "2026-05-28 20:50:35",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "東海道本線内での安全確認の影響で、一部列車に遅れや運休が出ています。（5月28日 15時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+            "detail": "宇都宮線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月28日 17時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
-            "line": "京葉線",
+            "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "武蔵野線内で発生した乗務員支障の影響で、一部列車に遅れが出ています。（5月28日 15時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+            "detail": "池袋駅での安全確認の影響で、大崎〜大宮駅間の一部列車に遅れが出ています。（5月28日 20時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
         },
         {
-            "line": "武蔵野線",
+            "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "南浦和駅で発生した乗務員支障の影響で、運転を見合わせていましたが、15:31頃、運転を再開しました。なお、一部列車に遅れが出ています。（5月28日 15時31分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+            "detail": "17:56頃、豊洲駅でのドア点検の影響で、一部列車に遅れが出ています。（5月28日 18時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
         }
     ]
 }
