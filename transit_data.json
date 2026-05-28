@@ -1,27 +1,27 @@
 {
-    "update_time": "2026-05-28 20:50:35",
+    "update_time": "2026-05-29 08:42:34",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "小田急小田原線",
             "status": "運転状況",
-            "detail": "宇都宮線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月28日 17時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "06:35頃、玉川学園前駅での線路内点検の影響などで、一部列車に遅れが出ています。（5月29日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
         },
         {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "line": "小田急江ノ島線",
             "status": "運転状況",
-            "detail": "池袋駅での安全確認の影響で、大崎〜大宮駅間の一部列車に遅れが出ています。（5月28日 20時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+            "detail": "07:28頃、桜ケ丘〜高座渋谷駅間で発生した踏切支障の影響などで、相模大野〜藤沢駅間の一部列車に遅れが出ています。（5月29日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
         },
         {
-            "line": "東京メトロ有楽町線",
+            "line": "東京メトロ銀座線",
             "status": "運転状況",
-            "detail": "17:56頃、豊洲駅でのドア点検の影響で、一部列車に遅れが出ています。（5月28日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+            "detail": "05:59頃、末広町〜神田駅間で発生した発煙の影響で、浅草〜銀座駅間の運転を見合わせています。運転区間のダイヤが乱れています。振替輸送を行っています。（5月29日 6時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
         }
     ]
 }
