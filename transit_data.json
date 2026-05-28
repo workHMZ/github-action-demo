@@ -1,27 +1,27 @@
 {
-    "update_time": "2026-05-28 08:37:42",
+    "update_time": "2026-05-28 15:39:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "西武新宿線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "新所沢〜入曽駅間での踏切内点検の影響で、一部列車に遅れが出ています。（5月28日 8時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
+            "detail": "東海道本線内での安全確認の影響で、一部列車に遅れや運休が出ています。（5月28日 15時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "西武拝島線",
+            "line": "京葉線",
             "status": "運転状況",
-            "detail": "西武新宿線内での踏切内点検の影響で、一部列車に遅れが出ています。（5月28日 8時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
+            "detail": "武蔵野線内で発生した乗務員支障の影響で、一部列車に遅れが出ています。（5月28日 15時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         },
         {
-            "line": "都営大江戸線",
+            "line": "武蔵野線",
             "status": "運転状況",
-            "detail": "07:35頃、光が丘駅での安全確認の影響で、ダイヤが乱れています。（5月28日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/131/0"
+            "detail": "南浦和駅で発生した乗務員支障の影響で、運転を見合わせていましたが、15:31頃、運転を再開しました。なお、一部列車に遅れが出ています。（5月28日 15時31分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
         }
     ]
 }
