@@ -1,27 +1,33 @@
 {
-    "update_time": "2026-05-29 08:42:34",
+    "update_time": "2026-05-29 15:41:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "京王線",
             "status": "運転状況",
-            "detail": "06:35頃、玉川学園前駅での線路内点検の影響などで、一部列車に遅れが出ています。（5月29日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "14:20頃、上北沢駅で発生した人身事故の影響で、桜上水〜つつじケ丘駅間の運転を見合わせています。運転区間の一部列車に遅れや運転変更が出ています。振替輸送を行っています。（5月29日 14時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
         },
         {
-            "line": "小田急江ノ島線",
+            "line": "京王新線",
             "status": "運転状況",
-            "detail": "07:28頃、桜ケ丘〜高座渋谷駅間で発生した踏切支障の影響などで、相模大野〜藤沢駅間の一部列車に遅れが出ています。（5月29日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
+            "detail": "14:20頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（5月29日 14時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
         },
         {
-            "line": "東京メトロ銀座線",
+            "line": "京王相模原線",
             "status": "運転状況",
-            "detail": "05:59頃、末広町〜神田駅間で発生した発煙の影響で、浅草〜銀座駅間の運転を見合わせています。運転区間のダイヤが乱れています。振替輸送を行っています。（5月29日 6時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+            "detail": "14:20頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（5月29日 14時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "14:20頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（5月29日 14時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
         }
     ]
 }
