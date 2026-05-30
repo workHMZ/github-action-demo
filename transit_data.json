@@ -1,33 +1,21 @@
 {
-    "update_time": "2026-05-30 19:18:05",
+    "update_time": "2026-05-31 08:13:46",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "西武新宿線",
             "status": "運転状況",
-            "detail": "高崎線内で発生した旅客転落の影響で、一部列車に遅れが出ています。（5月30日 17時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+            "detail": "07:29頃、西武拝島線内で発生した窓ガラス破損の影響で、一部列車に運休が出ています。（5月31日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
         },
         {
-            "line": "横須賀線",
+            "line": "西武拝島線",
             "status": "運転状況",
-            "detail": "新川崎駅で発生した人身事故の影響で、一部列車に遅れが出ています。（5月30日 18時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "横須賀線内で発生した人身事故の影響で、一部列車に遅れが出ています。（5月30日 18時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "西武池袋線・秩父線内でのホームドア点検の影響で、一部列車に運休が出ています。（5月30日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "07:29頃、拝島駅で発生した窓ガラス破損の影響で、一部列車に運休が出ています。（5月31日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
         }
     ]
 }
