@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-05-31 08:13:46",
+    "update_time": "2026-05-31 15:42:54",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "西武新宿線",
-            "status": "運転状況",
-            "detail": "07:29頃、西武拝島線内で発生した窓ガラス破損の影響で、一部列車に運休が出ています。（5月31日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
-        },
-        {
-            "line": "西武拝島線",
-            "status": "運転状況",
-            "detail": "07:29頃、拝島駅で発生した窓ガラス破損の影響で、一部列車に運休が出ています。（5月31日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
