@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-05-31 15:42:54",
+    "update_time": "2026-05-31 19:24:35",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "中央総武線(各停)内での線路内点検の影響で、一部列車に遅れが出ています。（5月31日 18時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        },
+        {
+            "line": "中央総武線(各停)",
+            "status": "運転状況",
+            "detail": "吉祥寺駅での線路内点検の影響で、一部列車に遅れが出ています。（5月31日 18時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+        }
+    ]
 }
