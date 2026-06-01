@@ -1,5 +1,5 @@
 {
-    "update_time": "2026-06-01 08:16:52",
+    "update_time": "2026-06-01 16:32:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 2,
@@ -8,14 +8,14 @@
         {
             "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "大宮駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月1日 8時10分掲載）",
+            "detail": "港南台〜本郷台駅間で発生した沿線火災の影響で、一部列車に遅れや運休が出ています。（6月1日 16時0分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "都営三田線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "07:52頃、志村坂上駅での車両点検の影響で、一部列車のダイヤが乱れています。（6月1日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
+            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（6月1日 15時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         }
     ]
 }
