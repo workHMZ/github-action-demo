@@ -1,21 +1,15 @@
 {
-    "update_time": "2026-06-01 16:32:18",
+    "update_time": "2026-06-01 22:47:45",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "港南台〜本郷台駅間で発生した沿線火災の影響で、一部列車に遅れや運休が出ています。（6月1日 16時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（6月1日 15時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "13:15頃、京急本線内での信号関係点検の影響で、ダイヤが乱れています。（6月1日 16時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
