@@ -1,15 +1,39 @@
 {
-    "update_time": "2026-06-02 16:11:42",
+    "update_time": "2026-06-02 21:15:32",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "常磐線(快速)[品川～取手]",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "常磐線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月2日 14時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（6月2日 21時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "新川崎〜横浜駅間での踏切内点検の影響で、一部列車に遅れが出ています。（6月2日 21時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "新川崎〜横浜駅間での踏切内点検の影響で、一部列車に遅れが出ています。（6月2日 21時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "status": "運転状況",
+            "detail": "渋谷駅での荷物挟まり対応の影響で、一部列車に遅れが出ています。（6月2日 21時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+        },
+        {
+            "line": "西武新宿線",
+            "status": "運転状況",
+            "detail": "19:18頃、西武新宿駅で発生した乗務員支障の影響で、一部列車に遅れが出ています。（6月2日 19時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
         }
     ]
 }
