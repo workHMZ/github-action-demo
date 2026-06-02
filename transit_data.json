@@ -1,27 +1,15 @@
 {
-    "update_time": "2026-06-02 08:44:05",
+    "update_time": "2026-06-02 16:11:42",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "常磐線(快速)[品川～取手]",
             "status": "運転状況",
-            "detail": "八王子駅での安全確認の影響で、一部列車に遅れが出ています。（6月2日 8時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "08:02頃、南砂町駅でのホームドア点検の影響で、列車に遅れが出ています。（6月2日 8時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "08:18頃、飯田橋駅での救護活動の影響で、列車に遅れが出ています。（6月2日 8時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+            "detail": "常磐線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月2日 14時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
         }
     ]
 }
