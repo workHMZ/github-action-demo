@@ -1,51 +1,8 @@
 {
-    "update_time": "2026-06-03 16:26:27",
+    "update_time": "2026-06-03 21:50:22",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 7,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に運休や運転変更が出ています。（6月3日 5時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "台風の影響で、一部列車に遅れや運休が出ています。（6月3日 15時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "台風の影響で、成田線との直通運転を中止しています。（6月3日 9時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "錦糸町〜新小岩駅間での車両点検の影響で、一部列車に遅れが出ています。（6月3日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "京葉線",
-            "status": "運転状況",
-            "detail": "台風の影響で、武蔵野線との直通運転を中止しています。（6月3日 4時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
-        },
-        {
-            "line": "武蔵野線",
-            "status": "運転状況",
-            "detail": "台風の影響で、京葉線との直通運転を中止しています。（6月3日 13時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
-        },
-        {
-            "line": "都営浅草線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れが出ています。（6月3日 10時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
