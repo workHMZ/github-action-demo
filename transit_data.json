@@ -1,16 +1,10 @@
 {
-    "update_time": "2026-06-03 09:01:43",
+    "update_time": "2026-06-03 16:26:27",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 18,
+    "issue_count": 7,
     "status": "issues_found",
     "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "西日暮里駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月3日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
         {
             "line": "湘南新宿ライン",
             "status": "運転状況",
@@ -20,14 +14,8 @@
         {
             "line": "横須賀線",
             "status": "運転状況",
-            "detail": "台風の影響で、逗子〜久里浜駅間の運転を見合わせています。運転区間の一部列車に遅れや運休や運転変更が出ています。振替輸送を行っています。（6月3日 8時50分掲載）",
+            "detail": "台風の影響で、一部列車に遅れや運休が出ています。（6月3日 15時45分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "中央総武線(各停)",
-            "status": "運転状況",
-            "detail": "幕張駅での安全確認の影響で、一部列車に遅れが出ています。（6月3日 8時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
         },
         {
             "line": "常磐線(快速)[品川～取手]",
@@ -38,7 +26,7 @@
         {
             "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "錦糸町〜新小岩駅間での車両点検の影響で、一部列車に遅れが出ています。なお、横須賀線との直通運転を中止しています。（6月3日 8時50分掲載）",
+            "detail": "錦糸町〜新小岩駅間での車両点検の影響で、一部列車に遅れが出ています。（6月3日 13時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         },
         {
@@ -50,68 +38,14 @@
         {
             "line": "武蔵野線",
             "status": "運転状況",
-            "detail": "台風の影響で、京葉線との直通運転を中止しています。（6月3日 4時30分掲載）",
+            "detail": "台風の影響で、京葉線との直通運転を中止しています。（6月3日 13時20分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/71/0"
         },
         {
-            "line": "上野東京ライン",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "台風の影響で、東海道本線と宇都宮線・高崎線との直通運転を中止しています。（6月3日 5時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/627/0"
-        },
-        {
-            "line": "京王線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れや運休が出ています。（6月3日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
-        },
-        {
-            "line": "京王新線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れや運休が出ています。（6月3日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
-        },
-        {
-            "line": "京王相模原線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れや運休が出ています。（6月3日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れや運休が出ています。（6月3日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "台風の影響で、ダイヤが乱れています。（6月3日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "台風の影響で、ダイヤが乱れています。（6月3日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "小田急多摩線",
-            "status": "運転状況",
-            "detail": "台風の影響で、ダイヤが乱れています。（6月3日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/111/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れが出ています。（6月3日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "台風の影響で、列車に遅れが出ています。（6月3日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+            "detail": "台風の影響で、列車に遅れが出ています。（6月3日 10時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
