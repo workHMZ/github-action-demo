@@ -1,39 +1,8 @@
 {
-    "update_time": "2026-06-04 08:59:34",
+    "update_time": "2026-06-04 16:10:13",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（6月4日 8時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "新川崎〜横浜駅間での踏切内点検の影響で、一部列車に遅れが出ています。（6月4日 8時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（6月4日 8時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "京葉線",
-            "status": "運転状況",
-            "detail": "内房線内での車内安全確認の影響で、一部列車に遅れが出ています。（6月4日 8時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
-        },
-        {
-            "line": "都営浅草線",
-            "status": "運転状況",
-            "detail": "京急線内での救護活動の影響で、押上方面行のダイヤが乱れています。（6月4日 8時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
