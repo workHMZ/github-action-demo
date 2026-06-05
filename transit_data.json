@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-06-05 20:36:15",
+    "update_time": "2026-06-06 08:37:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "中央線(快速)[東京～高尾]",
-            "status": "運転状況",
-            "detail": "豊田〜八王子駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（6月5日 16時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "20:11頃、東武スカイツリーライン内で発生した人身事故の影響で、一部列車に運転変更が出ています。（6月5日 20時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
