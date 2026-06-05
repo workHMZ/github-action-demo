@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-06-05 08:35:59",
+    "update_time": "2026-06-05 15:53:03",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "日暮里・舎人ライナー",
-            "status": "運転状況",
-            "detail": "高野駅でのホームドア点検の影響で、運転を見合わせていましたが、08:30現在、運転を再開しています。なお、ダイヤが乱れています。（6月5日 8時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/541/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
