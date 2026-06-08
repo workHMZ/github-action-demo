@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-06-08 21:42:21",
+    "update_time": "2026-06-09 08:35:52",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "常磐線(各停)",
             "status": "運転状況",
-            "detail": "本郷台〜大船駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月8日 21時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+            "detail": "安全確認の影響で、綾瀬〜我孫子駅間の一部列車に遅れが出ています。（6月9日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
         },
         {
-            "line": "西武池袋線・秩父線",
+            "line": "都営新宿線",
             "status": "運転状況",
-            "detail": "19:09頃、椎名町〜東長崎駅間で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月8日 20時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
-        },
-        {
-            "line": "西武有楽町線",
-            "status": "運転状況",
-            "detail": "19:09頃、西武池袋線・秩父線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月8日 21時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+            "detail": "07:58頃、浜町駅での安全確認の影響で、ダイヤが乱れています。（6月9日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
         }
     ]
 }
