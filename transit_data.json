@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-06-08 08:18:55",
+    "update_time": "2026-06-08 16:16:55",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "南武線[川崎～立川]",
+            "status": "運転状況",
+            "detail": "平間〜向河原駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月8日 16時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
+        }
+    ]
 }
