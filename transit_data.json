@@ -1,15 +1,27 @@
 {
-    "update_time": "2026-06-08 16:16:55",
+    "update_time": "2026-06-08 21:42:21",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "南武線[川崎～立川]",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "平間〜向河原駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月8日 16時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
+            "detail": "本郷台〜大船駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月8日 21時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "西武池袋線・秩父線",
+            "status": "運転状況",
+            "detail": "19:09頃、椎名町〜東長崎駅間で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月8日 20時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+        },
+        {
+            "line": "西武有楽町線",
+            "status": "運転状況",
+            "detail": "19:09頃、西武池袋線・秩父線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月8日 21時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
         }
     ]
 }
