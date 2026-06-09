@@ -1,21 +1,33 @@
 {
-    "update_time": "2026-06-09 08:35:52",
+    "update_time": "2026-06-09 15:35:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "常磐線(各停)",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "安全確認の影響で、綾瀬〜我孫子駅間の一部列車に遅れが出ています。（6月9日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
+            "detail": "矢川駅でのホームドア点検の影響で、一部列車に遅れや運休が出ています。（6月9日 14時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         },
         {
-            "line": "都営新宿線",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "07:58頃、浜町駅での安全確認の影響で、ダイヤが乱れています。（6月9日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
+            "detail": "13:05頃、東武東上線内で発生した人身事故の影響で、一部列車に運転変更が出ています。（6月9日 13時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ有楽町線",
+            "status": "運転状況",
+            "detail": "13:05頃、東武東上線内で発生した人身事故の影響で、東武東上線との直通運転を中止しています。（6月9日 13時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "13:05頃、東武東上線内で発生した人身事故の影響で、東武東上線との直通運転を中止しています。（6月9日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
