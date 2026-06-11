@@ -1,33 +1,21 @@
 {
-    "update_time": "2026-06-11 08:49:27",
+    "update_time": "2026-06-11 16:18:01",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "武蔵野線",
+            "line": "東京メトロ丸ノ内線",
             "status": "運転状況",
-            "detail": "越谷レイクタウン〜吉川駅間での車両点検の影響で、一部列車に遅れや運休が出ています。（6月11日 8時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+            "detail": "15:03頃、後楽園駅での車両点検の影響で、一部列車に遅れが出ています。（6月11日 15時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
         },
         {
-            "line": "東急田園都市線",
+            "line": "東京メトロ有楽町線",
             "status": "運転状況",
-            "detail": "07:57頃、東京メトロ半蔵門線内でのホームドア点検の影響で、下り線(中央林間方面行)の列車に遅れが出ています。（6月11日 8時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（6月11日 8時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "07:57頃、神保町駅でのホームドア点検の影響で、列車に遅れが出ています。（6月11日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
+            "detail": "15:55頃、氷川台駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月11日 16時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
         }
     ]
 }
