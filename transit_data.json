@@ -1,33 +1,8 @@
 {
-    "update_time": "2026-06-12 20:53:01",
+    "update_time": "2026-06-13 08:48:27",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "保土ケ谷駅でのドア点検の影響で、一部列車に遅れが出ています。（6月12日 20時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "保土ケ谷駅でのドア点検の影響で、一部列車に遅れが出ています。（6月12日 20時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "南武線[川崎～立川]",
-            "status": "運転状況",
-            "detail": "武蔵溝ノ口駅構内での踏切内点検の影響で、一部列車に遅れが出ています。（6月12日 20時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "横須賀線内でのドア点検の影響で、一部列車に遅れが出ています。（6月12日 20時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
