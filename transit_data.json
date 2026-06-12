@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-06-12 08:53:08",
+    "update_time": "2026-06-12 16:07:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "東海道本線内での線路内点検の影響で、一部列車に遅れが出ています。（6月12日 15時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        }
+    ]
 }
