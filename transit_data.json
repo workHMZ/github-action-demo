@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-06-13 08:48:27",
+    "update_time": "2026-06-13 15:42:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東京メトロ南北線",
+            "status": "運転状況",
+            "detail": "14:59頃、後楽園駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月13日 15時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
+        }
+    ]
 }
