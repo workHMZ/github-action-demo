@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-06-14 08:20:46",
+    "update_time": "2026-06-14 16:09:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ日比谷線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "07:59頃、仲御徒町駅でのドア点検の影響で、一部列車に遅れが出ています。（6月14日 8時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
+            "detail": "現在､事故･遅延に関する情報はありません。",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         }
     ]
 }
