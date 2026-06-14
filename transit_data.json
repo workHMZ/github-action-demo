@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-06-14 16:09:25",
+    "update_time": "2026-06-14 20:08:49",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "現在､事故･遅延に関する情報はありません。",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（6月14日 18時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         }
     ]
 }
