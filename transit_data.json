@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-06-15 17:42:15",
+    "update_time": "2026-06-15 23:35:10",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
-            "status": "運転状況",
-            "detail": "十条駅構内での踏切内点検の影響で、一部列車に遅れが出ています。（6月15日 17時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
-        },
-        {
-            "line": "東京メトロ丸ノ内線",
-            "status": "運転状況",
-            "detail": "17:27頃、茗荷谷駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月15日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
