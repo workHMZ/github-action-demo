@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-06-15 23:35:10",
+    "update_time": "2026-06-16 09:01:34",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東京メトロ千代田線",
+            "status": "運転状況",
+            "detail": "08:15頃、代々木公園駅でのドア点検の影響で、列車に遅れが出ています。（6月16日 8時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+        }
+    ]
 }
