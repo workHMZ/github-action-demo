@@ -1,51 +1,8 @@
 {
-    "update_time": "2026-06-18 08:50:11",
+    "update_time": "2026-06-18 16:19:51",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 7,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
-            "status": "運転状況",
-            "detail": "十条駅での荷物挟まり対応の影響で、一部列車に遅れが出ています。（6月18日 8時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
-        },
-        {
-            "line": "常磐線(各停)",
-            "status": "運転状況",
-            "detail": "08:15頃、東京メトロ千代田線内での車両点検の影響で、一部列車に遅れが出ています。（6月18日 8時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "救護活動の影響などで、一部列車に遅れが出ています。なお、東京メトロ千代田線との直通運転を中止しています。（6月18日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "救護活動の影響で、一部列車に遅れが出ています。（6月18日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "東急目黒線",
-            "status": "運転状況",
-            "detail": "東京メトロ南北線内での混雑の影響で、下り線(日吉方面行)の列車に遅れが出ています。（6月18日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
-        },
-        {
-            "line": "東京メトロ千代田線",
-            "status": "運転状況",
-            "detail": "08:15頃、北千住駅での車両点検の影響で、ダイヤが乱れています。なお、小田急小田原線との直通運転を中止しています。（6月18日 8時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
-        },
-        {
-            "line": "東京メトロ南北線",
-            "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月18日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
