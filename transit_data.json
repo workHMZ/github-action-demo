@@ -1,20 +1,14 @@
 {
-    "update_time": "2026-06-19 17:19:38",
+    "update_time": "2026-06-19 21:17:52",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 7,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "大森〜蒲田駅間での踏切内点検の影響で、一部列車に遅れが出ています。（6月19日 16時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
             "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "東海道本線内での線路内点検の影響で、一部列車に遅れが出ています。（6月19日 16時35分掲載）",
+            "detail": "東海道本線内での線路内点検の影響で、一部列車に遅れが出ています。（6月19日 19時50分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
@@ -24,28 +18,10 @@
             "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         },
         {
-            "line": "京王線",
+            "line": "都営新宿線",
             "status": "運転状況",
-            "detail": "15:50頃、明大前〜下高井戸駅間で発生した線路内立入の影響で、列車に遅れが出ています。（6月19日 16時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
-        },
-        {
-            "line": "京王新線",
-            "status": "運転状況",
-            "detail": "15:50頃、京王線内で発生した線路内立入の影響で、列車に遅れが出ています。（6月19日 16時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
-        },
-        {
-            "line": "京王相模原線",
-            "status": "運転状況",
-            "detail": "15:50頃、京王線内で発生した線路内立入の影響で、列車に遅れが出ています。（6月19日 16時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "15:50頃、京王線内で発生した線路内立入の影響で、列車に遅れが出ています。（6月19日 16時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+            "detail": "19:12頃、市ケ谷駅での安全確認の影響で、ダイヤが乱れています。（6月19日 20時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
         }
     ]
 }
