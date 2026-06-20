@@ -1,21 +1,33 @@
 {
-    "update_time": "2026-06-20 19:40:49",
+    "update_time": "2026-06-21 08:35:49",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "西武池袋線・秩父線",
             "status": "運転状況",
-            "detail": "赤羽〜池袋駅間で発生した倒木の影響で、一部列車に遅れが出ています。（6月20日 19時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "04:36頃、東京メトロ有楽町線内でのポイント点検の影響で、一部列車に遅れや運休が出ています。（6月21日 8時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
         },
         {
-            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "line": "西武有楽町線",
             "status": "運転状況",
-            "detail": "湘南新宿ライン内で発生した倒木の影響で、一部列車に遅れや運休や運転変更が出ています。（6月20日 19時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+            "detail": "04:36頃、東京メトロ有楽町線内でのポイント点検の影響で、一部列車に遅れが出ています。（6月21日 8時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "04:36頃、東京メトロ有楽町線内でのポイント点検の影響で、一部列車に遅れや運転変更が出ています。（6月21日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "04:36頃、東京メトロ有楽町線内でのポイント点検の影響で、ダイヤが乱れています。（6月21日 6時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
