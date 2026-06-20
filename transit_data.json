@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-06-20 15:48:46",
+    "update_time": "2026-06-20 19:40:49",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "赤羽〜池袋駅間で発生した倒木の影響で、一部列車に遅れが出ています。（6月20日 19時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "status": "運転状況",
+            "detail": "湘南新宿ライン内で発生した倒木の影響で、一部列車に遅れや運休や運転変更が出ています。（6月20日 19時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+        }
+    ]
 }
