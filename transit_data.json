@@ -1,39 +1,39 @@
 {
-    "update_time": "2026-06-21 20:24:51",
+    "update_time": "2026-06-22 08:43:39",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "新川崎〜横浜駅間での信号関係点検の影響で、一部列車に遅れや運休が出ています。（6月21日 18時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+            "detail": "川崎〜鶴見駅間での車両点検の影響で、一部列車に遅れが出ています。（6月22日 8時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "横須賀線",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "新川崎〜横浜駅間での信号関係点検の影響で、一部列車に遅れや運休が出ています。（6月21日 18時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+            "detail": "分倍河原駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月22日 8時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         },
         {
-            "line": "総武線(快速)[東京～千葉]",
+            "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "横須賀線内での信号関係点検の影響で、一部列車に遅れが出ています。（6月21日 18時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+            "detail": "武蔵境駅での安全確認の影響で、一部列車に遅れが出ています。（6月22日 8時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         },
         {
-            "line": "西武新宿線",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "19:42頃、上石神井〜武蔵関駅間で発生した人身事故の影響で、西武新宿〜田無駅間の運転を見合わせています。振替輸送を行っています。（6月21日 19時42分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
+            "detail": "06:20頃、成田スカイアクセス線内で発生した人身事故の影響で、ダイヤが乱れています。（6月22日 7時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         },
         {
-            "line": "西武拝島線",
+            "line": "多摩都市モノレール線",
             "status": "運転状況",
-            "detail": "19:42頃、西武新宿線内で発生した人身事故の影響で、小平〜小川駅間の運転を見合わせています。振替輸送を行っています。（6月21日 19時42分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
+            "detail": "救護活動の影響で、列車に遅れが出ています。（6月22日 8時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/156/0"
         }
     ]
 }
