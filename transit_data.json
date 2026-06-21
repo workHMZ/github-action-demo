@@ -1,15 +1,39 @@
 {
-    "update_time": "2026-06-21 16:19:57",
+    "update_time": "2026-06-21 20:24:51",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京葉線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "新習志野〜幕張豊砂駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月21日 15時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+            "detail": "新川崎〜横浜駅間での信号関係点検の影響で、一部列車に遅れや運休が出ています。（6月21日 18時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "新川崎〜横浜駅間での信号関係点検の影響で、一部列車に遅れや運休が出ています。（6月21日 18時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "横須賀線内での信号関係点検の影響で、一部列車に遅れが出ています。（6月21日 18時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "西武新宿線",
+            "status": "運転状況",
+            "detail": "19:42頃、上石神井〜武蔵関駅間で発生した人身事故の影響で、西武新宿〜田無駅間の運転を見合わせています。振替輸送を行っています。（6月21日 19時42分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
+        },
+        {
+            "line": "西武拝島線",
+            "status": "運転状況",
+            "detail": "19:42頃、西武新宿線内で発生した人身事故の影響で、小平〜小川駅間の運転を見合わせています。振替輸送を行っています。（6月21日 19時42分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
         }
     ]
 }
