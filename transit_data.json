@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-06-22 22:44:04",
+    "update_time": "2026-06-23 08:42:33",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "川口駅での荷物挟まり対応の影響で、一部列車に遅れが出ています。（6月23日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "総武本線内での線路内点検の影響で、一部列車に遅れが出ています。（6月23日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "総武本線内での線路内点検の影響で、一部列車に遅れが出ています。（6月23日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "07:53頃、都立大学〜自由が丘駅間で発生した踏切支障の影響で、列車に遅れが出ています。（6月23日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        }
+    ]
 }
