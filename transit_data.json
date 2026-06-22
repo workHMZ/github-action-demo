@@ -1,39 +1,15 @@
 {
-    "update_time": "2026-06-22 08:43:39",
+    "update_time": "2026-06-22 17:43:50",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京浜東北根岸線",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "川崎〜鶴見駅間での車両点検の影響で、一部列車に遅れが出ています。（6月22日 8時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "南武線[川崎～立川]",
-            "status": "運転状況",
-            "detail": "分倍河原駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月22日 8時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
-        },
-        {
-            "line": "中央線(快速)[東京～高尾]",
-            "status": "運転状況",
-            "detail": "武蔵境駅での安全確認の影響で、一部列車に遅れが出ています。（6月22日 8時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "都営浅草線",
-            "status": "運転状況",
-            "detail": "06:20頃、成田スカイアクセス線内で発生した人身事故の影響で、ダイヤが乱れています。（6月22日 7時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        },
-        {
-            "line": "多摩都市モノレール線",
-            "status": "運転状況",
-            "detail": "救護活動の影響で、列車に遅れが出ています。（6月22日 8時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/156/0"
+            "detail": "衣笠駅での車両点検の影響で、横須賀〜久里浜駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（6月22日 17時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         }
     ]
 }
