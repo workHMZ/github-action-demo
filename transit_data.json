@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-06-22 17:43:50",
+    "update_time": "2026-06-22 22:44:04",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "衣笠駅での車両点検の影響で、横須賀〜久里浜駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（6月22日 17時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
