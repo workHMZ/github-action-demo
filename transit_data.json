@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-06-23 15:34:41",
+    "update_time": "2026-06-23 20:31:59",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "山手線",
+            "status": "運転状況",
+            "detail": "大塚駅での救護活動の影響で、外回りの列車に遅れが出ています。（6月23日 20時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+        },
+        {
+            "line": "京葉線",
+            "status": "運転状況",
+            "detail": "19:49頃、武蔵野線内で発生した人身事故の影響で、一部列車に遅れが出ています。（6月23日 20時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+        },
+        {
+            "line": "武蔵野線",
+            "status": "運転状況",
+            "detail": "19:49頃、南流山〜新松戸駅間で発生した人身事故の影響で、運転を見合わせています。振替輸送を行っています。（6月23日 19時49分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+        }
+    ]
 }
