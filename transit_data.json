@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-06-24 08:20:51",
+    "update_time": "2026-06-24 15:31:55",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "山手線",
-            "status": "運転状況",
-            "detail": "06:17頃、駒込駅で発生した人身事故の影響で、列車に遅れが出ています。（6月24日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "06:17頃、山手線内で発生した人身事故の影響で、一部列車に遅れや運休が出ています。（6月24日 8時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "東京メトロ千代田線",
-            "status": "運転状況",
-            "detail": "07:40頃、根津駅での救護活動の影響で、一部列車に遅れが出ています。（6月24日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
