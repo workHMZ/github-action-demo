@@ -1,33 +1,33 @@
 {
-    "update_time": "2026-06-26 20:14:40",
+    "update_time": "2026-06-27 08:33:43",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京王線",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+            "detail": "08:08頃、鹿島田〜平間駅間で発生した人身事故の影響で、運転を見合わせています。振替輸送を行っています。（6月27日 8時8分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         },
         {
-            "line": "京王新線",
+            "line": "常磐線(快速)[品川～取手]",
             "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+            "detail": "台風の影響で、一部列車に運休が出ています。なお、成田線との直通運転を中止しています。（6月27日 6時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
         },
         {
-            "line": "京王相模原線",
+            "line": "京葉線",
             "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+            "detail": "台風の影響で、一部列車に遅れが出ています。（6月27日 8時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         },
         {
-            "line": "京王高尾線",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+            "detail": "台風の影響で、一部列車のダイヤが乱れています。（6月27日 8時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
