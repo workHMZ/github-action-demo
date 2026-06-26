@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-06-26 08:43:57",
+    "update_time": "2026-06-26 15:38:45",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "車両故障の影響で、一部列車に運休が出ています。（6月26日 6時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
