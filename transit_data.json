@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-06-26 15:38:45",
+    "update_time": "2026-06-26 20:14:40",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京王線",
+            "status": "運転状況",
+            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+        },
+        {
+            "line": "京王新線",
+            "status": "運転状況",
+            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "混雑の影響で、一部列車に遅れが出ています。（6月26日 19時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+        }
+    ]
 }
