@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-06-27 19:23:19",
+    "update_time": "2026-06-28 08:16:32",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "台風の影響で、一部列車に運休が出ています。なお、成田線との直通運転を中止しています。（6月27日 6時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
-        },
-        {
-            "line": "東京メトロ日比谷線",
-            "status": "運転状況",
-            "detail": "18:00頃、北千住駅での安全確認の影響で、一部列車に遅れが出ています。（6月27日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
