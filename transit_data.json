@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-06-28 19:35:07",
+    "update_time": "2026-06-29 08:17:19",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ千代田線",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "16:24頃、明治神宮前駅での安全確認の影響で、列車に遅れが出ています。（6月28日 16時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+            "detail": "07:10頃、東武東上線内での踏切内点検の影響などで、一部列車に遅れが出ています。（6月29日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         }
     ]
 }
