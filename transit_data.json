@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-06-28 08:16:32",
+    "update_time": "2026-06-28 15:46:28",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "中央総武線(各停)",
+            "status": "運転状況",
+            "detail": "東中野〜大久保駅間での車両点検の影響で、千葉方面行の一部列車に遅れが出ています。（6月28日 15時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+        }
+    ]
 }
