@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-06-29 16:15:35",
+    "update_time": "2026-06-29 21:42:09",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "15:02頃、開成〜栢山駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月29日 15時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+            "detail": "千葉駅でのポイント点検の影響で、一部列車に遅れが出ています。（6月29日 21時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        },
+        {
+            "line": "東京メトロ丸ノ内線",
+            "status": "運転状況",
+            "detail": "18:45頃、新宿三丁目駅でのホームドア点検の影響で、一部列車に遅れが出ています。（6月29日 19時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
         }
     ]
 }
