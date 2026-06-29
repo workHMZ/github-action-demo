@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-06-29 08:17:19",
+    "update_time": "2026-06-29 16:15:35",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "小田急小田原線",
             "status": "運転状況",
-            "detail": "07:10頃、東武東上線内での踏切内点検の影響などで、一部列車に遅れが出ています。（6月29日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "15:02頃、開成〜栢山駅間での線路内点検の影響で、一部列車に遅れが出ています。（6月29日 15時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
         }
     ]
 }
