@@ -1,21 +1,15 @@
 {
-    "update_time": "2026-07-01 15:58:26",
+    "update_time": "2026-07-01 20:33:00",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "小田急小田原線",
+            "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "14:12頃、小田急江ノ島線内で発生した踏切支障の影響で、一部列車に遅れが出ています。（7月1日 15時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "14:12頃、桜ケ丘〜高座渋谷駅間で発生した踏切支障の影響で、一部列車に遅れが出ています。（7月1日 14時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
+            "detail": "新宿〜中野駅間での車両点検の影響で、一部列車に遅れが出ています。（7月1日 19時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         }
     ]
 }
