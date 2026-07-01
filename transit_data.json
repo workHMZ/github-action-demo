@@ -1,15 +1,27 @@
 {
-    "update_time": "2026-07-01 20:33:00",
+    "update_time": "2026-07-02 08:42:08",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "東急田園都市線",
             "status": "運転状況",
-            "detail": "新宿〜中野駅間での車両点検の影響で、一部列車に遅れが出ています。（7月1日 19時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+            "detail": "08:17頃、東京メトロ半蔵門線内での車両点検の影響で、列車に遅れが出ています。（7月2日 8時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+        },
+        {
+            "line": "東急大井町線",
+            "status": "運転状況",
+            "detail": "07:58頃、下神明駅で発生した車両故障の影響で、一部列車に遅れや運休が出ています。（7月2日 8時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
+        },
+        {
+            "line": "東京メトロ半蔵門線",
+            "status": "運転状況",
+            "detail": "08:17頃、押上駅での車両点検の影響で、ダイヤが乱れています。（7月2日 8時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
         }
     ]
 }
