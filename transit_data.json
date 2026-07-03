@@ -1,21 +1,15 @@
 {
-    "update_time": "2026-07-03 08:20:47",
+    "update_time": "2026-07-03 15:17:34",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "07:26頃、東京メトロ副都心線内での荷物挟まり対応の影響で、一部列車に遅れが出ています。（7月3日 7時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "07:39頃、JR中央総武線(各停)内での車両点検の影響で、一部列車に遅れが出ています。（7月3日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+            "detail": "横浜線内での踏切内点検の影響で、東神奈川〜桜木町駅間の一部列車に遅れが出ています。（7月3日 14時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         }
     ]
 }
