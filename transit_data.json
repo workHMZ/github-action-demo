@@ -1,15 +1,39 @@
 {
-    "update_time": "2026-07-03 15:17:34",
+    "update_time": "2026-07-03 19:49:59",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
             "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "横浜線内での踏切内点検の影響で、東神奈川〜桜木町駅間の一部列車に遅れが出ています。（7月3日 14時25分掲載）",
+            "detail": "鶴見駅での落し物拾得の影響で、一部列車に遅れが出ています。（7月3日 18時30分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "京王線",
+            "status": "運転状況",
+            "detail": "15:05頃、下高井戸〜桜上水駅間で発生した線路支障の影響で、列車に遅れが出ています。（7月3日 17時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+        },
+        {
+            "line": "京王新線",
+            "status": "運転状況",
+            "detail": "15:05頃、京王線内で発生した線路支障の影響で、列車に遅れが出ています。（7月3日 17時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "15:05頃、京王線内で発生した線路支障の影響で、列車に遅れが出ています。（7月3日 17時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "15:05頃、京王線内で発生した線路支障の影響で、列車に遅れが出ています。（7月3日 17時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
         }
     ]
 }
