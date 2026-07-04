@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-07-04 19:25:15",
+    "update_time": "2026-07-05 08:12:10",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東京メトロ銀座線",
+            "status": "運転状況",
+            "detail": "07:55頃、新橋駅での落し物拾得の影響で、列車に遅れが出ています。（7月5日 8時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+        }
+    ]
 }
