@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-07-05 08:12:10",
+    "update_time": "2026-07-05 15:26:05",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ銀座線",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "07:55頃、新橋駅での落し物拾得の影響で、列車に遅れが出ています。（7月5日 8時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
+            "detail": "津田山〜久地駅間での踏切内点検の影響で、一部列車に遅れが出ています。（7月5日 14時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
+        },
+        {
+            "line": "都営浅草線",
+            "status": "運転状況",
+            "detail": "12:29頃、京急本線内で発生した人身事故の影響で、ダイヤが乱れています。（7月5日 13時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
