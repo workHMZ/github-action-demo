@@ -1,39 +1,27 @@
 {
-    "update_time": "2026-07-05 19:27:44",
+    "update_time": "2026-07-06 08:17:09",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "山手線",
+            "line": "東急目黒線",
             "status": "運転状況",
-            "detail": "秋葉原駅での救護活動の影響で、内回りの列車に遅れが出ています。（7月5日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+            "detail": "日吉駅での旅客対応の影響で、一部列車に遅れが出ています。（7月6日 7時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
         },
         {
-            "line": "西武池袋線・秩父線",
+            "line": "東京メトロ南北線",
             "status": "運転状況",
-            "detail": "17:06頃、東急東横線内での救護活動の影響で、練馬〜飯能駅間の一部列車に遅れや運休が出ています。（7月5日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+            "detail": "06:31頃、王子駅での救護活動の影響で、一部列車に遅れが出ています。（7月6日 6時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
         },
         {
-            "line": "西武有楽町線",
+            "line": "多摩都市モノレール線",
             "status": "運転状況",
-            "detail": "17:06頃、東急東横線内での救護活動の影響で、一部列車に遅れや運休が出ています。（7月5日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "17:06頃、学芸大学駅での救護活動の影響で、列車に遅れや運休や運転変更が出ています。（7月5日 18時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "17:06頃、東急東横線内での救護活動の影響で、ダイヤが乱れています。（7月5日 17時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "ポイント故障の影響で、10分間隔での運転となっています。（7月6日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/156/0"
         }
     ]
 }
