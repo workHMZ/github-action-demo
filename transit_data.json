@@ -1,27 +1,21 @@
 {
-    "update_time": "2026-07-06 08:17:09",
+    "update_time": "2026-07-06 15:56:39",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急目黒線",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "日吉駅での旅客対応の影響で、一部列車に遅れが出ています。（7月6日 7時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/113/0"
+            "detail": "中央総武線(各停)内で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月6日 13時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         },
         {
-            "line": "東京メトロ南北線",
+            "line": "中央総武線(各停)",
             "status": "運転状況",
-            "detail": "06:31頃、王子駅での救護活動の影響で、一部列車に遅れが出ています。（7月6日 6時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/139/0"
-        },
-        {
-            "line": "多摩都市モノレール線",
-            "status": "運転状況",
-            "detail": "ポイント故障の影響で、10分間隔での運転となっています。（7月6日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/156/0"
+            "detail": "東船橋駅で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月6日 13時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
         }
     ]
 }
