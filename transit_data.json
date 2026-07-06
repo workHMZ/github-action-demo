@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-07-06 15:56:39",
+    "update_time": "2026-07-06 21:15:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "中央総武線(各停)内で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月6日 13時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "中央総武線(各停)",
-            "status": "運転状況",
-            "detail": "東船橋駅で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月6日 13時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
