@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-07-06 21:15:18",
+    "update_time": "2026-07-07 08:31:06",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "高崎線内での車両点検の影響で、一部列車に遅れが出ています。（7月7日 7時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "status": "運転状況",
+            "detail": "池袋〜板橋駅間での踏切内点検の影響で、一部列車に遅れが出ています。（7月7日 8時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+        }
+    ]
 }
