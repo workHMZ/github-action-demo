@@ -1,21 +1,45 @@
 {
-    "update_time": "2026-07-07 20:18:53",
+    "update_time": "2026-07-08 08:13:38",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 6,
     "status": "issues_found",
     "issues": [
         {
-            "line": "武蔵野線",
+            "line": "京王線",
             "status": "運転状況",
-            "detail": "西浦和駅での救護活動の影響で、一部列車に遅れが出ています。（7月7日 19時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+            "detail": "07:08頃、下高井戸〜桜上水駅間での線路内点検の影響で、列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
         },
         {
-            "line": "東京メトロ東西線",
+            "line": "京王新線",
             "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（7月7日 19時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
+            "detail": "07:08頃、京王線内での線路内点検の影響で、一部列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "07:08頃、京王線内での線路内点検の影響で、一部列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "07:08頃、京王線内での線路内点検の影響で、一部列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "07:57頃、学芸大学〜都立大学駅間での車両点検の影響で、列車に遅れが出ています。（7月8日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "都営新宿線",
+            "status": "運転状況",
+            "detail": "07:08頃、京王線内での線路内点検の影響で、本八幡方面行のダイヤが乱れています。（7月8日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
         }
     ]
 }
