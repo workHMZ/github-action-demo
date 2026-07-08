@@ -1,27 +1,8 @@
 {
-    "update_time": "2026-07-08 14:38:14",
+    "update_time": "2026-07-08 19:30:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月8日 14時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月8日 14時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月8日 14時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
