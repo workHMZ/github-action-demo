@@ -1,45 +1,27 @@
 {
-    "update_time": "2026-07-08 08:13:38",
+    "update_time": "2026-07-08 14:38:14",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 6,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京王線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "07:08頃、下高井戸〜桜上水駅間での線路内点検の影響で、列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月8日 14時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "京王新線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "07:08頃、京王線内での線路内点検の影響で、一部列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月8日 14時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
-            "line": "京王相模原線",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "07:08頃、京王線内での線路内点検の影響で、一部列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "07:08頃、京王線内での線路内点検の影響で、一部列車に遅れや運休が出ています。（7月8日 7時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "07:57頃、学芸大学〜都立大学駅間での車両点検の影響で、列車に遅れが出ています。（7月8日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "都営新宿線",
-            "status": "運転状況",
-            "detail": "07:08頃、京王線内での線路内点検の影響で、本八幡方面行のダイヤが乱れています。（7月8日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
+            "detail": "東海道本線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月8日 14時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         }
     ]
 }
