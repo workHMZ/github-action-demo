@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-07-09 20:18:53",
+    "update_time": "2026-07-10 08:35:27",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "中央線(快速)[東京～高尾]",
-            "status": "運転状況",
-            "detail": "八王子〜西八王子駅間での踏切内点検の影響で、一部列車に遅れや運休が出ています。（7月9日 17時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "都営浅草線",
-            "status": "運転状況",
-            "detail": "18:09頃、浅草橋駅での救護活動の影響で、一部列車のダイヤが乱れています。（7月9日 19時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
