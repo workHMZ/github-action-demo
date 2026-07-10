@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-07-10 08:35:27",
+    "update_time": "2026-07-10 15:28:30",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "総武本線内で発生した人身事故の影響で、一部列車に遅れが出ています。（7月10日 14時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "青梅線内で発生した発煙の影響で、一部列車に遅れが出ています。なお、青梅線との直通運転を中止しています。（7月10日 15時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "13:07頃、東武東上線内で発生した発煙の影響で、一部列車に運転変更が出ています。（7月10日 14時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+        }
+    ]
 }
