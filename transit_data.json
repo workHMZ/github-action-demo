@@ -1,20 +1,14 @@
 {
-    "update_time": "2026-07-11 08:12:20",
+    "update_time": "2026-07-11 14:28:40",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "宇都宮線内での線路内点検の影響で、一部列車に遅れが出ています。（7月11日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
             "line": "常磐線(快速)[品川～取手]",
             "status": "運転状況",
-            "detail": "常磐線内での線路内点検の影響で、一部列車に遅れが出ています。（7月11日 7時50分掲載）",
+            "detail": "南千住〜北千住駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月11日 12時20分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/57/0"
         }
     ]
