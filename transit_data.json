@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-07-11 14:28:40",
+    "update_time": "2026-07-11 18:48:43",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "南千住〜北千住駅間で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月11日 12時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
