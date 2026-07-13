@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-07-13 08:08:17",
+    "update_time": "2026-07-13 14:54:46",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東京メトロ銀座線",
-            "status": "運転状況",
-            "detail": "新橋駅で発生した変電所支障の影響で、ダイヤが乱れています。（7月13日 6時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
-        },
-        {
-            "line": "東京メトロ千代田線",
-            "status": "運転状況",
-            "detail": "06:49頃、代々木公園駅での旅客対応の影響で、一部列車に遅れが出ています。（7月13日 7時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
