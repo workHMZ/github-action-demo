@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-07-14 08:11:33",
+    "update_time": "2026-07-14 14:16:28",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "西武池袋線・秩父線",
+            "status": "運転状況",
+            "detail": "12:40頃、練馬駅での信号関係点検の影響で、池袋〜飯能駅間の列車に遅れや運休が出ています。（7月14日 13時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+        },
+        {
+            "line": "西武有楽町線",
+            "status": "運転状況",
+            "detail": "12:40頃、練馬駅での信号関係点検の影響で、列車に遅れや運休が出ています。（7月14日 13時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+        },
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "12:40頃、西武池袋線・秩父線内での信号関係点検の影響で、一部列車に運休や運転変更が出ています。（7月14日 13時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        },
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "12:40頃、西武池袋線・秩父線内での信号関係点検の影響で、一部列車に運転変更が出ています。（7月14日 13時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+        }
+    ]
 }
