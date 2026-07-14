@@ -1,33 +1,33 @@
 {
-    "update_time": "2026-07-14 14:16:28",
+    "update_time": "2026-07-14 19:10:45",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
-            "line": "西武池袋線・秩父線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "12:40頃、練馬駅での信号関係点検の影響で、池袋〜飯能駅間の列車に遅れや運休が出ています。（7月14日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
+            "detail": "西川口駅での車両点検の影響で、一部列車に遅れが出ています。（7月14日 17時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
         },
         {
-            "line": "西武有楽町線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "12:40頃、練馬駅での信号関係点検の影響で、列車に遅れや運休が出ています。（7月14日 13時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
+            "detail": "保土ケ谷〜東戸塚駅間での踏切内点検の影響で、一部列車に遅れが出ています。（7月14日 17時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
-            "line": "東急東横線",
+            "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "12:40頃、西武池袋線・秩父線内での信号関係点検の影響で、一部列車に運休や運転変更が出ています。（7月14日 13時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+            "detail": "内房線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月14日 18時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
         },
         {
-            "line": "東京メトロ副都心線",
+            "line": "東京メトロ銀座線",
             "status": "運転状況",
-            "detail": "12:40頃、西武池袋線・秩父線内での信号関係点検の影響で、一部列車に運転変更が出ています。（7月14日 13時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "18:05頃、末広町駅でのホームドア点検の影響で、列車に遅れが出ています。（7月14日 19時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/132/0"
         }
     ]
 }
