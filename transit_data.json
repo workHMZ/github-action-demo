@@ -1,15 +1,39 @@
 {
-    "update_time": "2026-07-15 14:17:15",
+    "update_time": "2026-07-15 19:15:23",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ副都心線",
+            "line": "京浜東北根岸線",
             "status": "運転状況",
-            "detail": "10:53頃、東武東上線内で発生した線路支障の影響で、一部列車に遅れが出ています。（7月15日 13時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "大森〜蒲田駅間での車両点検の影響で、一部列車に遅れが出ています。（7月15日 16時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "大宮〜浦和駅間で発生した発煙の影響で、一部列車に遅れが出ています。（7月15日 17時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "東京駅での落し物拾得の影響で、一部列車に遅れが出ています。（7月15日 18時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        },
+        {
+            "line": "小田急小田原線",
+            "status": "運転状況",
+            "detail": "代々木八幡〜代々木上原駅間での踏切内点検の影響で、一部列車に遅れが出ています。（7月15日 18時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
+        },
+        {
+            "line": "東京メトロ有楽町線",
+            "status": "運転状況",
+            "detail": "17:44頃、東池袋駅での車内安全確認の影響で、一部列車に遅れが出ています。（7月15日 17時55分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
         }
     ]
 }
