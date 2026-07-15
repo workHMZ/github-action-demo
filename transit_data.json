@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-07-15 08:09:54",
+    "update_time": "2026-07-15 14:17:15",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東京メトロ副都心線",
+            "status": "運転状況",
+            "detail": "10:53頃、東武東上線内で発生した線路支障の影響で、一部列車に遅れが出ています。（7月15日 13時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+        }
+    ]
 }
