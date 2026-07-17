@@ -1,87 +1,39 @@
 {
-    "update_time": "2026-07-17 14:29:42",
+    "update_time": "2026-07-17 19:11:31",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 15,
+    "issue_count": 7,
     "status": "issues_found",
     "issues": [
         {
-            "line": "横須賀線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "大雨の影響で、一部列車に遅れが出ています。（7月17日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+            "detail": "新宿駅での安全確認の影響で、一部列車に遅れが出ています。（7月17日 18時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         },
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "大雨の影響で、一部列車に遅れが出ています。（7月17日 14時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
-        },
-        {
-            "line": "総武線(快速)[東京～千葉]",
-            "status": "運転状況",
-            "detail": "大雨の影響で、一部列車に遅れが出ています。（7月17日 13時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "京葉線",
-            "status": "運転状況",
-            "detail": "武蔵野線内での大雨の影響で、武蔵野線との直通運転を中止しています。（7月17日 13時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
+            "detail": "新宿駅での安全確認の影響で、一部列車に遅れが出ています。（7月17日 18時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
         },
         {
             "line": "武蔵野線",
             "status": "運転状況",
-            "detail": "大雨の影響で、一部列車に遅れや運休が出ています。なお、京葉線との直通運転を中止しています。（7月17日 13時5分掲載）",
+            "detail": "大雨の影響で、武蔵浦和〜西船橋駅間の一部列車に運休が出ています。（7月17日 19時0分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/71/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "大雨の影響などで、一部列車に遅れが出ています。（7月17日 13時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "大雨の影響などで、相模大野〜藤沢駅間の一部列車に遅れや運休が出ています。（7月17日 13時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "小田急多摩線",
-            "status": "運転状況",
-            "detail": "大雨の影響などで、一部列車に遅れが出ています。（7月17日 13時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/111/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "大雨の影響で、列車に遅れが出ています。（7月17日 13時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         },
         {
             "line": "東急田園都市線",
             "status": "運転状況",
-            "detail": "大雨の影響で、鷺沼〜長津田駅間の運転を見合わせています。運転区間の一部列車に遅れが出ています。振替輸送を行っています。（7月17日 13時25分掲載）",
+            "detail": "大雨の影響で、列車に遅れや運休が出ています。（7月17日 17時55分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東急大井町線",
-            "status": "運転状況",
-            "detail": "東急田園都市線内での大雨の影響で、一部列車に運休や運転変更が出ています。（7月17日 14時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/115/0"
         },
         {
             "line": "都営浅草線",
             "status": "運転状況",
             "detail": "北総線内での大雨の影響で、ダイヤが乱れています。（7月17日 13時25分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/128/0"
-        },
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "13:13頃、行徳駅でのホームドア点検の影響で、一部列車に遅れが出ています。（7月17日 13時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         },
         {
             "line": "東京メトロ半蔵門線",
@@ -92,7 +44,7 @@
         {
             "line": "東京メトロ副都心線",
             "status": "運転状況",
-            "detail": "東急東横線内での大雨の影響で、一部列車に遅れが出ています。（7月17日 14時0分掲載）",
+            "detail": "東急東横線内での大雨の影響で、ダイヤが乱れています。（7月17日 15時5分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
