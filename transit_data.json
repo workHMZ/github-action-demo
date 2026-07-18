@@ -1,45 +1,8 @@
 {
-    "update_time": "2026-07-18 18:44:40",
+    "update_time": "2026-07-19 08:09:04",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 6,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "山手線",
-            "status": "運転状況",
-            "detail": "池袋〜大塚駅間での車両点検の影響で、内回りの列車に遅れが出ています。（7月18日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
-        },
-        {
-            "line": "西武池袋線・秩父線",
-            "status": "運転状況",
-            "detail": "15:06頃、東急東横線内で発生した発煙の影響で、池袋〜飯能駅間の一部列車に遅れや運休や運転変更が出ています。（7月18日 15時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
-        },
-        {
-            "line": "西武有楽町線",
-            "status": "運転状況",
-            "detail": "15:06頃、東急東横線内で発生した発煙の影響で、一部列車に遅れや運休が出ています。なお、東京メトロ副都心線との直通運転を中止しています。（7月18日 15時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/90/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "生田〜読売ランド前駅間で発生した線路内立入の影響などで、一部列車に遅れが出ています。（7月18日 18時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "中目黒駅で発生した発煙の影響で、渋谷〜自由が丘駅間の運転を見合わせていましたが、18:15現在、運転を再開しています。なお、ダイヤが乱れています。（7月18日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "15:06頃、東急東横線内で発生した発煙の影響で、ダイヤが乱れています。なお、西武線・東武東上線との直通運転および急行の運転を中止しています。（7月18日 18時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
