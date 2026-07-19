@@ -1,8 +1,21 @@
 {
-    "update_time": "2026-07-19 08:09:04",
+    "update_time": "2026-07-19 14:38:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 2,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "東海道本線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（7月19日 13時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "中央総武線(各停)内で発生した線路内立入の影響で、下り線(久里浜方面行)の一部列車に遅れが出ています。（7月19日 14時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        }
+    ]
 }
