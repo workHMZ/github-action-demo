@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-07-19 19:01:56",
+    "update_time": "2026-07-20 08:10:22",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "山手線",
+            "status": "運転状況",
+            "detail": "目黒駅で発生した線路内立入の影響で、列車に遅れが出ています。（7月20日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+        },
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "山手線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月20日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "埼京川越線[羽沢横浜国大～川越]",
+            "status": "運転状況",
+            "detail": "山手線内で発生した線路内立入の影響で、一部列車に遅れが出ています。（7月20日 7時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/50/0"
+        }
+    ]
 }
