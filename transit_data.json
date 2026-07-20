@@ -1,21 +1,8 @@
 {
-    "update_time": "2026-07-20 14:55:41",
+    "update_time": "2026-07-20 20:12:53",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "横須賀駅でのポイント点検の影響で、逗子〜久里浜駅間の一部列車に運休が出ています。（7月20日 14時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "中央総武線(各停)",
-            "status": "運転状況",
-            "detail": "御茶ノ水駅での車両点検の影響で、三鷹〜津田沼駅間の一部列車に運休が出ています。（7月20日 14時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
