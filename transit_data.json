@@ -1,14 +1,32 @@
 {
-    "update_time": "2026-07-21 08:13:34",
+    "update_time": "2026-07-21 14:37:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
         {
+            "line": "京浜東北根岸線",
+            "status": "運転状況",
+            "detail": "横須賀線内での踏切内点検の影響で、一部列車に遅れが出ています。（7月21日 14時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "新川崎〜横浜駅間での踏切内点検の影響で、一部列車に遅れが出ています。（7月21日 14時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "日野駅での荷物挟まり対応の影響で、一部列車に遅れが出ています。（7月21日 12時45分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+        },
+        {
             "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "京急本線内での車両点検の影響で、一部列車のダイヤが乱れています。（7月21日 8時5分掲載）",
+            "detail": "京急本線内での車両点検の影響で、一部列車のダイヤが乱れています。（7月21日 14時10分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
