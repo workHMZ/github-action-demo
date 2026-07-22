@@ -1,21 +1,39 @@
 {
-    "update_time": "2026-07-22 08:10:18",
+    "update_time": "2026-07-22 14:36:02",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
-            "line": "武蔵野線",
+            "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "京葉線内での車内安全確認の影響で、一部列車に遅れが出ています。（7月22日 6時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/71/0"
+            "detail": "13:52頃、西国分寺駅で発生した人身事故の影響で、運転を見合わせています。振替輸送を行っています。（7月22日 13時52分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         },
         {
-            "line": "東京メトロ千代田線",
+            "line": "西武新宿線",
             "status": "運転状況",
-            "detail": "一部列車に遅れが出ています。（7月22日 8時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
+            "detail": "停電の影響で、列車に遅れや運休が出ています。（7月22日 12時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/86/0"
+        },
+        {
+            "line": "西武拝島線",
+            "status": "運転状況",
+            "detail": "停電の影響で、列車に遅れや運休が出ています。（7月22日 12時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/93/0"
+        },
+        {
+            "line": "都営新宿線",
+            "status": "運転状況",
+            "detail": "13:16頃、曙橋駅での安全確認の影響で、ダイヤが乱れています。（7月22日 14時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
+        },
+        {
+            "line": "多摩都市モノレール線",
+            "status": "運転状況",
+            "detail": "停電の影響で、列車に遅れが出ています。（7月22日 12時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/156/0"
         }
     ]
 }
