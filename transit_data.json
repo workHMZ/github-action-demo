@@ -1,63 +1,15 @@
 {
-    "update_time": "2026-07-24 19:28:26",
+    "update_time": "2026-07-25 08:14:50",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 9,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "山手線",
-            "status": "運転状況",
-            "detail": "東京駅で発生した窓ガラス破損の影響で、内回りの列車に遅れが出ています。（7月24日 15時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
-        },
-        {
-            "line": "京浜東北根岸線",
-            "status": "運転状況",
-            "detail": "有楽町駅での救護活動の影響で、一部列車に遅れが出ています。（7月24日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/22/0"
-        },
-        {
-            "line": "湘南新宿ライン",
-            "status": "運転状況",
-            "detail": "西大井駅でのドア点検の影響で、一部列車に遅れが出ています。（7月24日 17時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "横須賀線",
-            "status": "運転状況",
-            "detail": "西大井駅でのドア点検の影響で、一部列車に遅れや運休が出ています。（7月24日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "常磐線(各停)",
-            "status": "運転状況",
-            "detail": "北小金駅でのドア点検の影響で、一部列車に遅れが出ています。（7月24日 18時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/58/0"
-        },
-        {
             "line": "総武線(快速)[東京～千葉]",
             "status": "運転状況",
-            "detail": "横須賀線内でのドア点検の影響で、一部列車に遅れや運休が出ています。（7月24日 19時0分掲載）",
+            "detail": "内房線内で発生した沿線火災の影響で、一部列車に遅れが出ています。（7月25日 8時5分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "西武池袋線・秩父線",
-            "status": "運転状況",
-            "detail": "停電の影響で、一部列車に遅れが出ています。（7月24日 19時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/84/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "16:01頃、東京メトロ千代田線内で発生した停電の影響で、東京メトロ千代田線との直通運転を中止しています。（7月24日 16時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "東京メトロ千代田線",
-            "status": "運転状況",
-            "detail": "16:01頃、町屋〜北綾瀬駅間で発生した停電の影響で、ダイヤが乱れています。なお、小田急小田原線との直通運転を中止しています。（7月24日 16時45分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/136/0"
         }
     ]
 }
