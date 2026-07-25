@@ -1,45 +1,8 @@
 {
-    "update_time": "2026-07-25 18:59:46",
+    "update_time": "2026-07-26 08:10:49",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 6,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "京王線",
-            "status": "運転状況",
-            "detail": "京王相模原線内で発生した設備故障の影響で、一部列車に遅れや運転変更が出ています。（7月25日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
-        },
-        {
-            "line": "京王新線",
-            "status": "運転状況",
-            "detail": "京王相模原線内で発生した設備故障の影響で、一部列車に遅れや運転変更が出ています。（7月25日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
-        },
-        {
-            "line": "京王相模原線",
-            "status": "運転状況",
-            "detail": "設備故障の影響で、調布〜京王多摩センター駅間の運転を見合わせています。運転区間の一部列車に遅れや運転変更が出ています。振替輸送を行っています。（7月25日 18時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "京王相模原線内で発生した設備故障の影響で、一部列車に遅れや運転変更が出ています。（7月25日 18時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "18:14頃、小田急江ノ島線内で発生した信号関係故障の影響で、一部列車に遅れが出ています。（7月25日 18時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "18:14頃、藤沢駅で発生した信号関係故障の影響で、運転を見合わせています。振替輸送を行っています。（7月25日 18時14分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
