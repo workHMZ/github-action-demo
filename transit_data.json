@@ -1,63 +1,8 @@
 {
-    "update_time": "2026-07-26 14:47:51",
+    "update_time": "2026-07-26 19:12:47",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 9,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "中央総武線(各停)",
-            "status": "運転状況",
-            "detail": "亀戸駅での救護活動の影響で、一部列車に遅れが出ています。（7月26日 13時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
-        },
-        {
-            "line": "京王線",
-            "status": "運転状況",
-            "detail": "強風の影響で、一部列車に遅れが出ています。（7月26日 13時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
-        },
-        {
-            "line": "京王新線",
-            "status": "運転状況",
-            "detail": "強風の影響で、一部列車に遅れが出ています。（7月26日 13時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
-        },
-        {
-            "line": "京王相模原線",
-            "status": "運転状況",
-            "detail": "強風の影響で、一部列車に遅れが出ています。（7月26日 13時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "強風の影響で、一部列車に遅れが出ています。（7月26日 13時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "京王井の頭線",
-            "status": "運転状況",
-            "detail": "踏切支障の影響で、永福町〜富士見ケ丘駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（7月26日 13時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/108/0"
-        },
-        {
-            "line": "小田急小田原線",
-            "status": "運転状況",
-            "detail": "13:05頃、小田急江ノ島線内で発生した人身事故の影響で、一部列車に遅れが出ています。（7月26日 14時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/109/0"
-        },
-        {
-            "line": "小田急江ノ島線",
-            "status": "運転状況",
-            "detail": "高座渋谷〜長後駅間で発生した人身事故の影響で、大和〜長後駅間の運転を見合わせていましたが、14:33頃、運転を再開しました。なお、列車に遅れや運休が出ています。（7月26日 14時33分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/110/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "東急田園都市線内での強風の影響で、一部列車に遅れが出ています。（7月26日 13時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
