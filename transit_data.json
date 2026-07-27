@@ -1,15 +1,15 @@
 {
-    "update_time": "2026-07-27 08:10:32",
+    "update_time": "2026-07-27 15:13:12",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
     "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ日比谷線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "08:10現在、ほぼ平常通り運転しています。（7月27日 8時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
+            "detail": "大崎駅で発生した旅客転落の影響で、一部列車に遅れが出ています。（7月27日 15時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         }
     ]
 }
