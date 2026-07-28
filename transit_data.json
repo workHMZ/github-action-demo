@@ -1,57 +1,27 @@
 {
-    "update_time": "2026-07-28 19:44:59",
+    "update_time": "2026-07-29 08:14:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 8,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "横須賀線",
+            "line": "東急東横線",
             "status": "運転状況",
-            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（7月28日 19時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+            "detail": "07:03頃、東京メトロ副都心線内での安全確認の影響で、一部列車に遅れが出ています。（7月29日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
         },
         {
-            "line": "中央総武線(各停)",
+            "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "18:46頃、西船橋〜船橋駅間での車両点検の影響で、西船橋〜津田沼駅間の一部列車に運休が出ています。なお、西船橋〜津田沼駅間で東京メトロ東西線との直通運転を中止しています。（7月28日 19時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+            "detail": "07:07頃、大手町駅での救護活動の影響で、一部列車に遅れが出ています。（7月29日 7時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         },
         {
-            "line": "総武線(快速)[東京～千葉]",
+            "line": "東京メトロ副都心線",
             "status": "運転状況",
-            "detail": "市川〜船橋駅間での車両点検の影響で、一部列車に遅れが出ています。（7月28日 19時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
-        },
-        {
-            "line": "京王線",
-            "status": "運転状況",
-            "detail": "18:44頃、新宿駅で発生した信号関係故障の影響で、新宿〜桜上水駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（7月28日 18時44分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
-        },
-        {
-            "line": "京王新線",
-            "status": "運転状況",
-            "detail": "18:44頃、京王線内で発生した信号関係故障の影響で、列車に遅れや運転変更が出ています。（7月28日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
-        },
-        {
-            "line": "京王相模原線",
-            "status": "運転状況",
-            "detail": "18:44頃、京王線内で発生した信号関係故障の影響で、一部列車に遅れや運転変更が出ています。（7月28日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "18:44頃、京王線内で発生した信号関係故障の影響で、一部列車に遅れや運転変更が出ています。（7月28日 19時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "都営新宿線",
-            "status": "運転状況",
-            "detail": "18:44頃、京王線内で発生した信号関係故障の影響で、ダイヤが乱れています。（7月28日 19時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
+            "detail": "07:03頃、東新宿駅での安全確認の影響で、列車に遅れが出ています。（7月29日 7時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
