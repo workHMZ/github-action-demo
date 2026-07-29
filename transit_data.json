@@ -1,27 +1,15 @@
 {
-    "update_time": "2026-07-29 08:14:18",
+    "update_time": "2026-07-29 14:38:52",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
-            "status": "運転状況",
-            "detail": "07:03頃、東京メトロ副都心線内での安全確認の影響で、一部列車に遅れが出ています。（7月29日 7時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
             "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "07:07頃、大手町駅での救護活動の影響で、一部列車に遅れが出ています。（7月29日 7時20分掲載）",
+            "detail": "08:32頃、中野駅でのポイント点検の影響で、ダイヤが乱れています。（7月29日 13時0分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "07:03頃、東新宿駅での安全確認の影響で、列車に遅れが出ています。（7月29日 7時15分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
         }
     ]
 }
