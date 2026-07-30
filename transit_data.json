@@ -1,15 +1,21 @@
 {
-    "update_time": "2026-07-30 19:33:50",
+    "update_time": "2026-07-31 08:17:43",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東京メトロ丸ノ内線",
+            "line": "東急田園都市線",
             "status": "運転状況",
-            "detail": "19:04頃、新宿三丁目駅でのドア点検の影響で、列車に遅れが出ています。（7月30日 19時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
+            "detail": "長津田駅付近で発生した車両故障の影響で、上り線(渋谷方面行)の一部列車に運休が出ています。（7月31日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
+        },
+        {
+            "line": "都営三田線",
+            "status": "運転状況",
+            "detail": "05:52頃、高島平駅での車両点検の影響で、西高島平方面行のダイヤが乱れています。（7月31日 8時10分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
         }
     ]
 }
