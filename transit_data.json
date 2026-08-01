@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-08-01 19:10:17",
+    "update_time": "2026-08-02 08:09:34",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "都営三田線",
-            "status": "運転状況",
-            "detail": "混雑の影響で、ダイヤが乱れています。（8月1日 18時10分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/129/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
