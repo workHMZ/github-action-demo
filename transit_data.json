@@ -1,8 +1,27 @@
 {
-    "update_time": "2026-08-02 14:43:08",
+    "update_time": "2026-08-02 19:07:52",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 3,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "保土ケ谷〜東戸塚駅間での信号関係点検の影響などで、一部列車に遅れが出ています。（8月2日 18時20分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "保土ケ谷〜東戸塚駅間での信号関係点検の影響で、一部列車に遅れが出ています。なお、総武線(快速)との直通運転を中止しています。（8月2日 17時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "総武線(快速)[東京～千葉]",
+            "status": "運転状況",
+            "detail": "横須賀線内での信号関係点検の影響で、一部列車に遅れが出ています。なお、横須賀線との直通運転を中止しています。（8月2日 17時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/61/0"
+        }
+    ]
 }
