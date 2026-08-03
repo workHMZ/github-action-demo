@@ -1,39 +1,27 @@
 {
-    "update_time": "2026-08-03 20:43:53",
+    "update_time": "2026-08-04 08:18:02",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 5,
+    "issue_count": 3,
     "status": "issues_found",
     "issues": [
         {
-            "line": "京王線",
+            "line": "横須賀線",
             "status": "運転状況",
-            "detail": "19:54頃、明大前〜下高井戸駅間で発生した人身事故の影響で、新宿〜桜上水駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（8月3日 19時54分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（8月4日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
         },
         {
-            "line": "京王新線",
+            "line": "京葉線",
             "status": "運転状況",
-            "detail": "19:54頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（8月3日 20時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+            "detail": "海浜幕張駅での救護活動の影響で、一部列車に遅れが出ています。（8月4日 6時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
         },
         {
-            "line": "京王相模原線",
+            "line": "東京メトロ日比谷線",
             "status": "運転状況",
-            "detail": "19:54頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（8月3日 20時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
-        },
-        {
-            "line": "京王高尾線",
-            "status": "運転状況",
-            "detail": "19:54頃、京王線内で発生した人身事故の影響で、一部列車に遅れや運転変更が出ています。（8月3日 20時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
-        },
-        {
-            "line": "都営新宿線",
-            "status": "運転状況",
-            "detail": "19:54頃、京王線内で発生した人身事故の影響で、一部列車のダイヤが乱れています。（8月3日 20時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/130/0"
+            "detail": "07:27頃、入谷駅での救護活動の影響で、一部列車に遅れが出ています。（8月4日 7時40分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
         }
     ]
 }
