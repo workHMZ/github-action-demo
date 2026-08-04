@@ -1,27 +1,15 @@
 {
-    "update_time": "2026-08-04 08:18:02",
+    "update_time": "2026-08-04 14:33:58",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "横須賀線",
+            "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "総武線(快速)内での車両点検の影響で、一部列車に遅れが出ています。（8月4日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
-        },
-        {
-            "line": "京葉線",
-            "status": "運転状況",
-            "detail": "海浜幕張駅での救護活動の影響で、一部列車に遅れが出ています。（8月4日 6時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/69/0"
-        },
-        {
-            "line": "東京メトロ日比谷線",
-            "status": "運転状況",
-            "detail": "07:27頃、入谷駅での救護活動の影響で、一部列車に遅れが出ています。（8月4日 7時40分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/134/0"
+            "detail": "高崎線内での踏切内点検の影響で、一部列車に遅れが出ています。（8月4日 13時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
         }
     ]
 }
