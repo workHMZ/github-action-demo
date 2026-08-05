@@ -1,20 +1,38 @@
 {
-    "update_time": "2026-08-05 14:33:06",
+    "update_time": "2026-08-05 19:46:11",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 5,
     "status": "issues_found",
     "issues": [
         {
+            "line": "山手線",
+            "status": "運転状況",
+            "detail": "埼京川越線内で発生した線路内立入の影響で、列車に遅れが出ています。（8月5日 19時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+        },
+        {
             "line": "湘南新宿ライン",
             "status": "運転状況",
-            "detail": "渋谷駅で発生した人身事故の影響で、新宿〜大船駅間の運転を見合わせていましたが、14:08頃、運転を再開しました。なお、列車に遅れが出ています。（8月5日 14時8分掲載）",
+            "detail": "武蔵小杉〜新川崎駅間での踏切内点検の影響で、一部列車に遅れが出ています。（8月5日 19時25分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "横須賀線",
+            "status": "運転状況",
+            "detail": "武蔵小杉〜新川崎駅間での踏切内点検の影響で、一部列車に遅れが出ています。（8月5日 19時25分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/29/0"
+        },
+        {
+            "line": "中央線(快速)[東京～高尾]",
+            "status": "運転状況",
+            "detail": "豊田〜八王子駅間での踏切内点検の影響で、一部列車に遅れが出ています。（8月5日 17時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         },
         {
             "line": "埼京川越線[羽沢横浜国大～川越]",
             "status": "運転状況",
-            "detail": "渋谷駅で発生した人身事故の影響で、羽沢横浜国大〜新宿駅間の運転を見合わせていましたが、14:08頃、運転を再開しました。なお、列車に遅れや運転変更が出ています。（8月5日 14時8分掲載）",
+            "detail": "渋谷駅で発生した線路内立入の影響で、一部列車に遅れが出ています。（8月5日 19時35分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/50/0"
         }
     ]
