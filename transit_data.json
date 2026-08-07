@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-08-07 18:15:05",
+    "update_time": "2026-08-08 07:54:18",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東京メトロ丸ノ内線",
-            "status": "運転状況",
-            "detail": "16:38頃、新宿三丁目駅での旅客対応の影響で、一部列車に遅れが出ています。（8月7日 16時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/133/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
