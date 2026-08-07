@@ -1,8 +1,33 @@
 {
-    "update_time": "2026-08-06 19:48:36",
+    "update_time": "2026-08-07 10:33:47",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 4,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "京王線",
+            "status": "運転状況",
+            "detail": "06:18頃、京王相模原線内で発生した旅客転落の影響で、一部列車に遅れが出ています。（8月7日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/102/0"
+        },
+        {
+            "line": "京王新線",
+            "status": "運転状況",
+            "detail": "06:18頃、京王相模原線内で発生した旅客転落の影響で、一部列車に遅れが出ています。（8月7日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/103/0"
+        },
+        {
+            "line": "京王相模原線",
+            "status": "運転状況",
+            "detail": "06:18頃、橋本駅で発生した旅客転落の影響で、列車に遅れが出ています。（8月7日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/104/0"
+        },
+        {
+            "line": "京王高尾線",
+            "status": "運転状況",
+            "detail": "06:18頃、京王相模原線内で発生した旅客転落の影響で、一部列車に遅れが出ています。（8月7日 7時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/105/0"
+        }
+    ]
 }
