@@ -1,8 +1,15 @@
 {
-    "update_time": "2026-08-08 07:54:18",
+    "update_time": "2026-08-08 12:58:03",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 0,
-    "status": "all_clear",
-    "issues": []
+    "issue_count": 1,
+    "status": "issues_found",
+    "issues": [
+        {
+            "line": "東急東横線",
+            "status": "運転状況",
+            "detail": "車両故障の影響で、下り線(横浜方面行)の一部列車に運休が出ています。（8月8日 12時30分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
+        }
+    ]
 }
