@@ -1,27 +1,15 @@
 {
-    "update_time": "2026-08-09 07:45:17",
+    "update_time": "2026-08-09 13:04:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 3,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "東急東横線",
+            "line": "東京メトロ東西線",
             "status": "運転状況",
-            "detail": "06:03頃、東武東上線内で発生した人身事故の影響で、一部列車に運転変更が出ています。（8月9日 6時20分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "06:03頃、東武東上線内で発生した人身事故の影響で、東武東上線との直通運転を中止しています。（8月9日 6時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "06:03頃、東武東上線内で発生した人身事故の影響で、東武東上線との直通運転を中止しています。（8月9日 6時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "09:58頃、原木中山駅でのホームドア点検の影響で、列車に遅れが出ています。（8月9日 11時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
         }
     ]
 }
