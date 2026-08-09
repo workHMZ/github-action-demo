@@ -1,15 +1,8 @@
 {
-    "update_time": "2026-08-09 13:04:25",
+    "update_time": "2026-08-09 18:02:12",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "東京メトロ東西線",
-            "status": "運転状況",
-            "detail": "09:58頃、原木中山駅でのホームドア点検の影響で、列車に遅れが出ています。（8月9日 11時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/135/0"
-        }
-    ]
+    "issue_count": 0,
+    "status": "all_clear",
+    "issues": []
 }
