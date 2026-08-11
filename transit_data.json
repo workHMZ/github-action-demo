@@ -1,10 +1,22 @@
 {
-    "update_time": "2026-08-11 13:05:47",
+    "update_time": "2026-08-11 18:13:40",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 4,
     "status": "issues_found",
     "issues": [
+        {
+            "line": "湘南新宿ライン",
+            "status": "運転状況",
+            "detail": "東海道本線内での信号関係点検の影響で、一部列車に遅れが出ています。（8月11日 17時50分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
+        },
+        {
+            "line": "常磐線(快速)[品川～取手]",
+            "status": "運転状況",
+            "detail": "台風の影響で、一部列車に遅れが出ています。（8月11日 17時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
+        },
         {
             "line": "東急田園都市線",
             "status": "運転状況",
