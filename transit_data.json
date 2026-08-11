@@ -1,33 +1,15 @@
 {
-    "update_time": "2026-08-11 18:13:40",
+    "update_time": "2026-08-12 08:01:25",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "湘南新宿ライン",
+            "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "東海道本線内での信号関係点検の影響で、一部列車に遅れが出ています。（8月11日 17時50分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/25/0"
-        },
-        {
-            "line": "常磐線(快速)[品川～取手]",
-            "status": "運転状況",
-            "detail": "台風の影響で、一部列車に遅れが出ています。（8月11日 17時0分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/57/0"
-        },
-        {
-            "line": "東急田園都市線",
-            "status": "運転状況",
-            "detail": "05:00頃、東京メトロ半蔵門線内での設備点検の影響で、東京メトロ半蔵門線との直通運転を中止しています。（8月11日 10時55分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/114/0"
-        },
-        {
-            "line": "東京メトロ半蔵門線",
-            "status": "運転状況",
-            "detail": "05:00頃、半蔵門駅構内での設備点検の影響で、九段下〜渋谷駅間の運転を見合わせています。運転区間の列車に遅れが出ています。振替輸送を行っています。（8月11日 5時30分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/138/0"
+            "detail": "三鷹駅での救護活動の影響で、一部列車に遅れや運休が出ています。（8月12日 7時35分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         }
     ]
 }
