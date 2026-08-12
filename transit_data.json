@@ -1,33 +1,21 @@
 {
-    "update_time": "2026-08-12 18:31:30",
+    "update_time": "2026-08-13 07:59:56",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 4,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
-            "line": "中央線(快速)[東京～高尾]",
+            "line": "南武線[川崎～立川]",
             "status": "運転状況",
-            "detail": "国分寺〜西国分寺駅間で発生した線路内立入の影響で、一部列車に遅れや運休が出ています。なお、青梅線との直通運転を中止しています。（8月12日 17時25分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/38/0"
+            "detail": "久地駅でのホームドア点検の影響で、一部列車に遅れが出ています。（8月13日 7時5分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
         },
         {
-            "line": "東急東横線",
+            "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "17:17頃、東武東上線内で発生した人身事故の影響で、一部列車に運転変更が出ています。（8月12日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/112/0"
-        },
-        {
-            "line": "東京メトロ有楽町線",
-            "status": "運転状況",
-            "detail": "17:17頃、東武東上線内で発生した人身事故の影響で、ダイヤが乱れています。なお、東武東上線との直通運転を中止しています。（8月12日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/137/0"
-        },
-        {
-            "line": "東京メトロ副都心線",
-            "status": "運転状況",
-            "detail": "17:17頃、東武東上線内で発生した人身事故の影響で、ダイヤが乱れています。なお、東武東上線との直通運転を中止しています。（8月12日 17時35分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/540/0"
+            "detail": "06:45頃、西馬込駅でのポイント点検の影響で、ダイヤが乱れています。（8月13日 7時0分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
 }
