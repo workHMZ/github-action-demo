@@ -1,14 +1,20 @@
 {
-    "update_time": "2026-08-12 08:01:25",
+    "update_time": "2026-08-12 13:27:45",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 1,
+    "issue_count": 2,
     "status": "issues_found",
     "issues": [
         {
+            "line": "山手線",
+            "status": "運転状況",
+            "detail": "11:25頃、原宿駅で発生した人身事故の影響で、列車に遅れが出ています。（8月12日 13時15分掲載）",
+            "url": "https://transit.yahoo.co.jp/diainfo/21/0"
+        },
+        {
             "line": "中央線(快速)[東京～高尾]",
             "status": "運転状況",
-            "detail": "三鷹駅での救護活動の影響で、一部列車に遅れや運休が出ています。（8月12日 7時35分掲載）",
+            "detail": "中央本線内での大雨の影響で、一部列車に遅れが出ています。（8月12日 11時50分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/38/0"
         }
     ]
