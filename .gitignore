@@ -8,4 +8,4 @@ api_keys.txt
 __pycache__/
 *.py[cod]
 *$py.class
-*.pem
+*.pemtransit_data.json
