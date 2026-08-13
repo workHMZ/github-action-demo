@@ -1,20 +1,14 @@
 {
-    "update_time": "2026-08-13 07:59:56",
+    "update_time": "2026-08-13 13:30:30",
     "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
     "monitored_lines_count": 52,
-    "issue_count": 2,
+    "issue_count": 1,
     "status": "issues_found",
     "issues": [
         {
-            "line": "南武線[川崎～立川]",
-            "status": "運転状況",
-            "detail": "久地駅でのホームドア点検の影響で、一部列車に遅れが出ています。（8月13日 7時5分掲載）",
-            "url": "https://transit.yahoo.co.jp/diainfo/34/0"
-        },
-        {
             "line": "都営浅草線",
             "status": "運転状況",
-            "detail": "06:45頃、西馬込駅でのポイント点検の影響で、ダイヤが乱れています。（8月13日 7時0分掲載）",
+            "detail": "12:45頃、西馬込駅でのポイント点検の影響で、西馬込〜泉岳寺駅間の運転を見合わせています。振替輸送を行っています。（8月13日 12時45分掲載）",
             "url": "https://transit.yahoo.co.jp/diainfo/128/0"
         }
     ]
