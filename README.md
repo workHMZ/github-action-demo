@@ -2,7 +2,7 @@
 
 **[English](#tokyo-transit-scraper) | [日本語](#東京交通情報スクレイパー-日本語)**
 
-A Python-based web scraper that collects real-time train operation information for Tokyo area railways, designed to run on GitHub Actions with automatic notifications.
+A Python-based web scraper that collects real-time train operation information for Tokyo area railways, designed to run on GitHub Actions with ultra-fast `uv` environment and optional Synology Chat notifications.
 
 ## Features
 
@@ -10,21 +10,24 @@ A Python-based web scraper that collects real-time train operation information f
 - Filters for Tokyo metropolitan area lines only (JR, Tokyo Metro, Toei, private railways)
 - Outputs structured JSON data
 - Automatic GitHub Pages deployment for web dashboard
-- Synology Chat notifications
+- Synology Chat notifications (formatted with status tags and clickable links)
 - Scheduled runs (7:30 AM, 12:00 PM, and 5:30 PM JST)
+- Ultra-fast CI execution powered by `uv` and Python 3.13
 
 ## Project Structure
 
 ```
 .
-├── app.py                  # Main scraper script
-├── index.html              # Web dashboard (GitHub Pages)
-├── transit_data.json       # Scraped data (auto-generated)
-├── requirements.txt        # Python dependencies
-├── Dockerfile              # Container configuration
-└── .github/workflows/
-    ├── run-scraper.yml     # Scraper + notification workflow
-    └── (other personal workflows)
+├── .github/
+│   └── workflows/
+│       └── run-scraper.yml     # Scraper + notification + Pages workflow
+├── .gitignore                  # Git ignore rules
+├── app.py                      # Main scraper script
+├── index.html                  # Web dashboard (GitHub Pages)
+├── transit_data.json           # Scraped data (auto-generated)
+├── requirements.txt            # Python dependencies
+├── LICENSE                     # MIT License
+└── README.md                   # Project documentation
 ```
 
 ## Monitored Railway Lines
@@ -46,9 +49,18 @@ The scraper monitors the following Tokyo area lines:
 
 ### Local Development
 
+**Option 1: Using `uv` (Recommended - Fast & Simple)**
+
+```bash
+# Run directly with uv
+uv run --with-requirements requirements.txt app.py
+```
+
+**Option 2: Using standard `venv` + `pip`**
+
 ```bash
 # Create virtual environment
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate  # macOS/Linux
 
 # Install dependencies
@@ -62,19 +74,19 @@ python app.py
 
 ```json
 {
-    "update_time": "2026-02-08 12:00:00",
-    "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
-    "monitored_lines_count": 45,
-    "issue_count": 2,
-    "status": "issues_found",
-    "issues": [
-        {
-            "line": "Chuo-Sobu Line (Local)",
-            "status": "Delays",
-            "detail": "Due to overhead wire freezing near Mitaka Station...",
-            "url": "https://transit.yahoo.co.jp/diainfo/40/0"
-        }
-    ]
+  "update_time": "2026-08-14 08:37:21",
+  "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
+  "monitored_lines_count": 52,
+  "issue_count": 2,
+  "status": "issues_found",
+  "issues": [
+    {
+      "line": "中央総武線(各停)",
+      "status": "列車遅延",
+      "detail": "信号関係点検の影響で、一部列車に遅れが出ています。",
+      "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+    }
+  ]
 }
 ```
 
@@ -82,24 +94,11 @@ python app.py
 
 | Workflow | Schedule | Description |
 |----------|----------|-------------|
-| Run Scraper | 7:30 AM, 12:00 PM, 5:30 PM JST | Scrape transit data, update GitHub Pages, send Synology Chat notification |
-
-Note: some workflow files in this repository are for personal infrastructure tasks and are not part of this transit monitor project.
-
-### Personal reference (non-project workflows)
-
-The following workflows are kept in this repository for personal operations:
-
-| Workflow file | Purpose | Trigger |
-|---------------|---------|---------|
-| `backup-databases.yml` | PostgreSQL backup to Azure Blob + Synology Chat notification | Weekly Monday 4:00 JST / Manual |
-| `cd.yml` | Wake Azure VM and run latest Docker image via SSH | Manual |
-| `ci.yml` | Build and push multi-arch Docker image to Docker Hub | Push to main (selected paths) / Manual |
-| `start-pdf-server.yml` | Start Stirling PDF VM | Daily 7:00 JST / Manual |
+| Run Scraper | 7:30 AM, 12:00 PM, 5:30 PM JST | Scrapes transit data with `uv`, publishes GitHub Pages, sends Synology Chat notifications |
 
 ## Required Secrets
 
-For GitHub Actions workflows to function, configure the following secrets:
+For GitHub Actions notifications to function, configure the following repository secret:
 
 ```
 SYNOLOGY_CHAT_WEBHOOK          # Synology Chat incoming webhook URL
@@ -107,39 +106,55 @@ SYNOLOGY_CHAT_WEBHOOK          # Synology Chat incoming webhook URL
 
 ## Web Dashboard
 
-The `index.html` file provides a simple web dashboard that displays the latest transit information. It is designed to be embedded in Glance or similar dashboard applications.
+The `index.html` file provides a lightweight web dashboard displaying the latest transit status. It is designed to be embedded in Glance or similar dashboard applications.
 
 Features:
 - Dark/Light theme auto-detection
-- Responsive design
+- Responsive layout
 - Click to expand line details
 - Auto-refresh every 5 minutes
 
 ## Technologies
 
-- Python 3.11+
-- Requests + BeautifulSoup4
-- GitHub Actions
-- GitHub Pages
-- Docker
-
+- Python 3.11+ (GitHub Actions runs on Python 3.13)
+- Astral `uv` / Requests / BeautifulSoup4 / Urllib3
+- GitHub Actions / GitHub Pages
 
 ---
 
 # 東京交通情報スクレイパー (日本語)
 
-Yahoo!路線情報から東京圏の鉄道運行情報をリアルタイムで取得するPythonスクレイパーです。GitHub Actionsで定期実行し、自動通知を行います。
+Yahoo!路線情報から東京圏の鉄道運行情報をリアルタイムで取得するPythonスクレイパーです。GitHub Actions（`uv` による高速実行）で定期実行し、必要に応じてSynology Chatへ通知を送信します。
 
 ## 機能
 
 - Yahoo!路線情報から遅延・運休情報を取得
-- 東京都内の路線のみをフィルタリング（JR、東京メトロ、都営、私鉄）
-- 構造化されたJSON形式で出力
+- 東京都内の常用52路線を自動フィルタリング（JR、東京メトロ、都営地下鉄、大手私鉄等）
+- 構造化されたJSON形式でデータ出力
 - GitHub Pagesへの自動デプロイ（Webダッシュボード）
-- Synology Chat通知
+- Synology Chat通知（状態タグ・リンク付きの最適化フォーマット）
 - 定期実行（毎日 7:30、12:00、17:30 JST）
+- `uv` と Python 3.13 による極速CI実行
+
+## ディレクトリ構成
+
+```
+.
+├── .github/
+│   └── workflows/
+│       └── run-scraper.yml     # スクレイピング + 通知 + Pages更新ワークフロー
+├── .gitignore                  # Git除外設定
+├── app.py                      # スクレイパー本体プログラム
+├── index.html                  # Webダッシュボード（GitHub Pages）
+├── transit_data.json           # 取得済みデータ（自動生成）
+├── requirements.txt            # Python依存パッケージ
+├── LICENSE                     # MITライセンス
+└── README.md                   # プロジェクト説明書
+```
 
 ## 監視対象路線
+
+本スクレイパーは東京圏の以下の路線を監視します：
 
 | カテゴリ | 路線 |
 |----------|------|
@@ -154,50 +169,75 @@ Yahoo!路線情報から東京圏の鉄道運行情報をリアルタイムで�
 
 ## 使用方法
 
-```bash
-# 仮想環境を作成
-python -m venv .venv
-source .venv/bin/activate
+### ローカル実行
 
-# 依存関係をインストール
+**方法 1: `uv` を使用（推奨・高速）**
+
+```bash
+# uv で直接実行
+uv run --with-requirements requirements.txt app.py
+```
+
+**方法 2: 従来の `venv` + `pip`**
+
+```bash
+# 仮想環境を作成して有効化
+python3 -m venv .venv
+source .venv/bin/activate  # macOS/Linux
+
+# 依存パッケージをインストール
 pip install -r requirements.txt
 
 # スクレイパーを実行
 python app.py
 ```
 
+### 出力データ例
+
+```json
+{
+  "update_time": "2026-08-14 08:37:21",
+  "data_source": "https://transit.yahoo.co.jp/diainfo/area/4",
+  "monitored_lines_count": 52,
+  "issue_count": 2,
+  "status": "issues_found",
+  "issues": [
+    {
+      "line": "中央総武線(各停)",
+      "status": "列車遅延",
+      "detail": "信号関係点検の影響で、一部列車に遅れが出ています。",
+      "url": "https://transit.yahoo.co.jp/diainfo/40/0"
+    }
+  ]
+}
+```
+
 ## GitHub Actions ワークフロー
 
 | ワークフロー | スケジュール | 説明 |
 |-------------|-------------|------|
-| Run Scraper | 7:30、12:00、17:30 JST | 交通情報を取得し、GitHub Pages更新、Synology Chat通知 |
+| Run Scraper | 7:30、12:00、17:30 JST | `uv` で運行情報を取得し、Pages Artifactを公開、Synology Chatへ通知 |
 
-注記: このリポジトリ内の一部ワークフローファイルは個人インフラ用途であり、本プロジェクトの機能範囲には含めていません。
+## 必要なシークレット (Secrets)
 
-### 個人用メモ（本プロジェクト外ワークフロー）
+通知機能を利用する場合、リポジトリの Secrets に以下を設定してください：
 
-以下は個人運用のため同一リポジトリに置いているワークフローです。
-
-| ワークフローファイル | 用途 | トリガー |
-|---------------------|------|----------|
-| `backup-databases.yml` | PostgreSQL を Azure Blob にバックアップし Synology Chat に通知 | 毎週月曜 4:00 JST / 手動 |
-| `cd.yml` | Azure VM を起動し、SSH 経由で最新 Docker イメージを実行 | 手動 |
-| `ci.yml` | マルチアーチ Docker イメージを Docker Hub にビルド＆プッシュ | main への push（対象パス）/ 手動 |
-| `start-pdf-server.yml` | Stirling PDF 用 VM を起動 | 毎日 7:00 JST / 手動 |
+```
+SYNOLOGY_CHAT_WEBHOOK          # Synology Chat Incoming Webhook URL
+```
 
 ## Webダッシュボード
 
-`index.html` は最新の交通情報を表示するシンプルなWebダッシュボードです。Glanceなどのダッシュボードアプリに埋め込んで使用できます。
+`index.html` は最新の交通情報を表示する軽量なWebダッシュボードです。Glanceなどのダッシュボードアプリに埋め込んで使用できます。
 
 機能:
 - ダーク/ライトテーマ自動検出
 - レスポンシブデザイン
-- クリックで詳細を展開
-- 5分ごとに自動更新
+- クリックで各路線の詳細を展開
+- 5分ごとの自動データ更新
 
 ## 使用技術
 
-- Python 3.11+
-- Requests + BeautifulSoup4
+- Python 3.11+ (GitHub Actions CI: Python 3.13)
+- Astral `uv` / Requests / BeautifulSoup4 / Urllib3
 - GitHub Actions / GitHub Pages
-- Docker

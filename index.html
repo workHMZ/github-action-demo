@@ -210,24 +210,77 @@
             font-size: 10px;
             padding: 0.15rem 0.4rem;
             border-radius: 3px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .line-status.status-warning {
             background-color: var(--color-warning);
             color: #000;
-            font-weight: 500;
+        }
+
+        .line-status.status-danger {
+            background-color: var(--color-error);
+            color: #fff;
+        }
+
+        .line-status.status-success {
+            background-color: var(--color-success);
+            color: #fff;
+        }
+
+        .expand-indicator {
+            font-size: 10px;
+            color: var(--color-text-subdue);
+            transition: transform 0.2s ease;
+            margin-left: 0.25rem;
+            line-height: 1;
+        }
+
+        .line-item.expanded .expand-indicator {
+            transform: rotate(180deg);
         }
 
         .line-detail {
             color: var(--color-text-base);
             font-size: 11px;
-            line-height: 1.4;
+            line-height: 1.45;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            word-break: break-word;
         }
 
         .line-item.expanded .line-detail {
             -webkit-line-clamp: unset;
             overflow: visible;
+        }
+
+        .line-footer {
+            display: none;
+            margin-top: 0.45rem;
+            padding-top: 0.4rem;
+            border-top: 1px dashed var(--color-separator);
+            font-size: 10px;
+        }
+
+        .line-item.expanded .line-footer {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .line-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 10px;
+        }
+
+        .line-link:hover {
+            text-decoration: underline;
         }
 
         .all-clear {
@@ -309,12 +362,12 @@
         </div>
 
         <div class="footer">
-            データ: <a href="https://transit.yahoo.co.jp/diainfo/area/4" target="_blank">Yahoo!路線情報</a>
+            データ: <a href="https://transit.yahoo.co.jp/diainfo/area/4" target="_blank" rel="noopener noreferrer">Yahoo!路線情報</a>
         </div>
     </div>
 
     <script>
-        // Theme detection (same as before)
+        // Theme detection
         function detectAndApplyTheme() {
             let isLightTheme = false;
             try {
@@ -338,6 +391,23 @@
         }
         detectAndApplyTheme();
 
+        // Check theme when embedded in iframe (every 5s)
+        if (window.parent && window.parent !== window) {
+            setInterval(detectAndApplyTheme, 5000);
+        }
+
+        // Determine status tag CSS class
+        function getStatusClass(status) {
+            if (!status) return 'status-warning';
+            if (status.includes('見合わせ') || status.includes('運休')) {
+                return 'status-danger';
+            }
+            if (status.includes('再開') || status.includes('平常') || status.includes('正常')) {
+                return 'status-success';
+            }
+            return 'status-warning';
+        }
+
         // Data loading
         const DATA_URL = 'transit_data.json';
 
@@ -354,7 +424,7 @@
 
                 // Update header and data info
                 const fetchTime = document.getElementById('fetchTime');
-                updateTime.textContent = data.issue_count > 0 ? `${data.issue_count}件の遅延` : '正常';
+                updateTime.textContent = data.issue_count > 0 ? `${data.issue_count}件の運行情報` : '正常';
                 fetchTime.textContent = data.update_time || '不明';
 
                 if (data.status === 'all_clear' || data.issue_count === 0) {
@@ -376,15 +446,24 @@
                         <div class="line-list">
                     `;
 
-                    data.issues.forEach((issue, index) => {
+                    data.issues.forEach((issue) => {
+                        const statusClass = getStatusClass(issue.status);
+                        const detailUrl = issue.url || 'https://transit.yahoo.co.jp/diainfo/area/4';
+
                         html += `
                             <div class="line-item" onclick="this.classList.toggle('expanded')">
                                 <div class="line-header">
                                     <span class="line-icon">🚃</span>
                                     <span class="line-name">${escapeHtml(issue.line)}</span>
-                                    <span class="line-status">${escapeHtml(issue.status)}</span>
+                                    <span class="line-status ${statusClass}">${escapeHtml(issue.status || '情報あり')}</span>
+                                    <span class="expand-indicator">⌄</span>
                                 </div>
                                 <div class="line-detail">${escapeHtml(issue.detail)}</div>
+                                <div class="line-footer">
+                                    <a href="${escapeHtml(detailUrl)}" target="_blank" rel="noopener noreferrer" class="line-link" onclick="event.stopPropagation()">
+                                        Yahoo!路線情報で詳細を確認 ↗
+                                    </a>
+                                </div>
                             </div>
                         `;
                     });
@@ -396,7 +475,7 @@
             } catch (error) {
                 content.innerHTML = `
                     <div class="error-message">
-                        ⚠️ ${error.message}<br>
+                        ⚠️ ${escapeHtml(error.message)}<br>
                         <small>ページをリロードしてお試しください</small>
                     </div>
                 `;
@@ -404,6 +483,7 @@
         }
 
         function escapeHtml(text) {
+            if (!text) return '';
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
@@ -412,10 +492,14 @@
         // Initial load
         loadTransitData();
 
-        // Theme check interval
-        setInterval(detectAndApplyTheme, 1000);
+        // Auto reload on tab/window visibility change (e.g. waking up Mac)
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                loadTransitData();
+            }
+        });
 
-        // Auto refresh every 5 minutes
+        // Auto refresh every 5 minutes (backup interval)
         setInterval(loadTransitData, 5 * 60 * 1000);
     </script>
 </body>

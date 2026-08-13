@@ -1,12 +1,17 @@
 import json
-from datetime import datetime, timezone, timedelta
-import time
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
+
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # --- 設定 ---
-TARGET_URL = 'https://transit.yahoo.co.jp/diainfo/area/4'
-BASE_URL = 'https://transit.yahoo.co.jp'
+TARGET_URL = "https://transit.yahoo.co.jp/diainfo/area/4"
+OUTPUT_FILE = Path("transit_data.json")
 
 # 東京都内常用路線のホワイトリスト
 TOKYO_LINES = {
@@ -79,167 +84,155 @@ TOKYO_LINES = {
     "多摩都市モノレール線",
 }
 
-# リクエスト用のヘッダー
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-    'Accept-Language': 'ja,en-US;q=0.7,en;q=0.3',
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/151.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
 }
 
+class TransitParseError(RuntimeError):
+    pass
 
-def get_detail_page_info(session, detail_url, line_name, max_retries=3):
-    """
-    詳細ページから完全な運行情報を取得する。
-    
-    Returns:
-        dict: 路線情報 or None（取得失敗時）
-    """
-    for attempt in range(max_retries):
-        try:
-            response = session.get(detail_url, headers=HEADERS, timeout=10)
-            response.raise_for_status()
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # 詳細情報を取得（ページ内の主要テキスト）
-            detail_text = ""
-            
-            # 運行情報のメインテキストを探す
-            contents_body = soup.find(id='contents-body')
-            if contents_body:
-                # pタグから詳細テキストを取得
-                for p in contents_body.find_all('p'):
-                    text = p.get_text(strip=True)
-                    # 意味のある長さのテキストで、路線登録などのUIテキストを除外
-                    if len(text) > 20 and '路線を登録' not in text and '迂回ルート' not in text:
-                        detail_text = text
-                        break
-            
-            # 状態ラベルを取得
-            status = "運転状況"
-            status_elem = soup.find(class_='labelStatus')
-            if status_elem:
-                status = status_elem.get_text(strip=True) or status
-            
-            if detail_text:
-                return {
-                    "line": line_name,
-                    "status": status,
-                    "detail": detail_text,
-                    "url": detail_url
-                }
-            else:
-                print(f"  ⚠️ 詳細テキストが見つかりません: {line_name}")
-                return None
-                
-        except requests.exceptions.Timeout:
-            print(f"  ⚠️ タイムアウト ({attempt + 1}/{max_retries}): {line_name}")
-            if attempt < max_retries - 1:
-                time.sleep(1)
-                continue
-            return None
-        except requests.exceptions.RequestException as e:
-            print(f"  ❌ リクエストエラー: {line_name} - {e}")
-            return None
-        except Exception as e:
-            print(f"  ❌ エラー: {line_name} - {e}")
-            return None
-    
-    return None
+def create_session() -> requests.Session:
+    retry = Retry(
+        total=3,
+        connect=3,
+        read=3,
+        status=3,
+        backoff_factor=0.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset({"GET"}),
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(
+        max_retries=retry,
+        pool_connections=2,
+        pool_maxsize=2,
+    )
+    session = requests.Session()
+    session.headers.update(HEADERS)
+    session.mount("https://", adapter)
+    return session
 
+def parse_trouble_rows(soup: BeautifulSoup) -> list[dict]:
+    """
+    Yahoo! 路線情報の「現在運行情報のある路線」から
+    路線 / 状況 / 詳細を直接取得する。
+    """
+    # まず「現在運行情報」の領域を限定
+    trouble_section = soup.find(id="mdStatusTroubleLine")
+    if trouble_section is None:
+        raise TransitParseError(
+            "運行情報セクションが見つかりません。"
+            "Yahoo! のHTML構造が変更された可能性があります。"
+        )
 
-def scrape_transit_data():
-    """
-    交通情報をスクレイピングし、東京都内の路線情報のリストを返す。
-    """
-    print("交通情報を取得中...")
-    scraped_data = []
-    
-    try:
-        # セッションを使用して接続を再利用
-        session = requests.Session()
+    section_text = trouble_section.get_text(" ", strip=True)
+    # 正常時
+    if "事故・遅延情報はありません" in section_text:
+        return []
+
+    issues = []
+    parsed_rows = 0
+    for row in trouble_section.find_all("tr"):
+        cells = row.find_all("td")
+        if len(cells) < 3:
+            continue
         
-        print(f"URL: {TARGET_URL} から最新の運行情報を取得中...")
-        response = session.get(TARGET_URL, headers=HEADERS, timeout=15)
+        link = cells[0].find("a")
+        if link:
+            line_name = link.get_text(" ", strip=True)
+            detail_url = urljoin(TARGET_URL, link.get("href", ""))
+        else:
+            line_name = cells[0].get_text(" ", strip=True)
+            detail_url = TARGET_URL
+
+        status = cells[1].get_text(" ", strip=True)
+        detail = cells[2].get_text(" ", strip=True)
+        
+        if not line_name or not status or not detail:
+            continue
+            
+        parsed_rows += 1
+
+        if line_name not in TOKYO_LINES:
+            continue
+            
+        issues.append({
+            "line": line_name,
+            "status": status,
+            "detail": detail,
+            "url": detail_url,
+        })
+        
+    # 「問題なし」でもなく、行も取れないなら
+    # all_clear と誤判定せずエラーにする
+    if parsed_rows == 0:
+        raise TransitParseError(
+            "運行情報は存在しますが、"
+            "路線情報を解析できませんでした。"
+        )
+
+    return issues
+
+def scrape_transit_data() -> list[dict]:
+    print(f"URL: {TARGET_URL} から最新の運行情報を取得中...")
+    with create_session() as session:
+        response = session.get(
+            TARGET_URL,
+            timeout=(5, 15),
+        )
         response.raise_for_status()
         
-        soup = BeautifulSoup(response.text, 'html.parser')
-        print("✅ 主要コンテンツの取得完了。データ解析を開始します。")
-        
-        # 現在運行情報のある路線のリンクを収集
-        troubled_line_links = {}
-        
-        # elmTblLstLine テーブル内のリンクを取得
-        table = soup.find(class_='elmTblLstLine')
-        if table:
-            for link in table.find_all('a'):
-                line_name = link.get_text(strip=True)
-                href = link.get('href')
-                
-                if line_name and href and line_name in TOKYO_LINES:
-                    # 相対URLを絶対URLに変換
-                    if href.startswith('/'):
-                        href = BASE_URL + href
-                    troubled_line_links[line_name] = href
-        
-        if not troubled_line_links:
-            print("✅ 東京都内の路線で運行情報のある路線はありません。")
-            return []
-        
-        print(f"\n📋 運行情報のある東京都内路線: {len(troubled_line_links)}件")
-        for name in troubled_line_links:
-            print(f"  - {name}")
-        
-        # 各路線の詳細ページから完全な情報を取得
-        print("\n📖 詳細情報を取得中...")
-        for line_name, detail_url in troubled_line_links.items():
-            print(f"  取得中: {line_name}")
-            result = get_detail_page_info(session, detail_url, line_name)
-            if result:
-                scraped_data.append(result)
-                print(f"  ✅ 取得完了: {line_name}")
-            else:
-                # 詳細取得に失敗しても、基本情報は記録
-                scraped_data.append({
-                    "line": line_name,
-                    "status": "運転状況",
-                    "detail": "詳細情報の取得に失敗しました。",
-                    "url": detail_url
-                })
-            
-            # サーバー負荷軽減のため少し待機
-            time.sleep(0.3)
-        
-        return scraped_data
+        soup = BeautifulSoup(response.content, "html.parser")
+        return parse_trouble_rows(soup)
 
-    except requests.exceptions.RequestException as e:
-        print(f"リクエスト中にエラーが発生しました: {e}")
-        return None
-    except Exception as e:
-        print(f"処理中に予期せぬエラーが発生しました: {e}")
-        return None
+def build_output(issues: list[dict]) -> dict:
+    now = datetime.now(ZoneInfo("Asia/Tokyo"))
+    return {
+        "update_time": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "data_source": TARGET_URL,
+        "monitored_lines_count": len(TOKYO_LINES),
+        "issue_count": len(issues),
+        "status": "issues_found" if issues else "all_clear",
+        "issues": issues,
+    }
 
+def write_json_atomic(data: dict) -> None:
+    """
+    中途半端なJSONが残らないよう、一時ファイルからatomic replace。
+    """
+    temp_file = OUTPUT_FILE.with_suffix(".json.tmp")
+    temp_file.write_text(
+        json.dumps(
+            data,
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+    temp_file.replace(OUTPUT_FILE)
+    print(f"✅ {OUTPUT_FILE} を更新しました。")
 
-if __name__ == '__main__':
-    # データをスクレイピング
-    all_lines_data = scrape_transit_data()
-    
-    # JSON出力処理
-    if all_lines_data is not None:
-        # 最終的なJSON構造を作成 (JST時間を使用)
-        JST = timezone(timedelta(hours=9))
-        output_json = {
-            "update_time": datetime.now(JST).strftime('%Y-%m-%d %H:%M:%S'),
-            "data_source": TARGET_URL,
-            "monitored_lines_count": len(TOKYO_LINES),
-            "issue_count": len(all_lines_data),
-            "status": "issues_found" if all_lines_data else "all_clear",
-            "issues": all_lines_data
-        }
-        
-        # JSONを整形してプリント
-        print("\n--- JSON Output ---")
-        print(json.dumps(output_json, ensure_ascii=False, indent=4))
-        
-    else:
-        print("\n❌ 運行情報の取得に失敗しました。")
+def main() -> int:
+    try:
+        issues = scrape_transit_data()
+        output = build_output(issues)
+        write_json_atomic(output)
+        print(json.dumps(
+            output,
+            ensure_ascii=False,
+            indent=2,
+        ))
+        return 0
+    except (requests.RequestException, TransitParseError) as exc:
+        print(
+            f"❌ 運行情報の取得に失敗しました: {exc}",
+        )
+        return 1
+
+if __name__ == "__main__":
+    raise SystemExit(main())
