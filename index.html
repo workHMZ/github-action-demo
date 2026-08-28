@@ -336,6 +336,26 @@
             text-decoration: none;
         }
 
+        .stale-banner {
+            display: none;
+            margin: 0 0 0.75rem 0;
+            padding: 0.5rem 0.7rem;
+            border: 1px solid var(--color-warning);
+            border-radius: var(--border-radius);
+            color: var(--color-warning);
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .stale-banner.visible {
+            display: block;
+        }
+
+        .status-dot.stale {
+            background: var(--color-text-subdue) !important;
+            animation: none !important;
+        }
+
         .footer a:hover {
             text-decoration: underline;
         }
@@ -356,6 +376,8 @@
         <div class="data-info" id="dataInfo">
             📅 データ取得: <span id="fetchTime">--</span>
         </div>
+
+        <div class="stale-banner" id="staleBanner"></div>
 
         <div class="content" id="content">
             <div class="loading">読み込み中...</div>
@@ -411,6 +433,82 @@
         // Data loading
         const DATA_URL = 'transit_data.json';
 
+        // スクレイパーの cron 発火時刻 (UTC)。workflow の schedule と一致させること。
+        // 22:15Z -> 7:30 JST / 02:45Z -> 12:00 JST / 08:15Z -> 17:30 JST
+        //
+        // 固定時間のしきい値だと、17:30 -> 翌 7:30 の 14 時間の間隔を許容するために
+        // 15 時間まで緩める必要があり、日中に1回飛んでも夕方まで気づけなかった。
+        // 「直近で実行されるはずだった時刻」を基準にすることで、
+        // 1回飛んだだけでも猶予 90 分後に検知できる。
+        const SCHEDULE_UTC = [[22, 15], [2, 45], [8, 15]];
+        const GRACE_MS = 90 * 60 * 1000;
+
+        // 直近の「実行されるはずだった時刻」を UTC で求める。
+        // 閲覧者のタイムゾーンに依存しないよう、全て UTC で計算する。
+        function lastExpectedRun(now) {
+            let latest = null;
+            for (const [hour, minute] of SCHEDULE_UTC) {
+                for (const dayOffset of [0, -1]) {
+                    const candidate = new Date(Date.UTC(
+                        now.getUTCFullYear(),
+                        now.getUTCMonth(),
+                        now.getUTCDate() + dayOffset,
+                        hour, minute, 0, 0
+                    ));
+                    if (candidate <= now && (latest === null || candidate > latest)) {
+                        latest = candidate;
+                    }
+                }
+            }
+            return latest;
+        }
+
+        // update_time は JST の "YYYY-MM-DD HH:MM:SS"。
+        // Safari はこの形式をパースできないため明示的に +09:00 を付ける。
+        function parseUpdateTime(data) {
+            if (data.update_time_iso) {
+                const t = new Date(data.update_time_iso);
+                if (!isNaN(t)) return t;
+            }
+            if (typeof data.update_time === 'string') {
+                const t = new Date(data.update_time.replace(' ', 'T') + '+09:00');
+                if (!isNaN(t)) return t;
+            }
+            return null;
+        }
+
+        function updateStaleBanner(data, statusDot) {
+            const banner = document.getElementById('staleBanner');
+            const t = parseUpdateTime(data);
+            if (!t) {
+                banner.classList.remove('visible');
+                return;
+            }
+
+            const now = new Date();
+            const expected = lastExpectedRun(now);
+
+            // 直近の実行予定時刻より前のデータのまま猶予を過ぎている = 実行が飛んでいる
+            const missed = expected !== null
+                && t < expected
+                && (now - expected) > GRACE_MS;
+
+            if (missed) {
+                const ageMin = Math.floor((now - t) / (60 * 1000));
+                const age = ageMin >= 120
+                    ? '約' + Math.floor(ageMin / 60) + '時間'
+                    : ageMin + '分';
+                banner.textContent =
+                    '\u26a0\ufe0f 定期取得が実行されていない可能性があります。' +
+                    'データは' + age + '前のものです。';
+                banner.classList.add('visible');
+                statusDot.classList.add('stale');
+            } else {
+                banner.classList.remove('visible');
+                statusDot.classList.remove('stale');
+            }
+        }
+
         async function loadTransitData() {
             const content = document.getElementById('content');
             const statusDot = document.getElementById('statusDot');
@@ -426,8 +524,9 @@
                 const fetchTime = document.getElementById('fetchTime');
                 updateTime.textContent = data.issue_count > 0 ? `${data.issue_count}件の運行情報` : '正常';
                 fetchTime.textContent = data.update_time || '不明';
+                updateStaleBanner(data, statusDot);
 
-                if (data.status === 'all_clear' || data.issue_count === 0) {
+                if (data.status === 'all_clear' || !data.issue_count) {
                     statusDot.classList.remove('has-issues');
                     content.innerHTML = `
                         <div class="all-clear">
@@ -446,7 +545,7 @@
                         <div class="line-list">
                     `;
 
-                    data.issues.forEach((issue) => {
+                    (data.issues || []).forEach((issue) => {
                         const statusClass = getStatusClass(issue.status);
                         const detailUrl = issue.url || 'https://transit.yahoo.co.jp/diainfo/area/4';
 

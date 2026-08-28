@@ -9,10 +9,14 @@ A Python-based web scraper that collects real-time train operation information f
 - Scrapes train delay/suspension information from Yahoo! Japan Transit
 - Filters for Tokyo metropolitan area lines only (JR, Tokyo Metro, Toei, private railways)
 - Outputs structured JSON data
+- Fetches full (untruncated) incident text from each line's detail page
 - Automatic GitHub Pages deployment for web dashboard
-- Synology Chat notifications (formatted with status tags and clickable links)
+- Synology Chat notifications on manual runs (formatted with status tags and clickable links)
 - Scheduled runs (7:30 AM, 12:00 PM, and 5:30 PM JST)
 - Ultra-fast CI execution powered by `uv` and Python 3.13
+- Regression tests against saved HTML fixtures, so upstream markup changes fail loudly
+- Detects Yahoo!-side line renames (reported via `unmatched_lines`)
+- Dashboard warns when data has gone stale
 
 ## Project Structure
 
@@ -23,9 +27,13 @@ A Python-based web scraper that collects real-time train operation information f
 │       └── run-scraper.yml     # Scraper + notification + Pages workflow
 ├── .gitignore                  # Git ignore rules
 ├── app.py                      # Main scraper script
+├── lines.json                  # Monitored line whitelist (edit this, not app.py)
 ├── index.html                  # Web dashboard (GitHub Pages)
-├── transit_data.json           # Scraped data (auto-generated)
-├── requirements.txt            # Python dependencies
+├── tests/
+│   ├── test_parser.py          # Parser regression tests
+│   └── fixtures/               # Saved Yahoo! HTML for offline testing
+├── transit_data.json           # Scraped data (auto-generated, git-ignored)
+├── requirements.txt            # Python dependencies (pinned)
 ├── LICENSE                     # MIT License
 └── README.md                   # Project documentation
 ```
@@ -55,6 +63,24 @@ The scraper monitors the following Tokyo area lines:
 # Run directly with uv
 uv run --with-requirements requirements.txt app.py
 ```
+
+### Running Tests
+
+The parser is covered by regression tests that run against saved Yahoo! HTML.
+Run them before changing `app.py` or bumping dependencies:
+
+```bash
+uv run --with-requirements requirements.txt --with pytest python -m pytest tests/ -q
+```
+
+If Yahoo! changes its markup, refresh `tests/fixtures/area4_all_clear.html`
+with a fresh copy of the live page and re-run.
+
+### Adding or Removing Monitored Lines
+
+Edit `lines.json`. Names must match Yahoo!'s notation exactly — the test suite
+verifies every whitelisted name still appears on the live page, so a typo or an
+upstream rename fails the build instead of silently dropping the line.
 
 **Option 2: Using standard `venv` + `pip`**
 
@@ -94,7 +120,9 @@ python app.py
 
 | Workflow | Schedule | Description |
 |----------|----------|-------------|
-| Run Scraper | 7:30 AM, 12:00 PM, 5:30 PM JST | Scrapes transit data with `uv`, publishes GitHub Pages, sends Synology Chat notifications |
+| Run Scraper | 7:30 AM, 12:00 PM, 5:30 PM JST | Scrapes transit data with `uv` and publishes GitHub Pages |
+
+> **Note:** Synology Chat notifications are sent **only on manual runs** (`workflow_dispatch` with `send_notification: true`). Scheduled runs update the dashboard silently — this is intentional, to avoid three notifications every day.
 
 ## Required Secrets
 
@@ -132,7 +160,7 @@ Yahoo!路線情報から東京圏の鉄道運行情報をリアルタイムで�
 - 東京都内の常用52路線を自動フィルタリング（JR、東京メトロ、都営地下鉄、大手私鉄等）
 - 構造化されたJSON形式でデータ出力
 - GitHub Pagesへの自動デプロイ（Webダッシュボード）
-- Synology Chat通知（状態タグ・リンク付きの最適化フォーマット）
+- Synology Chat通知（手動実行時のみ／状態タグ・リンク付きの最適化フォーマット）
 - 定期実行（毎日 7:30、12:00、17:30 JST）
 - `uv` と Python 3.13 による極速CI実行
 
@@ -145,9 +173,13 @@ Yahoo!路線情報から東京圏の鉄道運行情報をリアルタイムで�
 │       └── run-scraper.yml     # スクレイピング + 通知 + Pages更新ワークフロー
 ├── .gitignore                  # Git除外設定
 ├── app.py                      # スクレイパー本体プログラム
+├── lines.json                  # 監視対象路線のホワイトリスト（app.pyではなくこちらを編集）
 ├── index.html                  # Webダッシュボード（GitHub Pages）
-├── transit_data.json           # 取得済みデータ（自動生成）
-├── requirements.txt            # Python依存パッケージ
+├── tests/
+│   ├── test_parser.py          # パーサーの回帰テスト
+│   └── fixtures/               # オフラインテスト用の保存済みYahoo! HTML
+├── transit_data.json           # 取得済みデータ（自動生成・git管理外）
+├── requirements.txt            # Python依存パッケージ（バージョン固定）
 ├── LICENSE                     # MITライセンス
 └── README.md                   # プロジェクト説明書
 ```
@@ -216,7 +248,9 @@ python app.py
 
 | ワークフロー | スケジュール | 説明 |
 |-------------|-------------|------|
-| Run Scraper | 7:30、12:00、17:30 JST | `uv` で運行情報を取得し、Pages Artifactを公開、Synology Chatへ通知 |
+| Run Scraper | 7:30、12:00、17:30 JST | `uv` で運行情報を取得し、Pages Artifactを公開 |
+
+> **補足:** Synology Chat への通知は**手動実行時のみ**送信されます（`workflow_dispatch` で `send_notification: true` を指定）。定時実行はダッシュボードを静かに更新するだけです。毎日3回通知が届くのを避けるための意図的な仕様です。
 
 ## 必要なシークレット (Secrets)
 

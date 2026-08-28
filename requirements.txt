@@ -1,3 +1,7 @@
-requests>=2.34.0
-beautifulsoup4>=4.15.0
-urllib3>=2.7.0
+# バージョンは固定する。
+# 上流の破壊的変更で CI が突然壊れるのを防ぐため。
+# 更新時は tests/ を通してから上げること。
+requests==2.34.2
+beautifulsoup4==4.15.0
+urllib3==2.7.0
+lxml==6.1.2

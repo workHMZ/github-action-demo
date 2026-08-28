@@ -30,3 +30,6 @@ api_keys.txt
 # Build & Deploy artifacts
 _site/
 *.tmp
+
+# Generated scraper output (V2以降はcommitしない)
+transit_data.json

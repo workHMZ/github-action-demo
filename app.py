@@ -1,4 +1,7 @@
 import json
+import re
+import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urljoin
@@ -11,78 +14,17 @@ from urllib3.util.retry import Retry
 
 # --- 設定 ---
 TARGET_URL = "https://transit.yahoo.co.jp/diainfo/area/4"
-OUTPUT_FILE = Path("transit_data.json")
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_FILE = BASE_DIR / "transit_data.json"
+LINES_FILE = BASE_DIR / "lines.json"
 
-# 東京都内常用路線のホワイトリスト
-TOKYO_LINES = {
-    # JR東日本（東京都内常用路線）
-    "山手線",
-    "中央総武線(各停)",
-    "中央線(快速)[東京～高尾]",
-    "京浜東北根岸線",
-    "埼京川越線[羽沢横浜国大～川越]",
-    "湘南新宿ライン",
-    "上野東京ライン",
-    "総武線(快速)[東京～千葉]",
-    "京葉線",
-    "武蔵野線",
-    "常磐線(快速)[品川～取手]",
-    "常磐線(各停)",
-    "南武線[川崎～立川]",
-    "横須賀線",
-    
-    # 東京メトロ
-    "東京メトロ銀座線",
-    "東京メトロ丸ノ内線",
-    "東京メトロ日比谷線",
-    "東京メトロ東西線",
-    "東京メトロ千代田線",
-    "東京メトロ有楽町線",
-    "東京メトロ半蔵門線",
-    "東京メトロ南北線",
-    "東京メトロ副都心線",
-    
-    # 都営地下鉄
-    "都営浅草線",
-    "都営三田線",
-    "都営新宿線",
-    "都営大江戸線",
-    
-    # 京王電鉄
-    "京王線",
-    "京王新線",
-    "京王相模原線",
-    "京王高尾線",
-    "京王井の頭線",
-    
-    # 小田急電鉄
-    "小田急小田原線",
-    "小田急江ノ島線",
-    "小田急多摩線",
-    
-    # 東急電鉄
-    "東急東横線",
-    "東急目黒線",
-    "東急田園都市線",
-    "東急大井町線",
-    "東急多摩川線",
-    "東急池上線",
-    "東急世田谷線",
-    
-    # 西武鉄道
-    "西武池袋線・秩父線",
-    "西武新宿線",
-    "西武国分寺線",
-    "西武多摩湖線",
-    "西武有楽町線",
-    "西武拝島線",
-    
-    # その他東京都内便利な路線
-    "日暮里・舎人ライナー",
-    "ゆりかもめ線",
-    "東京モノレール線",
-    "多摩都市モノレール線",
-}
+# 詳細ページ取得の設定
+FETCH_DETAIL_PAGES = True
+DETAIL_FETCH_DELAY = 1.0   # 秒。Yahoo! への負荷を避けるための間隔
+DETAIL_FETCH_LIMIT = 20    # 1回の実行で詳細ページを取得する最大件数
+
+# 「異常なし」を示す文言。全角/半角の中点ゆらぎに対応するため正規化して判定する
+NO_TROUBLE_PATTERN = re.compile(r"(事故.遅延(に関する)?情報はありません|情報はありません)")
 
 HEADERS = {
     "User-Agent": (
@@ -93,8 +35,48 @@ HEADERS = {
     "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
 }
 
+
 class TransitParseError(RuntimeError):
     pass
+
+
+def log(message: str) -> None:
+    """進捗ログは stderr へ。stdout は JSON 専用に保つ。"""
+    print(message, file=sys.stderr, flush=True)
+
+
+def load_monitored_lines() -> set[str]:
+    """
+    監視対象路線を lines.json から読み込む。
+    コード変更なしに路線を増減できるよう外部化している。
+    """
+    try:
+        raw = json.loads(LINES_FILE.read_text(encoding="utf-8"))
+    except FileNotFoundError as exc:
+        raise TransitParseError(f"{LINES_FILE.name} が見つかりません。") from exc
+    except json.JSONDecodeError as exc:
+        raise TransitParseError(f"{LINES_FILE.name} のJSONが不正です: {exc}") from exc
+
+    lines: set[str] = set()
+    for key, value in raw.items():
+        if key.startswith("_"):  # "_comment" などのメタキーは無視
+            continue
+        if not isinstance(value, list):
+            raise TransitParseError(f"{LINES_FILE.name}: '{key}' は配列である必要があります。")
+        lines.update(value)
+
+    if not lines:
+        raise TransitParseError(f"{LINES_FILE.name} に監視対象路線が1件もありません。")
+    return lines
+
+
+def make_soup(markup: bytes | str) -> BeautifulSoup:
+    """lxml があれば使い、無ければ標準の html.parser にフォールバックする。"""
+    try:
+        return BeautifulSoup(markup, "lxml")
+    except Exception:
+        return BeautifulSoup(markup, "html.parser")
+
 
 def create_session() -> requests.Session:
     retry = Retry(
@@ -117,12 +99,27 @@ def create_session() -> requests.Session:
     session.mount("https://", adapter)
     return session
 
-def parse_trouble_rows(soup: BeautifulSoup) -> list[dict]:
+
+def collect_page_line_names(soup: BeautifulSoup) -> set[str]:
+    """
+    ページ上に存在する全路線名を集める。
+    ホワイトリストとの差分を取ることで「Yahoo!側の路線名変更」を検知する。
+    """
+    names = set()
+    for link in soup.find_all("a", href=True):
+        if "/diainfo/" not in link["href"]:
+            continue
+        name = link.get_text(" ", strip=True)
+        if name:
+            names.add(name)
+    return names
+
+
+def parse_trouble_rows(soup: BeautifulSoup, monitored: set[str]) -> list[dict]:
     """
     Yahoo! 路線情報の「現在運行情報のある路線」から
     路線 / 状況 / 詳細を直接取得する。
     """
-    # まず「現在運行情報」の領域を限定
     trouble_section = soup.find(id="mdStatusTroubleLine")
     if trouble_section is None:
         raise TransitParseError(
@@ -130,18 +127,15 @@ def parse_trouble_rows(soup: BeautifulSoup) -> list[dict]:
             "Yahoo! のHTML構造が変更された可能性があります。"
         )
 
-    section_text = trouble_section.get_text(" ", strip=True)
-    # 正常時
-    if "事故・遅延情報はありません" in section_text:
-        return []
-
     issues = []
     parsed_rows = 0
+    skipped: list[str] = []
+
     for row in trouble_section.find_all("tr"):
         cells = row.find_all("td")
         if len(cells) < 3:
             continue
-        
+
         link = cells[0].find("a")
         if link:
             line_name = link.get_text(" ", strip=True)
@@ -152,87 +146,149 @@ def parse_trouble_rows(soup: BeautifulSoup) -> list[dict]:
 
         status = cells[1].get_text(" ", strip=True)
         detail = cells[2].get_text(" ", strip=True)
-        
+
         if not line_name or not status or not detail:
             continue
-            
+
         parsed_rows += 1
 
-        if line_name not in TOKYO_LINES:
+        if line_name not in monitored:
+            skipped.append(line_name)
             continue
-            
+
         issues.append({
             "line": line_name,
             "status": status,
             "detail": detail,
+            "detail_truncated": detail.endswith("..."),
             "url": detail_url,
         })
-        
-    # 「問題なし」でもなく、行も取れないなら
-    # all_clear と誤判定せずエラーにする
+
     if parsed_rows == 0:
+        # 行が取れない場合、本当に平常なのか構造変更なのかを文言で切り分ける。
+        section_text = trouble_section.get_text(" ", strip=True)
+        if NO_TROUBLE_PATTERN.search(section_text):
+            log("ℹ️  現在、運行情報のある路線はありません。")
+            return []
         raise TransitParseError(
-            "運行情報は存在しますが、"
-            "路線情報を解析できませんでした。"
+            "運行情報は存在しますが、路線情報を解析できませんでした。"
         )
+
+    if skipped:
+        log(f"ℹ️  監視対象外のため除外: {len(skipped)}件 -> {', '.join(sorted(set(skipped)))}")
 
     return issues
 
-def scrape_transit_data() -> list[dict]:
-    print(f"URL: {TARGET_URL} から最新の運行情報を取得中...")
-    with create_session() as session:
-        response = session.get(
-            TARGET_URL,
-            timeout=(5, 15),
-        )
-        response.raise_for_status()
-        
-        soup = BeautifulSoup(response.content, "html.parser")
-        return parse_trouble_rows(soup)
 
-def build_output(issues: list[dict]) -> dict:
+def warn_missing_lines(page_lines: set[str], monitored: set[str]) -> list[str]:
+    """
+    ホワイトリストにあるのにページ上に一切現れない路線を警告する。
+    Yahoo! 側の改名を黙って取りこぼすのを防ぐ。
+    """
+    missing = sorted(monitored - page_lines)
+    if missing:
+        log("⚠️  以下の監視対象路線がページ上に見つかりません（改名/廃止の可能性）:")
+        for name in missing:
+            log(f"      - {name}")
+    return missing
+
+
+def parse_detail_page(html: bytes) -> str | None:
+    """詳細ページ (#mdServiceStatus) から省略されていない本文を取り出す。"""
+    soup = make_soup(html)
+    status_block = soup.find(id="mdServiceStatus")
+    if status_block is None:
+        return None
+    # 1路線に複数の情報（運行情報 + 運休情報など）が並ぶことがあるため全て拾う。
+    parts = [
+        dd.get_text(" ", strip=True)
+        for dd in status_block.find_all("dd")
+    ]
+    text = " ".join(p for p in parts if p)
+    return text or None
+
+
+def enrich_with_details(session: requests.Session, issues: list[dict]) -> None:
+    """
+    一覧ページの詳細文はYahoo!側で「...」に切り詰められている。
+    問題のある路線だけ詳細ページを引いて全文に差し替える。
+    """
+    targets = [i for i in issues if i["url"] != TARGET_URL][:DETAIL_FETCH_LIMIT]
+    if not targets:
+        return
+
+    log(f"📄 詳細ページから全文を取得中... ({len(targets)}件)")
+    for index, issue in enumerate(targets):
+        if index > 0:
+            time.sleep(DETAIL_FETCH_DELAY)
+        try:
+            response = session.get(issue["url"], timeout=(5, 15))
+            response.raise_for_status()
+            full_text = parse_detail_page(response.content)
+        except requests.RequestException as exc:
+            log(f"   ⚠️  {issue['line']}: 詳細取得に失敗（一覧の要約を使用）: {exc}")
+            continue
+
+        if full_text:
+            issue["detail"] = full_text
+            issue["detail_truncated"] = False
+        else:
+            log(f"   ⚠️  {issue['line']}: 詳細ページを解析できませんでした（一覧の要約を使用）")
+
+
+def scrape_transit_data(monitored: set[str]) -> tuple[list[dict], list[str]]:
+    log(f"URL: {TARGET_URL} から最新の運行情報を取得中...")
+    with create_session() as session:
+        response = session.get(TARGET_URL, timeout=(5, 15))
+        response.raise_for_status()
+
+        soup = make_soup(response.content)
+        issues = parse_trouble_rows(soup, monitored)
+        missing = warn_missing_lines(collect_page_line_names(soup), monitored)
+
+        if issues and FETCH_DETAIL_PAGES:
+            enrich_with_details(session, issues)
+
+    return issues, missing
+
+
+def build_output(issues: list[dict], monitored: set[str], missing: list[str]) -> dict:
     now = datetime.now(ZoneInfo("Asia/Tokyo"))
     return {
         "update_time": now.strftime("%Y-%m-%d %H:%M:%S"),
+        "update_time_iso": now.isoformat(timespec="seconds"),
         "data_source": TARGET_URL,
-        "monitored_lines_count": len(TOKYO_LINES),
+        "monitored_lines_count": len(monitored),
+        "unmatched_lines": missing,
         "issue_count": len(issues),
         "status": "issues_found" if issues else "all_clear",
         "issues": issues,
     }
 
+
 def write_json_atomic(data: dict) -> None:
-    """
-    中途半端なJSONが残らないよう、一時ファイルからatomic replace。
-    """
+    """中途半端なJSONが残らないよう、一時ファイルからatomic replace。"""
     temp_file = OUTPUT_FILE.with_suffix(".json.tmp")
     temp_file.write_text(
-        json.dumps(
-            data,
-            ensure_ascii=False,
-            indent=2,
-        ) + "\n",
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     temp_file.replace(OUTPUT_FILE)
-    print(f"✅ {OUTPUT_FILE} を更新しました。")
+    log(f"✅ {OUTPUT_FILE.name} を更新しました。")
+
 
 def main() -> int:
     try:
-        issues = scrape_transit_data()
-        output = build_output(issues)
+        monitored = load_monitored_lines()
+        issues, missing = scrape_transit_data(monitored)
+        output = build_output(issues, monitored, missing)
         write_json_atomic(output)
-        print(json.dumps(
-            output,
-            ensure_ascii=False,
-            indent=2,
-        ))
+        print(json.dumps(output, ensure_ascii=False, indent=2))
         return 0
     except (requests.RequestException, TransitParseError) as exc:
-        print(
-            f"❌ 運行情報の取得に失敗しました: {exc}",
-        )
+        log(f"❌ 運行情報の取得に失敗しました: {exc}")
         return 1
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

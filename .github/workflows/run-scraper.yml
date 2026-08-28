@@ -8,13 +8,20 @@
 name: 🚃 Run Scraper (7:30AM, 12PM & 5:30PM JST)
 
 on:
+  # 【重要】cron は UTC で書き、timezone キーは使わないこと。
+  #
+  # GitHub Actions の `timezone:` は 2026-03 に Public Preview として追加されたが、
+  # 2026-08-27 昼(UTC)を境に本リポジトリでは適用されなくなり、
+  # cron が UTC として解釈されるようになった（= 定時実行が JST 16:30/21:00/02:30 にずれ、
+  # 12:00 JST の実行が消失）。同一コミット・同一ファイルのまま挙動が変わったため、
+  # プレビュー機能には依存せず、UTC で明示的に書く方式に戻している。
+  #
+  # JST = UTC + 9。GitHub 側のスケジューラ遅延(通常 20〜50分)を見込み、
+  # V1 と同じく目標時刻の15分前に設定している。
   schedule:
-    - cron: '30 7 * * *'
-      timezone: 'Asia/Tokyo'
-    - cron: '0 12 * * *'
-      timezone: 'Asia/Tokyo'
-    - cron: '30 17 * * *'
-      timezone: 'Asia/Tokyo'
+    - cron: '15 22 * * *'  # 目標 7:30 JST  (= 前日 22:30 UTC の15分前)
+    - cron: '45 2 * * *'   # 目標 12:00 JST (= 当日 03:00 UTC の15分前)
+    - cron: '15 8 * * *'   # 目標 17:30 JST (= 当日 08:30 UTC の15分前)
   
   workflow_dispatch:
     inputs:
@@ -34,22 +41,32 @@ permissions:
 
 concurrency:
   group: tokyo-transit-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   run-scraper:
     name: 🚀 Run Scraper
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v7
 
       - name: ⚡ Setup uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v10.0.1
         with:
           python-version: '3.13'
           enable-cache: true
+
+      - name: 🧪 Run parser tests
+        run: |
+          echo "=========================================="
+          echo "🧪 パーサーの回帰テストを実行中..."
+          echo "=========================================="
+
+          uv run --with-requirements requirements.txt --with pytest \
+            python -m pytest tests/ -q
 
       - name: 🚀 Run Scraper
         id: scraper
@@ -60,6 +77,9 @@ jobs:
           
           uv run --with-requirements requirements.txt app.py
 
+      # 【意図的な仕様】通知は手動実行 (workflow_dispatch) のときだけ送る。
+      # 定時実行のたびに通知すると毎日3回届いて煩わしいため、
+      # 日常の確認は Web ダッシュボードで行う方針。バグではないので直さないこと。
       - name: 📤 Send Notification to Synology Chat
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.send_notification == 'true' }}
         env:
@@ -83,8 +103,8 @@ jobs:
           # jq を使用してフォーマット済みメッセージを構築
           MESSAGE=$(jq -r '
             def format_detail:
-              if length > 35 then
-                sub("\\.\\.\\.$"; "") | .[0:35] + "..."
+              if length > 120 then
+                sub("\\.\\.\\.$"; "") | .[0:120] + "…"
               else
                 .
               end;
@@ -134,10 +154,10 @@ jobs:
           cp index.html transit_data.json _site/
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: '_site'
 
@@ -151,4 +171,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
